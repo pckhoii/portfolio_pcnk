@@ -12,16 +12,16 @@
 }
 
 [data-theme="dark"] {
-	--bg: #08150f;
-	--bg-soft: #0d2118;
-	--panel: rgba(16, 38, 28, 0.78);
-	--text: #dcf4e7;
-	--muted: #97c5ad;
-	--line: rgba(130, 203, 165, 0.22);
-	--accent: #36cf7a;
-	--accent-strong: #1ea95f;
-	--accent-soft: rgba(54, 207, 122, 0.17);
-	--shadow: 0 24px 90px rgba(0, 0, 0, 0.4);
+	--bg: #101112;
+	--bg-soft: #18191b;
+	--panel: rgba(23, 23, 23, 0.84);
+	--text: #f2f7f3;
+	--muted: #a5afa8;
+	--line: rgba(122, 255, 98, 0.22);
+	--accent: #7aff62;
+	--accent-strong: #68e852;
+	--accent-soft: rgba(122, 255, 98, 0.12);
+	--shadow: 0 24px 90px rgba(0, 0, 0, 0.58);
 }
 
 * {
@@ -34,7 +34,7 @@ html {
 
 body {
 	margin: 0;
-	font-family: "Manrope", "Segoe UI", sans-serif;
+	font-family: "Lexend", "Segoe UI", sans-serif;
 	color: var(--text);
 	background:
 		linear-gradient(165deg, var(--bg-soft) 0%, transparent 35%),
@@ -43,6 +43,14 @@ body {
 		var(--bg);
 	min-height: 100vh;
 	transition: background-color 240ms ease, color 240ms ease;
+}
+
+[data-theme="dark"] body {
+	background:
+		linear-gradient(165deg, rgba(24, 24, 24, 0.95) 0%, transparent 40%),
+		radial-gradient(circle at 18% 8%, rgba(122, 255, 98, 0.08), transparent 34%),
+		radial-gradient(circle at 80% 0%, rgba(122, 255, 98, 0.05), transparent 36%),
+		var(--bg);
 }
 
 .bg-layer {
@@ -231,7 +239,7 @@ main {
 .hero h1,
 .hero h2,
 .section h3 {
-	font-family: "Playfair Display", Georgia, serif;
+	font-family: "Lexend", "Segoe UI", sans-serif;
 	line-height: 1.15;
 	margin: 0;
 }
@@ -251,7 +259,7 @@ main {
 .section,
 .site-footer {
 	background: var(--panel);
-	border: 1px solid var(--line);
+	border: 1.5px solid var(--line);
 	border-radius: 22px;
 	box-shadow: var(--shadow);
 }
@@ -271,6 +279,10 @@ main {
 	mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 	mask-composite: exclude;
 	pointer-events: none;
+}
+
+[data-theme="dark"] .gradient-border::before {
+	background: linear-gradient(125deg, rgba(122, 255, 98, 0.45), rgba(122, 255, 98, 0.04));
 }
 
 .hero-copy,
@@ -305,7 +317,7 @@ main {
 .stat-item {
 	padding: 0.72rem;
 	border-radius: 12px;
-	border: 1px solid var(--line);
+	border: 1.5px solid var(--line);
 	background: var(--accent-soft);
 }
 
@@ -324,13 +336,13 @@ main {
 .meta-card {
 	padding: 0.85rem;
 	border-radius: 14px;
-	border: 1px solid var(--line);
+	border: 1.5px solid var(--line);
 	background: rgba(255, 255, 255, 0.42);
 	margin-bottom: 0.8rem;
 }
 
 [data-theme="dark"] .meta-card {
-	background: rgba(13, 19, 29, 0.48);
+	background: rgba(22, 22, 22, 0.68);
 }
 
 .meta-label {
@@ -376,7 +388,7 @@ main {
 .card,
 .project-card,
 .timeline-item {
-	border: 1px solid var(--line);
+	border: 1.5px solid var(--line);
 	border-radius: 14px;
 	padding: 0.95rem;
 	background: rgba(255, 255, 255, 0.38);
@@ -393,7 +405,15 @@ main {
 [data-theme="dark"] .card,
 [data-theme="dark"] .project-card,
 [data-theme="dark"] .timeline-item {
-	background: rgba(13, 19, 29, 0.5);
+	background: rgba(24, 24, 24, 0.68);
+	border-color: rgba(122, 255, 98, 0.24);
+	box-shadow: 0 0 0 1px rgba(122, 255, 98, 0.05);
+}
+
+[data-theme="dark"] .project-card:hover,
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] .timeline-item:hover {
+	border-color: rgba(122, 255, 98, 0.55);
 }
 
 .project-links {
