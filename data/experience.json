@@ -1,0 +1,42 @@
+[
+	{
+		"company": "ABC Commerce",
+		"position": {
+			"vi": "Data Analyst",
+			"en": "Data Analyst"
+		},
+		"period": "2024 - Present",
+		"highlights": {
+			"vi": [
+				"Xây dựng dashboard doanh thu và biên lợi nhuận theo kênh bán.",
+				"Giảm thời gian báo cáo tuần từ 1 ngày xuống 2 giờ.",
+				"Phối hợp với team Product để theo dõi KPI theo sprint."
+			],
+			"en": [
+				"Built revenue and margin dashboards by channel.",
+				"Reduced weekly reporting time from one day to two hours.",
+				"Worked with Product team to track sprint-level KPIs."
+			]
+		}
+	},
+	{
+		"company": "XYZ Startup",
+		"position": {
+			"vi": "Business Intelligence Intern",
+			"en": "Business Intelligence Intern"
+		},
+		"period": "2023 - 2024",
+		"highlights": {
+			"vi": [
+				"Chuẩn hóa dữ liệu từ nhiều nguồn marketing.",
+				"Hỗ trợ xây bộ metric theo hành trình khách hàng.",
+				"Tự động hóa báo cáo KPI bằng SQL và Google Sheets."
+			],
+			"en": [
+				"Standardized data from multiple marketing sources.",
+				"Supported customer-journey metric framework setup.",
+				"Automated KPI reports with SQL and Google Sheets."
+			]
+		}
+	}
+]

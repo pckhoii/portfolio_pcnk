@@ -1,0 +1,94 @@
+.reveal {
+	opacity: 0;
+	transform: translateY(20px) scale(0.99);
+	transition: opacity 560ms ease, transform 560ms ease;
+	transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+	opacity: 1;
+	transform: translateY(0) scale(1);
+}
+
+@keyframes floatIn {
+	from {
+		opacity: 0;
+		transform: scale(0.98) translateY(12px);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}
+
+@keyframes shimmer {
+	0% {
+		transform: translateX(-140%);
+	}
+
+	100% {
+		transform: translateX(180%);
+	}
+}
+
+@keyframes pulseGlow {
+	0% {
+		box-shadow: 0 0 0 0 rgba(31, 157, 85, 0.28);
+	}
+
+	70% {
+		box-shadow: 0 0 0 18px rgba(31, 157, 85, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(31, 157, 85, 0);
+	}
+}
+
+.hero-copy,
+.hero-meta {
+	animation: floatIn 640ms ease both;
+}
+
+.btn-solid {
+	animation: pulseGlow 2.8s infinite;
+}
+
+.project-card {
+	position: relative;
+	overflow: hidden;
+}
+
+.project-card::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30%;
+	height: 100%;
+	background: linear-gradient(95deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+	transform: translateX(-140%);
+}
+
+.project-card:hover::after {
+	animation: shimmer 900ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.reveal,
+	.reveal.is-visible,
+	.hero-copy,
+	.hero-meta,
+	.btn-solid {
+		transition: none;
+		animation: none;
+		opacity: 1;
+		transform: none;
+	}
+
+	.project-card::after,
+	.project-card:hover::after {
+		animation: none;
+	}
+}

@@ -1,0 +1,23 @@
+[
+	{
+		"title": {
+			"vi": "Phân tích dữ liệu",
+			"en": "Data Analysis"
+		},
+		"items": ["SQL", "Python", "Statistics", "A/B Testing"]
+	},
+	{
+		"title": {
+			"vi": "Dashboard",
+			"en": "Dashboard"
+		},
+		"items": ["Power BI", "Tableau", "Looker Studio", "Excel"]
+	},
+	{
+		"title": {
+			"vi": "Giao tiếp",
+			"en": "Communication"
+		},
+		"items": ["Data Storytelling", "Presentation", "Stakeholder Management"]
+	}
+]

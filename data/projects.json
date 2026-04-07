@@ -1,0 +1,50 @@
+[
+	{
+		"id": "sales-forecast",
+		"title": {
+			"vi": "Dự báo doanh thu theo tuần",
+			"en": "Weekly Revenue Forecast"
+		},
+		"description": {
+			"vi": "Xây dựng pipeline dự báo doanh thu theo tuần, giảm sai số dự báo từ 18% xuống 9%.",
+			"en": "Built a weekly revenue forecasting pipeline and reduced forecast error from 18% to 9%."
+		},
+		"tags": ["Python", "SQL", "Time Series"],
+		"demoUrl": "#",
+		"repoUrl": "#",
+		"featured": true,
+		"order": 1
+	},
+	{
+		"id": "customer-churn",
+		"title": {
+			"vi": "Phân tích rời bỏ khách hàng",
+			"en": "Customer Churn Analysis"
+		},
+		"description": {
+			"vi": "Xác định nhóm khách hàng nguy cơ rời bỏ cao và đề xuất hành động giữ chân.",
+			"en": "Identified high-risk customer cohorts and proposed retention actions for each segment."
+		},
+		"tags": ["Power BI", "Segmentation", "Cohort"],
+		"demoUrl": "#",
+		"repoUrl": "#",
+		"featured": true,
+		"order": 2
+	},
+	{
+		"id": "funnel-dashboard",
+		"title": {
+			"vi": "Dashboard funnel chuyển đổi",
+			"en": "Conversion Funnel Dashboard"
+		},
+		"description": {
+			"vi": "Thiết kế dashboard theo hành trình người dùng giúp team marketing tối ưu ngân sách.",
+			"en": "Designed a user-journey funnel dashboard that helped marketing optimize spend."
+		},
+		"tags": ["Tableau", "Product Metrics", "Funnel"],
+		"demoUrl": "#",
+		"repoUrl": "#",
+		"featured": true,
+		"order": 3
+	}
+]

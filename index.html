@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Data Analyst Portfolio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap"
+		rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+	<div class="bg-layer"></div>
+	<div class="grid-overlay"></div>
+
+	<header class="site-header container reveal">
+		<a class="brand" href="#top" id="brandText">Portfolio</a>
+		<nav class="main-nav" aria-label="Main navigation">
+			<a href="#about" id="navAbout">Giới thiệu</a>
+			<a href="#skills" id="navSkills">Kỹ năng</a>
+			<a href="#projects" id="navProjects">Dự án</a>
+			<a href="#experience" id="navExperience">Kinh nghiệm</a>
+			<a href="#contact" id="navContact">Liên hệ</a>
+		</nav>
+		<div class="toolbar">
+			<label class="switch-wrap" for="languageSwitch">
+				<span id="languageSwitchLabel">VI / EN</span>
+				<input id="languageSwitch" class="switch-input" type="checkbox" aria-label="Đổi ngôn ngữ" />
+				<span class="switch-slider"></span>
+			</label>
+			<label class="switch-wrap" for="themeSwitch">
+				<span id="themeSwitchLabel">Light / Dark</span>
+				<input id="themeSwitch" class="switch-input" type="checkbox" aria-label="Đổi giao diện" />
+				<span class="switch-slider"></span>
+			</label>
+		</div>
+	</header>
+
+	<main id="top" class="container">
+		<section class="hero grid-2">
+			<div class="hero-copy reveal gradient-border" data-reveal-delay="0">
+				<p class="kicker" id="heroKicker">Data Analyst</p>
+				<h1 id="heroRole">Data Analyst</h1>
+				<h2 id="heroHeadline">Biến dữ liệu thô thành quyết định kinh doanh.</h2>
+				<p id="heroSummary"></p>
+				<div class="hero-actions">
+					<a class="btn btn-solid" id="heroPrimaryBtn" href="#projects">Xem dự án</a>
+					<a class="btn btn-outline" id="heroSecondaryBtn" href="#contact">Liên hệ</a>
+				</div>
+				<div class="stat-row" id="statRow"></div>
+			</div>
+			<aside class="hero-meta reveal gradient-border" data-reveal-delay="120">
+				<div class="meta-card">
+					<p class="meta-label">Địa điểm</p>
+					<p id="locationText"></p>
+				</div>
+				<div class="meta-card">
+					<p class="meta-label">Email</p>
+					<a id="emailLink" href="#"></a>
+				</div>
+				<div class="meta-card">
+					<p class="meta-label">Social</p>
+					<ul id="socialList" class="social-list"></ul>
+				</div>
+			</aside>
+		</section>
+
+		<section id="about" class="section reveal gradient-border" data-reveal-delay="40">
+			<h3 id="aboutTitle">Giới thiệu</h3>
+			<p id="aboutText"></p>
+		</section>
+
+		<section id="skills" class="section reveal gradient-border" data-reveal-delay="80">
+			<h3 id="skillsTitle">Kỹ năng cốt lõi</h3>
+			<div id="skillsGrid" class="cards-grid"></div>
+		</section>
+
+		<section id="projects" class="section reveal gradient-border" data-reveal-delay="120">
+			<h3 id="projectsTitle">Dự án nổi bật</h3>
+			<div id="projectsGrid" class="cards-grid cards-grid-projects"></div>
+		</section>
+
+		<section id="experience" class="section reveal gradient-border" data-reveal-delay="160">
+			<h3 id="experienceTitle">Kinh nghiệm</h3>
+			<div id="experienceList" class="timeline"></div>
+		</section>
+
+		<section id="contact" class="section section-contact reveal gradient-border" data-reveal-delay="200">
+			<h3 id="contactTitle">Cùng hợp tác</h3>
+			<p id="contactText"></p>
+			<a class="btn btn-solid" id="contactBtn" href="#">Gửi email</a>
+		</section>
+	</main>
+
+	<footer class="site-footer container reveal" data-reveal-delay="240">
+		<p id="footerText"></p>
+	</footer>
+
+	<noscript>This site needs JavaScript enabled to render data.</noscript>
+	<script type="module" src="js/main.js"></script>
+</body>
+</html>

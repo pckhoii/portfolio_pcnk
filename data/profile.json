@@ -1,0 +1,31 @@
+{
+	"name": "Your Name",
+	"role": {
+		"vi": "Data Analyst",
+		"en": "Data Analyst"
+	},
+	"headline": {
+		"vi": "Biến dữ liệu thô thành góc nhìn kinh doanh rõ ràng.",
+		"en": "Turning raw data into clear business direction."
+	},
+	"summary": {
+		"vi": "Tôi phân tích dữ liệu để tìm ra vấn đề, đưa ra giải pháp và trình bày insight để team quyết định nhanh hơn.",
+		"en": "I analyze data to identify bottlenecks, design solutions, and present insights that help teams decide faster."
+	},
+	"about": {
+		"vi": "Tôi tập trung vào SQL, dashboard và storytelling bằng data. Mục tiêu của tôi là xây dựng sản phẩm phân tích dễ dùng và dễ mở rộng.",
+		"en": "I focus on SQL, dashboard design, and data storytelling. My goal is to build analytics products that are simple to use and easy to scale."
+	},
+	"location": "Ho Chi Minh City, Vietnam",
+	"email": "youremail@example.com",
+	"socials": [
+		{
+			"label": "GitHub",
+			"url": "https://github.com/"
+		},
+		{
+			"label": "LinkedIn",
+			"url": "https://www.linkedin.com/"
+		}
+	]
+}
