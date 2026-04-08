@@ -7,14 +7,20 @@ const uiText = {
 		navExperience: "Kinh nghiệm",
 		navContact: "Liên hệ",
 		aboutTitle: "Giới thiệu",
+		aboutKicker: "About",
+		aboutFeatureTitle: "Biến dữ liệu thành định hướng",
 		skillsTitle: "Kỹ năng cốt lõi",
+		skillsKicker: "Toolkit",
+		skillsAsideTitle: "Trọng tâm",
 		projectsTitle: "Dự án nổi bật",
+		projectsKicker: "Selected Work",
 		experienceTitle: "Kinh nghiệm",
+		experienceKicker: "Journey",
 		contactTitle: "Cùng hợp tác",
-		contactText: "Bạn có ý tưởng hoặc dự án cần phân tích dữ liệu? Hãy liên hệ với tôi.",
+		contactKicker: "Contact",
+		contactText:
+			"Bạn có ý tưởng, dashboard hoặc luồng phân tích cần làm rõ? Tôi có thể hỗ trợ từ việc bóc tách bài toán đến xây hệ thống báo cáo dễ dùng cho team.",
 		contactBtn: "Gửi email",
-		heroPrimaryBtn: "Xem dự án",
-		heroSecondaryBtn: "Liên hệ",
 		footer: "Portfolio được xây dựng bằng HTML, CSS và JavaScript.",
 		locationLabel: "Địa điểm",
 		emailLabel: "Email",
@@ -23,6 +29,23 @@ const uiText = {
 		viewCode: "Source",
 		themeSwitchLabel: "Light / Dark",
 		languageSwitchLabel: "VI / EN",
+		projectSummaryLabel: "Case study nổi bật",
+		impactSummaryValue: "Insight",
+		impactSummaryLabel: "Thiết kế cho quyết định kinh doanh",
+		availabilityText: "Sẵn sàng cho dự án mới",
+		availabilityNote:
+			"Mở cho freelance analytics, tối ưu dashboard, và các cơ hội phân tích dữ liệu in-house.",
+		specializations: [
+			"Business intelligence và reporting",
+			"A/B testing và đo hiệu quả",
+			"Funnel, cohort và retention analysis",
+			"Dashboard storytelling cho stakeholder"
+		],
+		contactPoints: [
+			{ title: "Email trực tiếp", value: "Phản hồi nhanh cho trao đổi dự án" },
+			{ title: "Dashboard review", value: "Rà soát chỉ số, flow và câu chuyện dữ liệu" },
+			{ title: "Data consulting", value: "Thiết kế cấu trúc báo cáo và metric framework" }
+		],
 		stats: [
 			{ value: "20+", label: "Báo cáo đã triển khai" },
 			{ value: "95%", label: "Độ chính xác dữ liệu" },
@@ -37,14 +60,20 @@ const uiText = {
 		navExperience: "Experience",
 		navContact: "Contact",
 		aboutTitle: "About",
+		aboutKicker: "About",
+		aboutFeatureTitle: "Turning data into direction",
 		skillsTitle: "Core Skills",
+		skillsKicker: "Toolkit",
+		skillsAsideTitle: "Focus Areas",
 		projectsTitle: "Featured Projects",
+		projectsKicker: "Selected Work",
 		experienceTitle: "Experience",
+		experienceKicker: "Journey",
 		contactTitle: "Let's Work Together",
-		contactText: "If you have an idea or project that needs data analysis, feel free to reach out.",
+		contactKicker: "Contact",
+		contactText:
+			"If you need a clearer analytics workflow, sharper dashboard storytelling, or support translating raw data into action, I'd love to help.",
 		contactBtn: "Send Email",
-		heroPrimaryBtn: "View Projects",
-		heroSecondaryBtn: "Contact",
 		footer: "Portfolio built with HTML, CSS, and JavaScript.",
 		locationLabel: "Location",
 		emailLabel: "Email",
@@ -53,6 +82,23 @@ const uiText = {
 		viewCode: "Source",
 		themeSwitchLabel: "Light / Dark",
 		languageSwitchLabel: "VI / EN",
+		projectSummaryLabel: "Featured case studies",
+		impactSummaryValue: "Impact",
+		impactSummaryLabel: "Designed for business decisions",
+		availabilityText: "Available for new projects",
+		availabilityNote:
+			"Open to freelance analytics work, dashboard optimization, and in-house data opportunities.",
+		specializations: [
+			"Business intelligence and reporting",
+			"A/B testing and impact measurement",
+			"Funnel, cohort, and retention analysis",
+			"Dashboard storytelling for stakeholders"
+		],
+		contactPoints: [
+			{ title: "Direct email", value: "Fast replies for project discussions" },
+			{ title: "Dashboard review", value: "Review metrics, flow, and data narrative" },
+			{ title: "Data consulting", value: "Build reporting structure and metric frameworks" }
+		],
 		stats: [
 			{ value: "20+", label: "Reports Delivered" },
 			{ value: "95%", label: "Data Accuracy" },
@@ -80,10 +126,26 @@ const setText = (id, text) => {
 	}
 };
 
+const initialsFromName = (name) => {
+	if (!name) {
+		return "DA";
+	}
+
+	return name
+		.split(/\s+/)
+		.filter(Boolean)
+		.slice(0, 2)
+		.map((part) => part[0].toUpperCase())
+		.join("");
+};
+
 export function renderPage(data, state) {
 	const { profile, skills, projects, experience } = data;
 	const lang = state.lang;
 	const t = uiText[lang];
+	const featuredProjects = [...projects]
+		.filter((item) => item.featured)
+		.sort((a, b) => (a.order || 99) - (b.order || 99));
 
 	document.documentElement.lang = lang;
 
@@ -95,44 +157,44 @@ export function renderPage(data, state) {
 	setText("navContact", t.navContact);
 
 	setText("heroKicker", pickText(profile.role, lang));
-	setText("heroRole", pickText(profile.role, lang));
+	setText("heroRole", profile.name || pickText(profile.role, lang));
 	setText("heroHeadline", pickText(profile.headline, lang));
 	setText("heroSummary", pickText(profile.summary, lang));
+	setText("heroPrimaryBtn", t.heroPrimaryBtn || (lang === "en" ? "View Projects" : "Xem dự án"));
+	setText("heroSecondaryBtn", t.heroSecondaryBtn || (lang === "en" ? "Contact" : "Liên hệ"));
 
 	setText("aboutTitle", t.aboutTitle);
+	setText("aboutKicker", t.aboutKicker);
+	setText("aboutFeatureTitle", t.aboutFeatureTitle);
 	setText("aboutText", pickText(profile.about, lang));
+
 	setText("skillsTitle", t.skillsTitle);
+	setText("skillsKicker", t.skillsKicker);
+	setText("skillsAsideTitle", t.skillsAsideTitle);
 	setText("projectsTitle", t.projectsTitle);
+	setText("projectsKicker", t.projectsKicker);
 	setText("experienceTitle", t.experienceTitle);
+	setText("experienceKicker", t.experienceKicker);
 	setText("contactTitle", t.contactTitle);
+	setText("contactKicker", t.contactKicker);
 	setText("contactText", t.contactText);
 	setText("contactBtn", t.contactBtn);
 	setText("footerText", t.footer);
-
-	setText("heroPrimaryBtn", t.heroPrimaryBtn);
-	setText("heroSecondaryBtn", t.heroSecondaryBtn);
 	setText("themeSwitchLabel", t.themeSwitchLabel);
 	setText("languageSwitchLabel", t.languageSwitchLabel);
+	setText("locationLabel", t.locationLabel);
+	setText("emailLabel", t.emailLabel);
+	setText("socialLabel", t.socialLabel);
+	setText("projectSummaryValue", `${featuredProjects.length}`);
+	setText("projectSummaryLabel", t.projectSummaryLabel);
+	setText("impactSummaryValue", t.impactSummaryValue);
+	setText("impactSummaryLabel", t.impactSummaryLabel);
+	setText("availabilityText", t.availabilityText);
+	setText("availabilityNote", t.availabilityNote);
 
 	const contactBtn = document.getElementById("contactBtn");
 	if (contactBtn) {
 		contactBtn.href = `mailto:${profile.email}`;
-	}
-
-	const locationLabel = document.querySelectorAll(".meta-label")[0];
-	const emailLabel = document.querySelectorAll(".meta-label")[1];
-	const socialLabel = document.querySelectorAll(".meta-label")[2];
-
-	if (locationLabel) {
-		locationLabel.textContent = t.locationLabel;
-	}
-
-	if (emailLabel) {
-		emailLabel.textContent = t.emailLabel;
-	}
-
-	if (socialLabel) {
-		socialLabel.textContent = t.socialLabel;
 	}
 
 	setText("locationText", profile.location);
@@ -147,23 +209,10 @@ export function renderPage(data, state) {
 	if (socialList) {
 		socialList.innerHTML = profile.socials
 			.map(
-				(item) =>
-					`<li><a href="${item.url}" target="_blank" rel="noreferrer">${item.label}</a></li>`
-			)
-			.join("");
-	}
-
-	const skillsGrid = document.getElementById("skillsGrid");
-	if (skillsGrid) {
-		skillsGrid.innerHTML = skills
-			.map(
-				(group) => `
-				<article class="card">
-					<h4>${pickText(group.title, lang)}</h4>
-					<div class="tag-row">
-						${group.items.map((item) => `<span class="tag">${item}</span>`).join("")}
-					</div>
-				</article>
+				(item) => `
+				<li>
+					<a href="${item.url}" target="_blank" rel="noreferrer">${item.label}</a>
+				</li>
 			`
 			)
 			.join("");
@@ -174,9 +223,62 @@ export function renderPage(data, state) {
 		statRow.innerHTML = t.stats
 			.map(
 				(item) => `
-				<div class="stat-item">
+				<article class="stat-card">
 					<p class="stat-value">${item.value}</p>
 					<p class="stat-label">${item.label}</p>
+				</article>
+			`
+			)
+			.join("");
+	}
+
+	const aboutHighlights = document.getElementById("aboutHighlights");
+	if (aboutHighlights) {
+		aboutHighlights.innerHTML = `
+			<article class="mini-card">
+				<p class="mini-value">${initialsFromName(profile.name)}</p>
+				<h4>${pickText(profile.role, lang)}</h4>
+				<p>${lang === "en" ? "Focused on clarity, velocity, and stakeholder-ready insight." : "Tập trung vào sự rõ ràng, tốc độ và insight dễ dùng cho stakeholder."}</p>
+			</article>
+			<article class="mini-card">
+				<p class="mini-value">${featuredProjects.length}+</p>
+				<h4>${lang === "en" ? "Featured Work" : "Case Study"}</h4>
+				<p>${lang === "en" ? "From forecasting to retention and funnel optimization." : "Từ forecasting đến retention và tối ưu conversion funnel."}</p>
+			</article>
+			<article class="mini-card">
+				<p class="mini-value">${profile.location.split(",")[0]}</p>
+				<h4>${lang === "en" ? "Based In" : "Đang làm việc tại"}</h4>
+				<p>${lang === "en" ? "Open to remote collaboration and cross-functional data work." : "Sẵn sàng cho collaboration remote và các bài toán dữ liệu liên phòng ban."}</p>
+			</article>
+		`;
+	}
+
+	const skillsGrid = document.getElementById("skillsGrid");
+	if (skillsGrid) {
+		skillsGrid.innerHTML = skills
+			.map(
+				(group) => `
+				<article class="skill-card">
+					<div class="skill-card-head">
+						<h4>${pickText(group.title, lang)}</h4>
+					</div>
+					<div class="tag-row">
+						${group.items.map((item) => `<span class="tag">${item}</span>`).join("")}
+					</div>
+				</article>
+			`
+			)
+			.join("");
+	}
+
+	const specializationList = document.getElementById("specializationList");
+	if (specializationList) {
+		specializationList.innerHTML = t.specializations
+			.map(
+				(item) => `
+				<div class="specialization-item">
+					<span class="specialization-dot"></span>
+					<p>${item}</p>
 				</div>
 			`
 			)
@@ -185,15 +287,18 @@ export function renderPage(data, state) {
 
 	const projectsGrid = document.getElementById("projectsGrid");
 	if (projectsGrid) {
-		const sorted = [...projects].sort((a, b) => (a.order || 99) - (b.order || 99));
-
-		projectsGrid.innerHTML = sorted
-			.filter((item) => item.featured)
+		projectsGrid.innerHTML = featuredProjects
 			.map(
-				(item) => `
-				<article class="project-card">
-					<h4>${pickText(item.title, lang)}</h4>
-					<p>${pickText(item.description, lang)}</p>
+				(item, index) => `
+				<article class="project-card project-card-${index + 1}">
+					<div class="project-top">
+						<div>
+							<p class="project-chip">${lang === "en" ? "Case Study" : "Case Study"}</p>
+							<h4>${pickText(item.title, lang)}</h4>
+						</div>
+						<div class="project-icon project-icon-${(index % 3) + 1}"></div>
+					</div>
+					<p class="project-desc">${pickText(item.description, lang)}</p>
 					<div class="tag-row">
 						${item.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
 					</div>
@@ -211,14 +316,36 @@ export function renderPage(data, state) {
 	if (experienceList) {
 		experienceList.innerHTML = experience
 			.map(
-				(item) => `
-				<article class="timeline-item">
-					<h4>${pickText(item.position, lang)} - ${item.company}</h4>
-					<p class="timeline-meta">${item.period}</p>
-					<ul>
-						${pickText(item.highlights, lang).map((point) => `<li>${point}</li>`).join("")}
-					</ul>
+				(item, index) => `
+				<article class="timeline-item reveal" data-reveal-delay="${index * 80}">
+					<div class="timeline-marker"></div>
+					<div class="timeline-card">
+						<div class="timeline-head">
+							<div>
+								<h4>${pickText(item.position, lang)}</h4>
+								<p class="timeline-company">${item.company}</p>
+							</div>
+							<p class="timeline-meta">${item.period}</p>
+						</div>
+						<ul>
+							${pickText(item.highlights, lang).map((point) => `<li>${point}</li>`).join("")}
+						</ul>
+					</div>
 				</article>
+			`
+			)
+			.join("");
+	}
+
+	const contactPoints = document.getElementById("contactPoints");
+	if (contactPoints) {
+		contactPoints.innerHTML = t.contactPoints
+			.map(
+				(item) => `
+				<div class="contact-point">
+					<h4>${item.title}</h4>
+					<p>${item.value}</p>
+				</div>
 			`
 			)
 			.join("");

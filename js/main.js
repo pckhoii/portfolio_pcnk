@@ -29,6 +29,7 @@ function rerender() {
 	}
 
 	renderPage(cachedData, state);
+	initRevealAnimations();
 }
 
 function bindToolbar() {
@@ -60,7 +61,6 @@ async function startApp() {
 
 		cachedData = await loadData();
 		rerender();
-		initRevealAnimations();
 	} catch (error) {
 		console.error("Failed to start portfolio app:", error);
 	}
