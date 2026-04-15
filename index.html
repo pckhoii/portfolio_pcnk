@@ -67,14 +67,14 @@
 			</nav>
 			<div class="toolbar">
 				<label class="switch-wrap switch-wrap-lang" for="languageSwitch">
-					<span id="languageSwitchLabel">VI / EN</span>
-					<input id="languageSwitch" class="switch-input" type="checkbox" aria-label="Đổi ngôn ngữ" />
+					<span id="languageSwitchLabel" class="sr-only">VI / EN</span>
+					<input id="languageSwitch" class="switch-input" type="checkbox" aria-label="Change language" />
 					<span class="switch-slider switch-slider-sm"></span>
 				</label>
 				<label class="switch-wrap switch-wrap-theme" for="themeSwitch">
-					<span id="themeSwitchLabel">Light / Dark</span>
-					<input id="themeSwitch" class="switch-input" type="checkbox" aria-label="Đổi giao diện" />
-					<span class="switch-slider switch-slider-lg"></span>
+					<span id="themeSwitchLabel" class="sr-only">Light / Dark</span>
+					<input id="themeSwitch" class="switch-input" type="checkbox" aria-label="Toggle theme" />
+					<span class="switch-slider switch-slider-sm"></span>
 				</label>
 			</div>
 		</div>
@@ -224,6 +224,7 @@
 	</footer>
 
 	<noscript>This site needs JavaScript enabled to render data.</noscript>
+	<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 	<script type="module" src="js/main.js"></script>
 </body>
 </html>
