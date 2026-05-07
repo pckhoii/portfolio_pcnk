@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Marketing Spend Performance Analysis</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap"
+		rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+	<div class="page-bg" aria-hidden="true">
+		<div class="grid-overlay"></div>
+		<div class="ambient ambient-a"></div>
+		<div class="ambient ambient-b"></div>
+		<div class="ambient ambient-c"></div>
+	</div>
+
+	<header class="site-header">
+		<div class="container header-shell reveal">
+			<a class="brand" href="index.html#projects">Portfolio</a>
+			<nav class="main-nav" aria-label="Project navigation">
+				<a href="index.html#projects">Projects</a>
+				<a href="#dashboard">Dashboard</a>
+				<a href="#insights">Insights</a>
+				<a href="#decisions">Decisions</a>
+			</nav>
+			<div class="toolbar">
+				<a class="btn btn-outline btn-compact" href="index.html#projects">Back</a>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="project-detail-hero section-shell">
+			<div class="container project-detail-shell">
+				<div class="project-detail-copy reveal">
+					<p class="eyebrow">Marketing Analytics Case Study</p>
+					<h1>Phân tích hiệu quả chi tiêu Marketing</h1>
+					<p class="hero-summary">
+						Dự án tập trung biến dữ liệu chi tiêu marketing thành một dashboard hỗ trợ quyết định: nhìn rõ kênh nào đang tạo giá trị,
+						nền tảng nào đang tiêu ngân sách chưa hiệu quả, và campaign nào nên được ưu tiên tối ưu hoặc mở rộng.
+					</p>
+					<div class="tag-row">
+						<span class="tag">Python</span>
+						<span class="tag">Power BI</span>
+						<span class="tag">Marketing Analytics</span>
+						<span class="tag">Dashboard Design</span>
+						<span class="tag">Budget Optimization</span>
+					</div>
+					<div class="hero-actions">
+						<a class="btn btn-solid" href="#dashboard">Xem dashboard</a>
+						<a class="btn btn-outline" href="https://www.kaggle.com/datasets/sinderpreet/analyze-the-marketing-spending" target="_blank" rel="noreferrer">Kaggle dataset</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-shell">
+			<div class="container detail-grid">
+				<article class="panel reveal">
+					<p class="section-kicker">Requirement</p>
+					<h3>Yêu cầu dự án</h3>
+					<p>
+						Doanh nghiệp cần một dashboard đủ rõ để đội marketing và quản lý ngân sách có thể theo dõi hiệu quả chi tiêu theo nhiều lớp:
+						category, platform, channel và campaign. Mục tiêu không chỉ là trình bày số liệu, mà là tạo một công cụ giúp ra quyết định
+						phân bổ ngân sách dựa trên dữ liệu thay vì cảm tính.
+					</p>
+				</article>
+				<article class="panel reveal" data-reveal-delay="80">
+					<p class="section-kicker">Problem</p>
+					<h3>Bài toán cần giải quyết</h3>
+					<p>
+						Vấn đề cốt lõi là chi tiêu marketing tạo ra rất nhiều tín hiệu nhưng không dễ nhìn ra nguyên nhân thật sự phía sau hiệu quả.
+						Một campaign có thể mang doanh thu cao nhưng biên hiệu quả thấp, hoặc tạo nhiều traffic nhưng không chuyển đổi. Dashboard vì vậy
+						cần giúp bóc tách dữ liệu theo từng chiều để trả lời chính xác: nên tăng ở đâu, tối ưu ở đâu, và dừng ở đâu.
+					</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="dashboard" class="section-shell">
+			<div class="container">
+				<div class="section-heading reveal">
+					<p class="section-kicker">Power BI</p>
+					<h3>Dashboard phân tích</h3>
+					<p class="section-intro">
+						Dashboard được thiết kế như một lớp điều hướng quyết định: từ bức tranh tổng quan chi tiêu đến việc drill-down vào từng platform,
+						từng campaign và từng chỉ số chuyển đổi để tìm ra nguồn tạo giá trị thật sự.
+					</p>
+				</div>
+				<div class="dashboard-frame reveal" data-reveal-delay="80">
+					<iframe
+						title="Marketing Spend Performance Power BI Dashboard"
+						src="https://app.powerbi.com/view?r=eyJrIjoiY2JiODBjMjMtMjY4NS00N2NiLTk0OGEtNjY0ZWFjN2E1MGViIiwidCI6Ijk4MmEyZGRkLTliZTEtNGQ2ZS05Y2M5LTM3ZGVhYjEwM2MwNyIsImMiOjEwfQ%3D%3D"
+						allowfullscreen="true">
+					</iframe>
+				</div>
+			</div>
+		</section>
+
+		<section id="insights" class="section-shell">
+			<div class="container">
+				<div class="section-heading reveal">
+					<p class="section-kicker">Analysis</p>
+					<h3>Phân tích chuyên sâu từ dashboard</h3>
+					<p class="section-intro">
+						Phần phân tích không dừng ở việc đọc KPI, mà tập trung vào cách dashboard hỗ trợ xác định nguyên nhân hiệu suất và chuyển insight
+						thành hành động cụ thể cho team marketing.
+					</p>
+				</div>
+				<div class="detail-grid detail-grid-three">
+					<article class="mini-card reveal">
+						<p class="mini-value">Channel view</p>
+						<h4>Phân tích theo kênh để tìm nguồn tạo giá trị</h4>
+						<p>Ở lớp này, dashboard giúp so sánh nhóm kênh nào đang chuyển chi phí thành doanh thu và đơn hàng tốt hơn mặt bằng chung. Khi một channel duy trì ROAS và ROMI tốt, đó là tín hiệu có thể tăng ngân sách có kiểm soát để mở rộng hiệu quả.</p>
+					</article>
+					<article class="mini-card reveal" data-reveal-delay="80">
+						<p class="mini-value">Platform view</p>
+						<h4>So sánh nền tảng để phát hiện lệch hiệu suất</h4>
+						<p>Cùng một mức đầu tư nhưng mỗi nền tảng cho ra chất lượng chuyển đổi khác nhau. Dashboard giúp nhận ra nơi có volume lớn nhưng hiệu quả thấp, từ đó tránh quyết định tăng chi tiêu chỉ vì những tín hiệu bề nổi như traffic hoặc reach.</p>
+					</article>
+					<article class="mini-card reveal" data-reveal-delay="160">
+						<p class="mini-value">Campaign view</p>
+						<h4>Đi sâu theo campaign để xác định điểm cần tối ưu</h4>
+						<p>Giá trị lớn nhất của dashboard nằm ở tầng campaign: đâu là nhóm đang tiêu mạnh nhưng chuyển đổi thấp, đâu là nhóm có tín hiệu tốt để mở rộng, và đâu là nhóm cần tối ưu creative, targeting hoặc bid strategy trước khi tiếp tục bơm ngân sách.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="decisions" class="section-shell">
+			<div class="container">
+				<article class="panel decision-panel reveal">
+					<p class="section-kicker">Solution</p>
+					<h3>Giải pháp đề xuất từ dashboard</h3>
+					<div class="decision-list">
+						<p>Thiết lập cơ chế phân bổ ngân sách theo hiệu suất thay vì chia đều: ưu tiên mở rộng cho các nhóm campaign có hiệu quả ổn định theo ROAS, ROMI và chất lượng chuyển đổi.</p>
+						<p>Tạo danh sách campaign cần tối ưu riêng cho các trường hợp chi phí cao nhưng doanh thu hoặc đơn hàng không tương xứng, sau đó kiểm tra lại creative, audience và bidding theo từng nền tảng.</p>
+						<p>Dùng conversion rate và cost per order như lớp kiểm chứng thứ hai để tránh quyết định chỉ dựa trên revenue, vì doanh thu cao chưa chắc đồng nghĩa với hiệu quả đầu tư tốt.</p>
+						<p>Biến dashboard thành công cụ theo dõi định kỳ cho team: mỗi lần review ngân sách đều có thể nhìn nhanh phần tổng quan, rồi đi sâu xuống đúng tầng dữ liệu đang gây vấn đề.</p>
+					</div>
+					<div class="hero-actions">
+						<a class="btn btn-solid" href="https://app.powerbi.com/view?r=eyJrIjoiY2JiODBjMjMtMjY4NS00N2NiLTk0OGEtNjY0ZWFjN2E1MGViIiwidCI6Ijk4MmEyZGRkLTliZTEtNGQ2ZS05Y2M5LTM3ZGVhYjEwM2MwNyIsImMiOjEwfQ%3D%3D" target="_blank" rel="noreferrer">Mở Power BI</a>
+						<a class="btn btn-outline" href="index.html#projects">Về portfolio</a>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-shell reveal">
+			<p>Marketing performance case study built with Python, Power BI, and Kaggle data.</p>
+		</div>
+	</footer>
+
+	<script type="module">
+		import { initRevealAnimations } from "./js/animations.js";
+
+		document.documentElement.setAttribute("data-theme", localStorage.getItem("portfolio_theme") || "light");
+		initRevealAnimations();
+	</script>
+</body>
+</html>

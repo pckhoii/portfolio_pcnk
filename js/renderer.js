@@ -290,7 +290,7 @@ export function renderPage(data, state) {
 		projectsGrid.innerHTML = featuredProjects
 			.map(
 				(item, index) => `
-				<article class="project-card project-card-${index + 1}">
+				<article class="project-card project-card-${index + 1}" role="link" tabindex="0" data-detail-url="${item.detailUrl || item.demoUrl}">
 					<div class="project-top">
 						<div>
 							<p class="project-chip">${lang === "en" ? "Case Study" : "Case Study"}</p>
@@ -310,6 +310,28 @@ export function renderPage(data, state) {
 			`
 			)
 			.join("");
+
+		projectsGrid.querySelectorAll("[data-detail-url]").forEach((card) => {
+			const openDetail = () => {
+				const detailUrl = card.getAttribute("data-detail-url");
+				if (detailUrl) {
+					window.location.href = detailUrl;
+				}
+			};
+
+			card.addEventListener("click", (event) => {
+				if (!event.target.closest("a")) {
+					openDetail();
+				}
+			});
+
+			card.addEventListener("keydown", (event) => {
+				if (event.key === "Enter" || event.key === " ") {
+					event.preventDefault();
+					openDetail();
+				}
+			});
+		});
 	}
 
 	const experienceList = document.getElementById("experienceList");

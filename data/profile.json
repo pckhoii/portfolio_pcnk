@@ -1,8 +1,8 @@
 {
 	"name": "Khoi Pham",
 	"role": {
-		"vi": "Data Analyst",
-		"en": "Data Analyst"
+		"vi": "Data Analyst | Data Engineer",
+		"en": "Data Analyst | Data Engineer"
 	},
 	"headline": {
 		"vi": "Biến dữ liệu thô thành góc nhìn kinh doanh rõ ràng.",
@@ -17,15 +17,15 @@
 		"en": "I focus on SQL, dashboard design, and data storytelling. My goal is to build analytics products that are simple to use and easy to scale."
 	},
 	"location": "Ho Chi Minh City, Vietnam",
-	"email": "youremail@example.com",
+	"email": "phamkhoi1602fw@gmail.com",
 	"socials": [
 		{
 			"label": "GitHub",
-			"url": "https://github.com/"
+			"url": "https://github.com/pckhoii"
 		},
 		{
 			"label": "LinkedIn",
-			"url": "https://www.linkedin.com/"
+			"url": "https://www.linkedin.com/in/pcnk-datananalyst/"
 		}
 	]
 }
