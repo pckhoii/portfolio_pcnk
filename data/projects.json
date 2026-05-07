@@ -6,13 +6,13 @@
 			"en": "Marketing Spend Performance Analysis"
 		},
 		"description": {
-			"vi": "Phân tích dữ liệu chi tiêu marketing từ Kaggle bằng Python và Power BI để đo lường Clicks, Conversion Rate, Cost, Revenue, ROMI và ROAS; từ đó xác định kênh, nền tảng và campaign mang lại hiệu quả tốt nhất để đề xuất phân bổ ngân sách có căn cứ.",
-			"en": "Analyzed Kaggle marketing spend data with Python and Power BI to measure clicks, conversion rate, cost, revenue, ROMI, and ROAS; identified the best-performing channels, platforms, and campaigns to support evidence-based budget allocation."
+			"vi": "Phân tích hiệu quả chi tiêu marketing bằng Python và Power BI để chỉ ra rằng tăng trưởng hiện tại đang được mua bằng ngân sách hơn là hiệu suất. Từ đó làm rõ channel, campaign và funnel nào đang tạo lợi nhuận thật, đâu là điểm đốt ngân sách, và đâu là cơ hội nên scale có kiểm soát.",
+			"en": "Analyzed marketing spend performance with Python and Power BI to show that current growth is being bought by spend rather than efficiency. Identified which channels, campaigns, and funnel stages generate real return, which areas burn budget, and where controlled scaling opportunities exist."
 		},
 		"tags": ["Python", "Power BI", "Marketing Analytics", "ROAS"],
 		"detailUrl": "marketing-performance.html",
 		"demoUrl": "https://app.powerbi.com/view?r=eyJrIjoiY2JiODBjMjMtMjY4NS00N2NiLTk0OGEtNjY0ZWFjN2E1MGViIiwidCI6Ijk4MmEyZGRkLTliZTEtNGQ2ZS05Y2M5LTM3ZGVhYjEwM2MwNyIsImMiOjEwfQ%3D%3D",
-		"repoUrl": "https://www.kaggle.com/datasets/sinderpreet/analyze-the-marketing-spending",
+		"repoUrl": "https://github.com/pckhoii/marketing_campaign_performance",
 		"featured": true,
 		"order": 1
 	}
