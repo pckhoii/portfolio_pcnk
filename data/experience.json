@@ -1,41 +1,45 @@
 [
 	{
-		"company": "ABC Commerce",
+		"company": "FSS JSC, Ho Chi Minh City",
 		"position": {
-			"vi": "Data Analyst",
-			"en": "Data Analyst"
+			"vi": "Data Engineer",
+			"en": "Data Engineer"
 		},
-		"period": "2024 - Present",
+		"period": "Apr 2025 - Present",
 		"highlights": {
 			"vi": [
-				"Xây dựng dashboard doanh thu và biên lợi nhuận theo kênh bán.",
-				"Giảm thời gian báo cáo tuần từ 1 ngày xuống 2 giờ.",
-				"Phối hợp với team Product để theo dõi KPI theo sprint."
+				"Triển khai hơn 10 dashboard BI cho khách hàng ngân hàng để theo dõi KPI vận hành và tài chính, hỗ trợ ra quyết định dựa trên dữ liệu.",
+				"Thiết kế, phát triển và tối ưu ETL pipeline bằng Python và PySpark để xử lý dữ liệu tài chính hằng ngày ở quy mô lớn, đảm bảo độ chính xác và tính sẵn sàng cho báo cáo.",
+				"Tích hợp và chuẩn hóa hơn 20 nguồn dữ liệu vào các lớp data warehouse có cấu trúc, cải thiện độ tin cậy và khả năng khai thác dữ liệu cho phân tích.",
+				"Phối hợp chặt chẽ với data engineer, analyst, business user và khách hàng ngân hàng để thu thập yêu cầu, hỗ trợ phân tích ad-hoc và nâng cấp giải pháp báo cáo."
 			],
 			"en": [
-				"Built revenue and margin dashboards by channel.",
-				"Reduced weekly reporting time from one day to two hours.",
-				"Worked with Product team to track sprint-level KPIs."
+				"Delivered 10+ BI dashboards for banking clients to monitor operational and financial KPIs, enabling data-driven decision-making.",
+				"Designed, developed, and optimized ETL pipelines using Python and PySpark to process large-scale daily financial data with accuracy and timely availability for reporting.",
+				"Integrated and standardized 20+ data sources into structured data warehouse layers, improving data reliability and usability for business analysis.",
+				"Worked closely with data engineers, analysts, business users, and banking clients to gather requirements, support ad-hoc analysis, and improve reporting solutions."
 			]
 		}
 	},
 	{
-		"company": "XYZ Startup",
+		"company": "Winwin Logistics JSC, Ho Chi Minh City",
 		"position": {
-			"vi": "Business Intelligence Intern",
-			"en": "Business Intelligence Intern"
+			"vi": "Data Analyst",
+			"en": "Data Analyst"
 		},
-		"period": "2023 - 2024",
+		"period": "Sep 2024 - Mar 2025",
 		"highlights": {
 			"vi": [
-				"Chuẩn hóa dữ liệu từ nhiều nguồn marketing.",
-				"Hỗ trợ xây bộ metric theo hành trình khách hàng.",
-				"Tự động hóa báo cáo KPI bằng SQL và Google Sheets."
+				"Phân tích dữ liệu vận hành và giao nhận để tìm ra điểm nghẽn trong quy trình logistics, hỗ trợ các sáng kiến tối ưu hiệu suất.",
+				"Xây dựng dashboard Power BI tương tác để theo dõi KPI như hiệu suất giao hàng, chi phí vận hành và mức sử dụng nguồn lực, giúp giảm 20% thời gian báo cáo thủ công.",
+				"Sử dụng SQL và Excel để phân tích sâu xu hướng, bất thường và mẫu dữ liệu, phục vụ điều tra nguyên nhân gốc rễ của vấn đề vận hành.",
+				"Chuyển hóa yêu cầu kinh doanh thành insight dữ liệu giúp stakeholder đưa ra quyết định tốt hơn về cải thiện hiệu suất và tối ưu chi phí."
 			],
 			"en": [
-				"Standardized data from multiple marketing sources.",
-				"Supported customer-journey metric framework setup.",
-				"Automated KPI reports with SQL and Google Sheets."
+				"Analyzed operational and delivery data to identify inefficiencies in logistics processes and support optimization initiatives.",
+				"Built interactive Power BI dashboards for KPIs such as delivery performance, cost efficiency, and resource utilization, reducing manual reporting time by 20%.",
+				"Used SQL and Excel to uncover trends, anomalies, and patterns that supported root-cause investigation of operational issues.",
+				"Translated business requirements into actionable insights that helped stakeholders improve performance and optimize costs."
 			]
 		}
 	}

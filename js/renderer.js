@@ -19,37 +19,38 @@ const uiText = {
 		contactTitle: "Cùng hợp tác",
 		contactKicker: "Contact",
 		contactText:
-			"Bạn có ý tưởng, dashboard hoặc luồng phân tích cần làm rõ? Tôi có thể hỗ trợ từ việc bóc tách bài toán đến xây hệ thống báo cáo dễ dùng cho team.",
+			"Bạn cần dashboard BI rõ ràng hơn, luồng ETL ổn định hơn, hay một góc nhìn dữ liệu giúp ra quyết định nhanh hơn? Tôi có thể hỗ trợ từ phân tích bài toán đến triển khai hệ thống báo cáo thực tế.",
 		contactBtn: "Gửi email",
 		footer: "Portfolio được xây dựng bằng HTML, CSS và JavaScript.",
 		locationLabel: "Địa điểm",
 		emailLabel: "Email",
+		phoneLabel: "Số điện thoại",
 		socialLabel: "Mạng xã hội",
 		viewDemo: "Live Demo",
 		viewCode: "Source",
 		themeSwitchLabel: "Light / Dark",
 		languageSwitchLabel: "VI / EN",
 		projectSummaryLabel: "Case study nổi bật",
-		impactSummaryValue: "Insight",
-		impactSummaryLabel: "Thiết kế cho quyết định kinh doanh",
-		availabilityText: "Sẵn sàng cho dự án mới",
+		impactSummaryValue: "Impact",
+		impactSummaryLabel: "Tập trung vào quyết định kinh doanh",
+		availabilityText: "Sẵn sàng cho cơ hội mới",
 		availabilityNote:
-			"Mở cho freelance analytics, tối ưu dashboard, và các cơ hội phân tích dữ liệu in-house.",
+			"Mở cho các cơ hội Data Analyst, Data Engineer, dashboard BI và tối ưu pipeline dữ liệu.",
 		specializations: [
-			"Business intelligence và reporting",
-			"A/B testing và đo hiệu quả",
-			"Funnel, cohort và retention analysis",
-			"Dashboard storytelling cho stakeholder"
+			"Dashboard BI và theo dõi KPI",
+			"ETL/ELT pipeline và chuẩn hóa dữ liệu",
+			"Data warehouse và data modeling",
+			"Phân tích vận hành, logistics và tài chính"
 		],
 		contactPoints: [
-			{ title: "Email trực tiếp", value: "Phản hồi nhanh cho trao đổi dự án" },
-			{ title: "Dashboard review", value: "Rà soát chỉ số, flow và câu chuyện dữ liệu" },
-			{ title: "Data consulting", value: "Thiết kế cấu trúc báo cáo và metric framework" }
+			{ title: "Trao đổi công việc", value: "Phản hồi nhanh cho cơ hội Data Analyst / Data Engineer" },
+			{ title: "BI dashboard", value: "Thiết kế và theo dõi KPI cho stakeholder" },
+			{ title: "Data pipeline", value: "Chuẩn hóa dữ liệu, ETL và data warehouse phục vụ báo cáo" }
 		],
 		stats: [
-			{ value: "20+", label: "Báo cáo đã triển khai" },
-			{ value: "95%", label: "Độ chính xác dữ liệu" },
-			{ value: "12", label: "Dự án thực chiến" }
+			{ value: "10+", label: "Dashboard BI đã triển khai" },
+			{ value: "20+", label: "Nguồn dữ liệu đã tích hợp" },
+			{ value: "2", label: "Vai trò chuyên môn chính" }
 		]
 	},
 	en: {
@@ -72,11 +73,12 @@ const uiText = {
 		contactTitle: "Let's Work Together",
 		contactKicker: "Contact",
 		contactText:
-			"If you need a clearer analytics workflow, sharper dashboard storytelling, or support translating raw data into action, I'd love to help.",
+			"If you need clearer BI dashboards, more reliable ETL workflows, or stronger analytics support for business decisions, I'd love to help.",
 		contactBtn: "Send Email",
 		footer: "Portfolio built with HTML, CSS, and JavaScript.",
 		locationLabel: "Location",
 		emailLabel: "Email",
+		phoneLabel: "Phone",
 		socialLabel: "Social",
 		viewDemo: "Live Demo",
 		viewCode: "Source",
@@ -85,24 +87,24 @@ const uiText = {
 		projectSummaryLabel: "Featured case studies",
 		impactSummaryValue: "Impact",
 		impactSummaryLabel: "Designed for business decisions",
-		availabilityText: "Available for new projects",
+		availabilityText: "Available for new opportunities",
 		availabilityNote:
-			"Open to freelance analytics work, dashboard optimization, and in-house data opportunities.",
+			"Open to Data Analyst and Data Engineer opportunities, BI dashboard work, and data pipeline optimization.",
 		specializations: [
-			"Business intelligence and reporting",
-			"A/B testing and impact measurement",
-			"Funnel, cohort, and retention analysis",
-			"Dashboard storytelling for stakeholders"
+			"BI dashboards and KPI monitoring",
+			"ETL/ELT pipelines and data standardization",
+			"Data warehousing and data modeling",
+			"Operational, logistics, and financial analytics"
 		],
 		contactPoints: [
-			{ title: "Direct email", value: "Fast replies for project discussions" },
-			{ title: "Dashboard review", value: "Review metrics, flow, and data narrative" },
-			{ title: "Data consulting", value: "Build reporting structure and metric frameworks" }
+			{ title: "Work inquiries", value: "Fast replies for Data Analyst and Data Engineer opportunities" },
+			{ title: "BI dashboards", value: "Build KPI reporting experiences for stakeholders" },
+			{ title: "Data pipelines", value: "Support ETL, data warehousing, and reporting readiness" }
 		],
 		stats: [
-			{ value: "20+", label: "Reports Delivered" },
-			{ value: "95%", label: "Data Accuracy" },
-			{ value: "12", label: "Hands-on Projects" }
+			{ value: "10+", label: "BI Dashboards Delivered" },
+			{ value: "20+", label: "Data Sources Standardized" },
+			{ value: "2", label: "Core Data Roles" }
 		]
 	}
 };
@@ -160,8 +162,8 @@ export function renderPage(data, state) {
 	setText("heroRole", profile.name || pickText(profile.role, lang));
 	setText("heroHeadline", pickText(profile.headline, lang));
 	setText("heroSummary", pickText(profile.summary, lang));
-	setText("heroPrimaryBtn", t.heroPrimaryBtn || (lang === "en" ? "View Projects" : "Xem dự án"));
-	setText("heroSecondaryBtn", t.heroSecondaryBtn || (lang === "en" ? "Contact" : "Liên hệ"));
+	setText("heroPrimaryBtn", lang === "en" ? "View Projects" : "Xem dự án");
+	setText("heroSecondaryBtn", lang === "en" ? "Contact" : "Liên hệ");
 
 	setText("aboutTitle", t.aboutTitle);
 	setText("aboutKicker", t.aboutKicker);
@@ -184,6 +186,7 @@ export function renderPage(data, state) {
 	setText("languageSwitchLabel", t.languageSwitchLabel);
 	setText("locationLabel", t.locationLabel);
 	setText("emailLabel", t.emailLabel);
+	setText("phoneLabel", t.phoneLabel);
 	setText("socialLabel", t.socialLabel);
 	setText("projectSummaryValue", `${featuredProjects.length}`);
 	setText("projectSummaryLabel", t.projectSummaryLabel);
@@ -205,6 +208,12 @@ export function renderPage(data, state) {
 		emailLink.textContent = profile.email;
 	}
 
+	const phoneLink = document.getElementById("phoneLink");
+	if (phoneLink) {
+		phoneLink.href = `tel:${profile.phone || ""}`;
+		phoneLink.textContent = profile.phone || "";
+	}
+
 	const socialList = document.getElementById("socialList");
 	if (socialList) {
 		socialList.innerHTML = profile.socials
@@ -220,12 +229,14 @@ export function renderPage(data, state) {
 
 	const statRow = document.getElementById("statRow");
 	if (statRow) {
-		statRow.innerHTML = t.stats
+		const stats = Array.isArray(profile.stats) && profile.stats.length ? profile.stats : t.stats;
+
+		statRow.innerHTML = stats
 			.map(
 				(item) => `
 				<article class="stat-card">
 					<p class="stat-value">${item.value}</p>
-					<p class="stat-label">${item.label}</p>
+					<p class="stat-label">${pickText(item.label, lang)}</p>
 				</article>
 			`
 			)
@@ -234,23 +245,37 @@ export function renderPage(data, state) {
 
 	const aboutHighlights = document.getElementById("aboutHighlights");
 	if (aboutHighlights) {
-		aboutHighlights.innerHTML = `
-			<article class="mini-card">
-				<p class="mini-value">${initialsFromName(profile.name)}</p>
-				<h4>${pickText(profile.role, lang)}</h4>
-				<p>${lang === "en" ? "Focused on clarity, velocity, and stakeholder-ready insight." : "Tập trung vào sự rõ ràng, tốc độ và insight dễ dùng cho stakeholder."}</p>
-			</article>
-			<article class="mini-card">
-				<p class="mini-value">${featuredProjects.length}+</p>
-				<h4>${lang === "en" ? "Featured Work" : "Case Study"}</h4>
-				<p>${lang === "en" ? "From forecasting to retention and funnel optimization." : "Từ forecasting đến retention và tối ưu conversion funnel."}</p>
-			</article>
-			<article class="mini-card">
-				<p class="mini-value">${profile.location.split(",")[0]}</p>
-				<h4>${lang === "en" ? "Based In" : "Đang làm việc tại"}</h4>
-				<p>${lang === "en" ? "Open to remote collaboration and cross-functional data work." : "Sẵn sàng cho collaboration remote và các bài toán dữ liệu liên phòng ban."}</p>
-			</article>
-		`;
+		if (Array.isArray(profile.highlights) && profile.highlights.length) {
+			aboutHighlights.innerHTML = profile.highlights
+				.map(
+					(item) => `
+					<article class="mini-card">
+						<p class="mini-value">${item.value}</p>
+						<h4>${pickText(item.title, lang)}</h4>
+						<p>${pickText(item.description, lang)}</p>
+					</article>
+				`
+				)
+				.join("");
+		} else {
+			aboutHighlights.innerHTML = `
+				<article class="mini-card">
+					<p class="mini-value">${initialsFromName(profile.name)}</p>
+					<h4>${pickText(profile.role, lang)}</h4>
+					<p>${lang === "en" ? "Focused on clarity, velocity, and stakeholder-ready insight." : "Tập trung vào sự rõ ràng, tốc độ và insight dễ dùng cho stakeholder."}</p>
+				</article>
+				<article class="mini-card">
+					<p class="mini-value">${featuredProjects.length}+</p>
+					<h4>${lang === "en" ? "Featured Work" : "Case Study"}</h4>
+					<p>${lang === "en" ? "From forecasting to retention and funnel optimization." : "Từ forecasting đến retention và tối ưu conversion funnel."}</p>
+				</article>
+				<article class="mini-card">
+					<p class="mini-value">${profile.location.split(",")[0]}</p>
+					<h4>${lang === "en" ? "Based In" : "Đang làm việc tại"}</h4>
+					<p>${lang === "en" ? "Open to remote collaboration and cross-functional data work." : "Sẵn sàng cho collaboration remote và các bài toán dữ liệu liên phòng ban."}</p>
+				</article>
+			`;
+		}
 	}
 
 	const skillsGrid = document.getElementById("skillsGrid");
@@ -293,7 +318,7 @@ export function renderPage(data, state) {
 				<article class="project-card project-card-${index + 1}" role="link" tabindex="0" data-detail-url="${item.detailUrl || item.demoUrl}">
 					<div class="project-top">
 						<div>
-							<p class="project-chip">${lang === "en" ? "Case Study" : "Case Study"}</p>
+							<p class="project-chip">Case Study</p>
 							<h4>${pickText(item.title, lang)}</h4>
 						</div>
 						<div class="project-icon project-icon-${(index % 3) + 1}"></div>

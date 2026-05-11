@@ -2,14 +2,14 @@
 	{
 		"id": "marketing-performance",
 		"title": {
-			"vi": "Phân tích hiệu quả chi tiêu Marketing",
+			"vi": "Dashboard Phân Tích Hiệu Quả Chiến Dịch Marketing",
 			"en": "Marketing Spend Performance Analysis"
 		},
 		"description": {
-			"vi": "Phân tích hiệu quả chi tiêu marketing bằng Python và Power BI để chỉ ra rằng tăng trưởng hiện tại đang được mua bằng ngân sách hơn là hiệu suất. Từ đó làm rõ channel, campaign và funnel nào đang tạo lợi nhuận thật, đâu là điểm đốt ngân sách, và đâu là cơ hội nên scale có kiểm soát.",
-			"en": "Analyzed marketing spend performance with Python and Power BI to show that current growth is being bought by spend rather than efficiency. Identified which channels, campaigns, and funnel stages generate real return, which areas burn budget, and where controlled scaling opportunities exist."
+			"vi": "Xử lý và phân tích dữ liệu marketing đa kênh bằng Python và Power BI để đánh giá hiệu quả campaign, theo dõi các KPI như CTR, Conversion Rate, ROAS và CPO, đồng thời phát hiện bất thường để đề xuất tối ưu phân bổ ngân sách.",
+			"en": "Processed and analyzed multi-channel marketing data with Python and Power BI to evaluate campaign performance, monitor CTR, Conversion Rate, ROAS, and CPO, and surface anomalies that informed smarter budget reallocation."
 		},
-		"tags": ["Python", "Power BI", "Marketing Analytics", "ROAS"],
+		"tags": ["Python", "Pandas", "Power BI", "Marketing Analytics", "ROAS"],
 		"detailUrl": "marketing-performance.html",
 		"demoUrl": "https://app.powerbi.com/view?r=eyJrIjoiY2JiODBjMjMtMjY4NS00N2NiLTk0OGEtNjY0ZWFjN2E1MGViIiwidCI6Ijk4MmEyZGRkLTliZTEtNGQ2ZS05Y2M5LTM3ZGVhYjEwM2MwNyIsImMiOjEwfQ%3D%3D",
 		"repoUrl": "https://github.com/pckhoii/marketing_campaign_performance",

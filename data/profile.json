@@ -5,18 +5,19 @@
 		"en": "Data Analyst | Data Engineer"
 	},
 	"headline": {
-		"vi": "Biến dữ liệu thô thành góc nhìn kinh doanh rõ ràng.",
-		"en": "Turning raw data into clear business direction."
+		"vi": "Phân tích dữ liệu vận hành và xây dựng pipeline đáng tin cậy cho quyết định kinh doanh.",
+		"en": "Analyzing operational data and building reliable pipelines for better business decisions."
 	},
 	"summary": {
-		"vi": "Tôi phân tích dữ liệu để tìm ra vấn đề, đưa ra giải pháp và trình bày insight để team quyết định nhanh hơn.",
-		"en": "I analyze data to identify bottlenecks, design solutions, and present insights that help teams decide faster."
+		"vi": "Tôi có kinh nghiệm phân tích dữ liệu vận hành, logistics và tài chính để hỗ trợ ra quyết định. Tôi sử dụng SQL, Excel, Power BI, Python và PySpark để xây dashboard, theo dõi KPI, tìm nguyên nhân gốc rễ và chuẩn hóa dữ liệu phục vụ báo cáo.",
+		"en": "I analyze operational, logistics, and financial data to support business decisions. I use SQL, Excel, Power BI, Python, and PySpark to build dashboards, monitor KPIs, investigate root causes, and standardize data for reporting."
 	},
 	"about": {
-		"vi": "Tôi tập trung vào SQL, dashboard và storytelling bằng data. Mục tiêu của tôi là xây dựng sản phẩm phân tích dễ dùng và dễ mở rộng.",
-		"en": "I focus on SQL, dashboard design, and data storytelling. My goal is to build analytics products that are simple to use and easy to scale."
+		"vi": "Tôi làm việc ở giao điểm giữa analytics và data engineering: từ phân tích hiệu suất vận hành, thiết kế dashboard BI cho stakeholder, đến xây ETL pipeline và data warehouse layer cho hệ thống báo cáo. Tôi ưu tiên dữ liệu sạch, logic đo lường rõ ràng và đầu ra dễ hành động.",
+		"en": "I work at the intersection of analytics and data engineering, from operational performance analysis and BI dashboard design to ETL pipelines and warehouse layers for reporting. I care about clean data, clear measurement logic, and outputs that teams can act on."
 	},
-	"location": "Ho Chi Minh City, Vietnam",
+	"location": "Thu Duc, Ho Chi Minh City, Vietnam",
+	"phone": "0858833863",
 	"email": "phamkhoi1602fw@gmail.com",
 	"socials": [
 		{
@@ -26,6 +27,64 @@
 		{
 			"label": "LinkedIn",
 			"url": "https://www.linkedin.com/in/pcnk-datananalyst/"
+		}
+	],
+	"stats": [
+		{
+			"value": "10+",
+			"label": {
+				"vi": "Dashboard BI đã triển khai",
+				"en": "BI Dashboards Delivered"
+			}
+		},
+		{
+			"value": "20+",
+			"label": {
+				"vi": "Nguồn dữ liệu đã tích hợp",
+				"en": "Data Sources Standardized"
+			}
+		},
+		{
+			"value": "2",
+			"label": {
+				"vi": "Vai trò chuyên môn chính",
+				"en": "Core Data Roles"
+			}
+		}
+	],
+	"highlights": [
+		{
+			"value": "UEL",
+			"title": {
+				"vi": "Học vấn",
+				"en": "Education"
+			},
+			"description": {
+				"vi": "Cử nhân Hệ thống Thông tin Quản lý, chuyên ngành Digital Business & AI (09/2021 - 05/2025).",
+				"en": "Bachelor's degree in Management Information Systems, majoring in Digital Business & AI (Sep 2021 - May 2025)."
+			}
+		},
+		{
+			"value": "690",
+			"title": {
+				"vi": "TOEIC & Certs",
+				"en": "TOEIC & Certs"
+			},
+			"description": {
+				"vi": "TOEIC 690 cùng Google Data Analytics Certificate và Data Analyst Associate.",
+				"en": "TOEIC 690 plus Google Data Analytics Certificate and Data Analyst Associate."
+			}
+		},
+		{
+			"value": "ETL",
+			"title": {
+				"vi": "Trọng tâm hiện tại",
+				"en": "Current Focus"
+			},
+			"description": {
+				"vi": "Dashboard BI, ETL/ELT pipeline, data warehouse và phân tích dữ liệu vận hành.",
+				"en": "BI dashboards, ETL/ELT pipelines, data warehousing, and operational analytics."
+			}
 		}
 	]
 }

@@ -1,23 +1,37 @@
 [
 	{
 		"title": {
-			"vi": "Phân tích dữ liệu",
-			"en": "Data Analysis"
+			"vi": "Lập trình & Truy vấn",
+			"en": "Programming & Query"
 		},
-		"items": ["SQL", "Python", "Statistics", "A/B Testing"]
+		"items": ["SQL (T-SQL)", "Python", "Pandas", "NumPy", "PySpark", "Git (Fundamental)"]
 	},
 	{
 		"title": {
-			"vi": "Dashboard",
-			"en": "Dashboard"
+			"vi": "Phân tích & BI",
+			"en": "Data Analysis & BI"
 		},
-		"items": ["Power BI", "Tableau", "Looker Studio", "Excel"]
+		"items": ["Power BI", "IBM Cognos", "Tableau", "Excel"]
 	},
 	{
 		"title": {
-			"vi": "Giao tiếp",
-			"en": "Communication"
+			"vi": "Data Engineering",
+			"en": "Data Engineering"
 		},
-		"items": ["Data Storytelling", "Presentation", "Stakeholder Management"]
+		"items": ["ETL/ELT Pipelines", "Spark", "Data Modeling", "Data Warehousing", "dbt", "Data Validation", "Job Automation"]
+	},
+	{
+		"title": {
+			"vi": "Nền tảng phân tích",
+			"en": "Core Concepts"
+		},
+		"items": ["EDA", "Statistical Analysis", "Data Cleaning", "Data Integration", "Star Schema", "Snowflake Schema"]
+	},
+	{
+		"title": {
+			"vi": "Cloud",
+			"en": "Cloud"
+		},
+		"items": ["AWS (Fundamental)", "Azure (Fundamental)"]
 	}
 ]
