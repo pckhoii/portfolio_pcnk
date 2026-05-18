@@ -3,6 +3,7 @@ const uiText = {
 		brand: "Portfolio",
 		navAbout: "Giới thiệu",
 		navSkills: "Kỹ năng",
+		navCertifications: "Chứng chỉ",
 		navProjects: "Dự án",
 		navExperience: "Kinh nghiệm",
 		navContact: "Liên hệ",
@@ -11,7 +12,9 @@ const uiText = {
 		aboutFeatureTitle: "Biến dữ liệu thành định hướng",
 		skillsTitle: "Kỹ năng cốt lõi",
 		skillsKicker: "Toolkit",
-		skillsAsideTitle: "Trọng tâm",
+		skillsAsideTitle: "Trọng tâm triển khai",
+		certificationsTitle: "Chứng chỉ",
+		certificationsKicker: "Credentials",
 		projectsTitle: "Dự án nổi bật",
 		projectsKicker: "Selected Work",
 		experienceTitle: "Kinh nghiệm",
@@ -36,6 +39,7 @@ const uiText = {
 		availabilityText: "Sẵn sàng cho cơ hội mới",
 		availabilityNote:
 			"Mở cho các cơ hội Data Analyst, Data Engineer, dashboard BI và tối ưu pipeline dữ liệu.",
+		certificationIssuerLabel: "Đơn vị",
 		specializations: [
 			"Dashboard BI và theo dõi KPI",
 			"ETL/ELT pipeline và chuẩn hóa dữ liệu",
@@ -57,6 +61,7 @@ const uiText = {
 		brand: "Portfolio",
 		navAbout: "About",
 		navSkills: "Skills",
+		navCertifications: "Credentials",
 		navProjects: "Projects",
 		navExperience: "Experience",
 		navContact: "Contact",
@@ -66,6 +71,8 @@ const uiText = {
 		skillsTitle: "Core Skills",
 		skillsKicker: "Toolkit",
 		skillsAsideTitle: "Focus Areas",
+		certificationsTitle: "Certifications",
+		certificationsKicker: "Credentials",
 		projectsTitle: "Featured Projects",
 		projectsKicker: "Selected Work",
 		experienceTitle: "Experience",
@@ -90,6 +97,7 @@ const uiText = {
 		availabilityText: "Available for new opportunities",
 		availabilityNote:
 			"Open to Data Analyst and Data Engineer opportunities, BI dashboard work, and data pipeline optimization.",
+		certificationIssuerLabel: "Issuer",
 		specializations: [
 			"BI dashboards and KPI monitoring",
 			"ETL/ELT pipelines and data standardization",
@@ -128,6 +136,13 @@ const setText = (id, text) => {
 	}
 };
 
+const setVisibility = (id, isVisible) => {
+	const node = document.getElementById(id);
+	if (node) {
+		node.style.display = isVisible ? "" : "none";
+	}
+};
+
 const initialsFromName = (name) => {
 	if (!name) {
 		return "DA";
@@ -148,12 +163,14 @@ export function renderPage(data, state) {
 	const featuredProjects = [...projects]
 		.filter((item) => item.featured)
 		.sort((a, b) => (a.order || 99) - (b.order || 99));
+	const certifications = Array.isArray(profile.certifications) ? profile.certifications : [];
 
 	document.documentElement.lang = lang;
 
 	setText("brandText", t.brand);
 	setText("navAbout", t.navAbout);
 	setText("navSkills", t.navSkills);
+	setText("navCertifications", t.navCertifications);
 	setText("navProjects", t.navProjects);
 	setText("navExperience", t.navExperience);
 	setText("navContact", t.navContact);
@@ -173,6 +190,8 @@ export function renderPage(data, state) {
 	setText("skillsTitle", t.skillsTitle);
 	setText("skillsKicker", t.skillsKicker);
 	setText("skillsAsideTitle", t.skillsAsideTitle);
+	setText("certificationsTitle", t.certificationsTitle);
+	setText("certificationsKicker", t.certificationsKicker);
 	setText("projectsTitle", t.projectsTitle);
 	setText("projectsKicker", t.projectsKicker);
 	setText("experienceTitle", t.experienceTitle);
@@ -309,6 +328,28 @@ export function renderPage(data, state) {
 			)
 			.join("");
 	}
+
+	const certificationsGrid = document.getElementById("certificationsGrid");
+	if (certificationsGrid) {
+		certificationsGrid.innerHTML = certifications
+			.map(
+				(item) => `
+				<article class="cert-card">
+					<div class="cert-card-top">
+						<p class="cert-badge">${item.badge || ""}</p>
+						<div class="cert-copy">
+							<h4>${pickText(item.title, lang)}</h4>
+							<p class="cert-issuer"><span>${t.certificationIssuerLabel}</span> ${pickText(item.issuer, lang)}</p>
+						</div>
+					</div>
+					<p class="cert-description">${pickText(item.description, lang)}</p>
+				</article>
+			`
+			)
+			.join("");
+	}
+
+	setVisibility("certifications", certifications.length > 0);
 
 	const projectsGrid = document.getElementById("projectsGrid");
 	if (projectsGrid) {

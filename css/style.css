@@ -672,7 +672,6 @@ a {
 }
 
 .about-grid,
-.skills-layout,
 .contact-layout {
 	display: grid;
 	grid-template-columns: 1.25fr 0.95fr;
@@ -799,13 +798,15 @@ a {
 }
 
 .skills-grid,
-.projects-grid {
+.projects-grid,
+.certifications-grid {
 	display: grid;
 	gap: 14px;
 }
 
 .skills-grid {
-	grid-template-columns: repeat(3, minmax(0, 1fr));
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	margin-top: 18px;
 }
 
 .skill-card,
@@ -844,6 +845,17 @@ a {
 	margin-bottom: 14px;
 }
 
+.skills-focus {
+	padding: 22px 24px;
+}
+
+.skills-focus-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+}
+
 .tag-row {
 	display: flex;
 	flex-wrap: wrap;
@@ -866,16 +878,15 @@ a {
 	background: var(--glass-bg-soft), var(--surface-soft);
 }
 
-.panel-side {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
 .specialization-list {
 	display: grid;
 	gap: 14px;
 	margin-top: 18px;
+}
+
+.specialization-list-compact {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0 22px;
 }
 
 .specialization-item {
@@ -912,6 +923,77 @@ a {
 
 .specialization-item p {
 	margin: 0;
+}
+
+.certifications-grid {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cert-card {
+	-webkit-backdrop-filter: blur(20px) saturate(125%);
+	backdrop-filter: blur(20px) saturate(125%);
+	border: 1px solid var(--glass-line);
+	background: var(--glass-bg), var(--surface);
+	box-shadow:
+		0 22px 62px rgba(0, 0, 0, 0.24),
+		inset 0 1px 0 rgba(255, 255, 255, 0.06);
+	border-radius: 22px;
+	padding: 20px;
+}
+
+.cert-card-top {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: start;
+	gap: 16px;
+}
+
+.cert-badge {
+	min-width: 76px;
+	margin: 0;
+	padding: 12px 14px;
+	border-radius: 18px;
+	background:
+		linear-gradient(135deg, rgba(100, 210, 255, 0.16), rgba(139, 92, 246, 0.14)),
+		var(--surface-soft);
+	border: 1px solid var(--glass-line);
+	color: var(--accent);
+	font-size: 1.1rem;
+	font-weight: 800;
+	text-align: center;
+}
+
+.cert-copy h4,
+.cert-copy p,
+.cert-description {
+	margin: 0;
+}
+
+.cert-copy h4 {
+	font-size: 1.06rem;
+}
+
+.cert-issuer {
+	margin-top: 8px;
+	color: var(--muted);
+	font-size: 0.92rem;
+}
+
+.cert-issuer span {
+	color: var(--text);
+	font-weight: 600;
+	margin-right: 6px;
+}
+
+.cert-description {
+	margin-top: 16px;
+	color: var(--muted);
+	line-height: 1.7;
+}
+
+.contact-meta-grid {
+	margin-top: 0;
+	margin-bottom: 18px;
 }
 
 .project-summary {
@@ -1317,12 +1399,12 @@ a {
 
 @media (max-width: 1080px) {
 	.skills-grid,
-	.projects-grid {
+	.projects-grid,
+	.certifications-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
 	.about-grid,
-	.skills-layout,
 	.contact-layout,
 	.project-detail-shell,
 	.detail-grid,
@@ -1350,7 +1432,9 @@ a {
 	.project-detail-metrics,
 	.project-summary,
 	.skills-grid,
-	.projects-grid {
+	.projects-grid,
+	.certifications-grid,
+	.specialization-list-compact {
 		grid-template-columns: 1fr;
 	}
 

@@ -1,15 +1,15 @@
 [
 	{
 		"title": {
-			"vi": "Lập trình & Truy vấn",
-			"en": "Programming & Query"
+			"vi": "SQL & Python",
+			"en": "SQL & Python"
 		},
-		"items": ["SQL (T-SQL)", "Python", "Pandas", "NumPy", "PySpark", "Git (Fundamental)"]
+		"items": ["SQL (T-SQL)", "Python", "Pandas", "NumPy", "PySpark"]
 	},
 	{
 		"title": {
-			"vi": "Phân tích & BI",
-			"en": "Data Analysis & BI"
+			"vi": "BI & Báo cáo",
+			"en": "BI & Reporting"
 		},
 		"items": ["Power BI", "IBM Cognos", "Tableau", "Excel"]
 	},
@@ -18,20 +18,20 @@
 			"vi": "Data Engineering",
 			"en": "Data Engineering"
 		},
-		"items": ["ETL/ELT Pipelines", "Spark", "Data Modeling", "Data Warehousing", "dbt", "Data Validation", "Job Automation"]
+		"items": ["ETL/ELT Pipelines", "Spark", "dbt", "Data Validation", "Job Automation"]
 	},
 	{
 		"title": {
-			"vi": "Nền tảng phân tích",
-			"en": "Core Concepts"
+			"vi": "Data Modeling",
+			"en": "Data Modeling"
 		},
-		"items": ["EDA", "Statistical Analysis", "Data Cleaning", "Data Integration", "Star Schema", "Snowflake Schema"]
+		"items": ["Data Modeling", "Data Warehousing", "Star Schema", "Snowflake Schema", "Data Integration"]
 	},
 	{
 		"title": {
-			"vi": "Cloud",
-			"en": "Cloud"
+			"vi": "Phân tích nền tảng",
+			"en": "Analytics Foundations"
 		},
-		"items": ["AWS (Fundamental)", "Azure (Fundamental)"]
+		"items": ["EDA", "Statistical Analysis", "Data Cleaning", "Git (Fundamental)", "AWS (Fundamental)", "Azure (Fundamental)"]
 	}
 ]

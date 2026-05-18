@@ -61,6 +61,7 @@
 			<nav class="main-nav" aria-label="Main navigation">
 				<a href="#about" id="navAbout">Giới thiệu</a>
 				<a href="#skills" id="navSkills">Kỹ năng</a>
+				<a href="#certifications" id="navCertifications">Chứng chỉ</a>
 				<a href="#projects" id="navProjects">Dự án</a>
 				<a href="#experience" id="navExperience">Kinh nghiệm</a>
 				<a href="#contact" id="navContact">Liên hệ</a>
@@ -100,25 +101,6 @@
 				<div class="hero-stats reveal" data-reveal-delay="120">
 					<div class="stats-grid" id="statRow"></div>
 				</div>
-
-				<div class="hero-meta-grid reveal" data-reveal-delay="180">
-					<article class="info-card">
-						<p class="meta-label" id="locationLabel">Địa điểm</p>
-						<p id="locationText"></p>
-					</article>
-					<article class="info-card">
-						<p class="meta-label" id="emailLabel">Email</p>
-						<a id="emailLink" href="#"></a>
-					</article>
-					<article class="info-card">
-						<p class="meta-label" id="phoneLabel">Phone</p>
-						<a id="phoneLink" href="#"></a>
-					</article>
-					<article class="info-card info-card-social">
-						<p class="meta-label" id="socialLabel">Mạng xã hội</p>
-						<ul id="socialList" class="social-list"></ul>
-					</article>
-				</div>
 			</div>
 		</section>
 
@@ -153,13 +135,25 @@
 					<h3 id="skillsTitle">Kỹ năng cốt lõi</h3>
 				</div>
 
-				<div class="skills-layout">
-					<div id="skillsGrid" class="skills-grid reveal" data-reveal-delay="60"></div>
-					<aside class="panel panel-side reveal" data-reveal-delay="120">
+				<div class="skills-focus panel reveal" data-reveal-delay="40">
+					<div class="skills-focus-head">
 						<h4 id="skillsAsideTitle">Focus Areas</h4>
-						<div id="specializationList" class="specialization-list"></div>
-					</aside>
+					</div>
+					<div id="specializationList" class="specialization-list specialization-list-compact"></div>
 				</div>
+
+				<div id="skillsGrid" class="skills-grid reveal" data-reveal-delay="100"></div>
+			</div>
+		</section>
+
+		<section id="certifications" class="section-shell">
+			<div class="container">
+				<div class="section-heading reveal">
+					<p class="section-kicker" id="certificationsKicker">Credentials</p>
+					<h3 id="certificationsTitle">Chứng chỉ</h3>
+				</div>
+
+				<div id="certificationsGrid" class="certifications-grid reveal" data-reveal-delay="60"></div>
 			</div>
 		</section>
 
@@ -200,6 +194,25 @@
 				<div class="section-heading reveal">
 					<p class="section-kicker" id="contactKicker">Contact</p>
 					<h3 id="contactTitle">Cùng hợp tác</h3>
+				</div>
+
+				<div class="hero-meta-grid contact-meta-grid reveal" data-reveal-delay="40">
+					<article class="info-card">
+						<p class="meta-label" id="locationLabel">Địa điểm</p>
+						<p id="locationText"></p>
+					</article>
+					<article class="info-card">
+						<p class="meta-label" id="emailLabel">Email</p>
+						<a id="emailLink" href="#"></a>
+					</article>
+					<article class="info-card">
+						<p class="meta-label" id="phoneLabel">Phone</p>
+						<a id="phoneLink" href="#"></a>
+					</article>
+					<article class="info-card info-card-social">
+						<p class="meta-label" id="socialLabel">Mạng xã hội</p>
+						<ul id="socialList" class="social-list"></ul>
+					</article>
 				</div>
 
 				<div class="contact-layout">

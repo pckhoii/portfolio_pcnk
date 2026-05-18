@@ -65,17 +65,6 @@
 			}
 		},
 		{
-			"value": "690",
-			"title": {
-				"vi": "TOEIC & Certs",
-				"en": "TOEIC & Certs"
-			},
-			"description": {
-				"vi": "TOEIC 690 cùng Google Data Analytics Certificate và Data Analyst Associate.",
-				"en": "TOEIC 690 plus Google Data Analytics Certificate and Data Analyst Associate."
-			}
-		},
-		{
 			"value": "ETL",
 			"title": {
 				"vi": "Trọng tâm hiện tại",
@@ -84,6 +73,53 @@
 			"description": {
 				"vi": "Dashboard BI, ETL/ELT pipeline, data warehouse và phân tích dữ liệu vận hành.",
 				"en": "BI dashboards, ETL/ELT pipelines, data warehousing, and operational analytics."
+			}
+		}
+	],
+	"certifications": [
+		{
+			"badge": "690",
+			"title": {
+				"vi": "TOEIC Listening & Reading",
+				"en": "TOEIC Listening & Reading"
+			},
+			"issuer": {
+				"vi": "Điểm số ngoại ngữ",
+				"en": "Language proficiency"
+			},
+			"description": {
+				"vi": "TOEIC 690, phù hợp cho môi trường làm việc tài liệu và báo cáo tiếng Anh.",
+				"en": "TOEIC score of 690, supporting English-based documentation and reporting work."
+			}
+		},
+		{
+			"badge": "Google",
+			"title": {
+				"vi": "Google Data Analytics Certificate",
+				"en": "Google Data Analytics Certificate"
+			},
+			"issuer": {
+				"vi": "Google",
+				"en": "Google"
+			},
+			"description": {
+				"vi": "Nền tảng về làm sạch dữ liệu, phân tích, trực quan hóa và tư duy ra quyết định dựa trên dữ liệu.",
+				"en": "Foundation in data cleaning, analysis, visualization, and data-driven decision making."
+			}
+		},
+		{
+			"badge": "PL-300",
+			"title": {
+				"vi": "Data Analyst Associate",
+				"en": "Data Analyst Associate"
+			},
+			"issuer": {
+				"vi": "Microsoft Power BI",
+				"en": "Microsoft Power BI"
+			},
+			"description": {
+				"vi": "Tập trung vào mô hình dữ liệu, trực quan hóa và triển khai báo cáo phục vụ phân tích doanh nghiệp.",
+				"en": "Focused on data modeling, visualization, and report delivery for business analytics."
 			}
 		}
 	]
