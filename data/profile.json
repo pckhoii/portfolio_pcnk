@@ -5,16 +5,16 @@
 		"en": "Data Analyst | Data Engineer"
 	},
 	"headline": {
-		"vi": "Phân tích dữ liệu vận hành và xây dựng pipeline đáng tin cậy cho quyết định kinh doanh.",
-		"en": "Analyzing operational data and building reliable pipelines for better business decisions."
+		"vi": "Tôi bắt đầu từ những câu hỏi vận hành rất thực tế, rồi dùng dữ liệu để biến chúng thành quyết định rõ ràng hơn.",
+		"en": "I usually start with real operational questions, then use data to turn them into clearer decisions."
 	},
 	"summary": {
-		"vi": "Tôi có kinh nghiệm phân tích dữ liệu vận hành, logistics và tài chính để hỗ trợ ra quyết định. Tôi sử dụng SQL, Excel, Power BI, Python và PySpark để xây dashboard, theo dõi KPI, tìm nguyên nhân gốc rễ và chuẩn hóa dữ liệu phục vụ báo cáo.",
-		"en": "I analyze operational, logistics, and financial data to support business decisions. I use SQL, Excel, Power BI, Python, and PySpark to build dashboards, monitor KPIs, investigate root causes, and standardize data for reporting."
+		"vi": "Mình đi từ Data Analyst sang Data Engineer, nên cách làm việc cũng mang màu sắc của cả hai bên: vừa muốn hiểu bài toán kinh doanh đang vướng ở đâu, vừa muốn dữ liệu phía sau đủ sạch và đủ chắc để người dùng có thể tin mà sử dụng. Phần lớn thời gian, mình làm với SQL, Excel, Power BI, Python và PySpark để xây dashboard, theo dõi KPI, xử lý dữ liệu và hỗ trợ team ra quyết định nhanh hơn.",
+		"en": "My path has moved from Data Analyst into Data Engineer, so I naturally work with both mindsets: understanding where the business problem really is, and making sure the data behind it is clean and reliable enough for people to trust. Most of my work involves SQL, Excel, Power BI, Python, and PySpark for dashboards, KPI tracking, data processing, and helping teams make faster decisions."
 	},
 	"about": {
-		"vi": "Tôi làm việc ở giao điểm giữa analytics và data engineering: từ phân tích hiệu suất vận hành, thiết kế dashboard BI cho stakeholder, đến xây ETL pipeline và data warehouse layer cho hệ thống báo cáo. Tôi ưu tiên dữ liệu sạch, logic đo lường rõ ràng và đầu ra dễ hành động.",
-		"en": "I work at the intersection of analytics and data engineering, from operational performance analysis and BI dashboard design to ETL pipelines and warehouse layers for reporting. I care about clean data, clear measurement logic, and outputs that teams can act on."
+		"vi": "Điều mình thấy thú vị ở nghề data là mỗi bài toán luôn có hai lớp. Một lớp là câu chuyện nghiệp vụ: vì sao doanh thu lệch, vì sao vận hành chậm, vì sao một KPI nhìn không đúng như kỳ vọng. Lớp còn lại là hạ tầng dữ liệu phía sau: dữ liệu đang nằm ở đâu, có nhất quán không, và phải xử lý thế nào để khi lên báo cáo thì ai nhìn vào cũng hiểu giống nhau. Mình thích làm ở giao điểm đó, nơi phân tích không chỉ dừng ở insight mà còn đi tiếp đến một hệ thống dữ liệu gọn gàng, ổn định và dùng được lâu dài.",
+		"en": "What I enjoy about data work is that every problem has two layers. One is the business story: why revenue shifts, why operations slow down, or why a KPI does not look the way people expect. The other is the data foundation behind it: where the data lives, whether it is consistent, and how it needs to be shaped so reports mean the same thing to everyone reading them. I like working at that intersection, where analysis does not stop at insight but continues into building data systems that are clean, stable, and useful over time."
 	},
 	"location": "Thu Duc, Ho Chi Minh City, Vietnam",
 	"phone": "0858833863",
@@ -88,7 +88,7 @@
 				"en": "Language proficiency"
 			},
 			"description": {
-				"vi": "TOEIC 690, phù hợp cho môi trường làm việc tài liệu và báo cáo tiếng Anh.",
+				"vi": "TOEIC 690, phù hợp cho môi trường làm việc với tài liệu và báo cáo tiếng Anh.",
 				"en": "TOEIC score of 690, supporting English-based documentation and reporting work."
 			}
 		},

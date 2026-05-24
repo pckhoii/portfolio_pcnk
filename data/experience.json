@@ -8,16 +8,16 @@
 		"period": "Apr 2025 - Present",
 		"highlights": {
 			"vi": [
-				"Triển khai hơn 10 dashboard BI cho khách hàng ngân hàng để theo dõi KPI vận hành và tài chính, hỗ trợ ra quyết định dựa trên dữ liệu.",
-				"Thiết kế, phát triển và tối ưu ETL pipeline bằng Python và PySpark để xử lý dữ liệu tài chính hằng ngày ở quy mô lớn, đảm bảo độ chính xác và tính sẵn sàng cho báo cáo.",
-				"Tích hợp và chuẩn hóa hơn 20 nguồn dữ liệu vào các lớp data warehouse có cấu trúc, cải thiện độ tin cậy và khả năng khai thác dữ liệu cho phân tích.",
-				"Phối hợp chặt chẽ với data engineer, analyst, business user và khách hàng ngân hàng để thu thập yêu cầu, hỗ trợ phân tích ad-hoc và nâng cấp giải pháp báo cáo."
+				"Ở FSS, mình làm các bài toán dữ liệu cho khối ngân hàng, chủ yếu xoay quanh vận hành và tài chính, nơi yêu cầu về độ chính xác và tính ổn định khá cao.",
+				"Mình đã tham gia triển khai hơn 10 dashboard BI để phía khách hàng theo dõi KPI quan trọng và nhìn tình hình vận hành rõ hơn thay vì phụ thuộc vào báo cáo rời rạc.",
+				"Bên cạnh phần báo cáo, mình cũng thiết kế và tối ưu ETL pipeline bằng Python và PySpark để xử lý dữ liệu tài chính hằng ngày, giúp dữ liệu lên báo cáo đúng lúc và đáng tin hơn.",
+				"Công việc này cho mình nhiều cơ hội phối hợp với engineer, analyst, business user và cả khách hàng, nên mình học được cách nối yêu cầu nghiệp vụ với cách tổ chức dữ liệu phía sau sao cho thực sự dùng được."
 			],
 			"en": [
-				"Delivered 10+ BI dashboards for banking clients to monitor operational and financial KPIs, enabling data-driven decision-making.",
-				"Designed, developed, and optimized ETL pipelines using Python and PySpark to process large-scale daily financial data with accuracy and timely availability for reporting.",
-				"Integrated and standardized 20+ data sources into structured data warehouse layers, improving data reliability and usability for business analysis.",
-				"Worked closely with data engineers, analysts, business users, and banking clients to gather requirements, support ad-hoc analysis, and improve reporting solutions."
+				"At FSS, I work on data problems for banking clients, mostly around operations and finance, where accuracy and stability matter a lot.",
+				"I have helped deliver more than 10 BI dashboards so clients can track important KPIs and get a clearer view of operations instead of relying on scattered reporting.",
+				"Alongside reporting work, I design and improve ETL pipelines with Python and PySpark to process daily financial data and make it available for reporting in a more reliable way.",
+				"This role has given me a lot of chances to work with engineers, analysts, business users, and clients directly, which helped me learn how to connect business needs with practical data solutions."
 			]
 		}
 	},
@@ -30,16 +30,16 @@
 		"period": "Sep 2024 - Mar 2025",
 		"highlights": {
 			"vi": [
-				"Phân tích dữ liệu vận hành và giao nhận để tìm ra điểm nghẽn trong quy trình logistics, hỗ trợ các sáng kiến tối ưu hiệu suất.",
-				"Xây dựng dashboard Power BI tương tác để theo dõi KPI như hiệu suất giao hàng, chi phí vận hành và mức sử dụng nguồn lực, giúp giảm 20% thời gian báo cáo thủ công.",
-				"Sử dụng SQL và Excel để phân tích sâu xu hướng, bất thường và mẫu dữ liệu, phục vụ điều tra nguyên nhân gốc rễ của vấn đề vận hành.",
-				"Chuyển hóa yêu cầu kinh doanh thành insight dữ liệu giúp stakeholder đưa ra quyết định tốt hơn về cải thiện hiệu suất và tối ưu chi phí."
+				"Ở Winwin Logistics, mình bắt đầu đi sâu hơn vào dữ liệu vận hành và học cách đọc một quy trình logistics qua các con số hằng ngày.",
+				"Mình xây dashboard Power BI để theo dõi các KPI như hiệu suất giao hàng, chi phí vận hành và mức sử dụng nguồn lực, qua đó giúp team giảm khoảng 20% thời gian làm báo cáo thủ công.",
+				"Phần mình học được nhiều nhất ở giai đoạn này là dùng SQL và Excel để lần theo các bất thường trong dữ liệu, tìm nguyên nhân gốc của vấn đề thay vì chỉ dừng ở việc mô tả kết quả.",
+				"Đây cũng là nơi giúp mình hình thành tư duy chuyển câu hỏi kinh doanh thành phân tích cụ thể, rồi biến phân tích đó thành những đề xuất mà stakeholder có thể dùng ngay."
 			],
 			"en": [
-				"Analyzed operational and delivery data to identify inefficiencies in logistics processes and support optimization initiatives.",
-				"Built interactive Power BI dashboards for KPIs such as delivery performance, cost efficiency, and resource utilization, reducing manual reporting time by 20%.",
-				"Used SQL and Excel to uncover trends, anomalies, and patterns that supported root-cause investigation of operational issues.",
-				"Translated business requirements into actionable insights that helped stakeholders improve performance and optimize costs."
+				"At Winwin Logistics, I started getting deeper into operational data and learned how to read a logistics process through day-to-day numbers.",
+				"I built Power BI dashboards to track KPIs such as delivery performance, operating cost, and resource utilization, helping the team reduce manual reporting time by about 20%.",
+				"What I learned most from this role was how to use SQL and Excel to trace anomalies back to root causes instead of stopping at surface-level reporting.",
+				"It was also the place where I built the habit of turning business questions into focused analysis, then into suggestions that stakeholders could actually use."
 			]
 		}
 	}
