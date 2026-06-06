@@ -90,7 +90,8 @@
 			"description": {
 				"vi": "TOEIC 690, phù hợp cho môi trường làm việc với tài liệu và báo cáo tiếng Anh.",
 				"en": "TOEIC score of 690, supporting English-based documentation and reporting work."
-			}
+			},
+			"theme": "score"
 		},
 		{
 			"badge": "Google",
@@ -99,28 +100,32 @@
 				"en": "Google Data Analytics Certificate"
 			},
 			"issuer": {
-				"vi": "Google",
-				"en": "Google"
+				"vi": "Google x Coursera",
+				"en": "Google x Coursera"
 			},
 			"description": {
 				"vi": "Nền tảng về làm sạch dữ liệu, phân tích, trực quan hóa và tư duy ra quyết định dựa trên dữ liệu.",
 				"en": "Foundation in data cleaning, analysis, visualization, and data-driven decision making."
-			}
+			},
+			"image": "./assets/cert/google da.jpeg",
+			"theme": "image"
 		},
 		{
-			"badge": "PL-300",
+			"badge": "DCA",
 			"title": {
-				"vi": "Data Analyst Associate",
-				"en": "Data Analyst Associate"
+				"vi": "Associate Data Analyst",
+				"en": "Associate Data Analyst"
 			},
 			"issuer": {
-				"vi": "Microsoft Power BI",
-				"en": "Microsoft Power BI"
+				"vi": "DataCamp",
+				"en": "DataCamp"
 			},
 			"description": {
-				"vi": "Tập trung vào mô hình dữ liệu, trực quan hóa và triển khai báo cáo phục vụ phân tích doanh nghiệp.",
-				"en": "Focused on data modeling, visualization, and report delivery for business analytics."
-			}
+				"vi": "Xác nhận năng lực phân tích dữ liệu thực hành, từ làm sạch dữ liệu đến diễn giải insight phục vụ quyết định.",
+				"en": "Validates practical analytics capability, from data cleaning to communicating decision-ready insight."
+			},
+			"image": "./assets/cert/da datacamp.png",
+			"theme": "image"
 		}
 	]
 }

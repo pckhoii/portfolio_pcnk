@@ -40,6 +40,7 @@ const uiText = {
 		availabilityNote:
 			"Mở cho các cơ hội Data Analyst, Data Engineer, dashboard BI và tối ưu pipeline dữ liệu.",
 		certificationIssuerLabel: "Đơn vị",
+		certificationPreviewLabel: "Xem chứng chỉ",
 		specializations: [
 			"Dashboard BI và theo dõi KPI",
 			"ETL/ELT pipeline và chuẩn hóa dữ liệu",
@@ -98,6 +99,7 @@ const uiText = {
 		availabilityNote:
 			"Open to Data Analyst and Data Engineer opportunities, BI dashboard work, and data pipeline optimization.",
 		certificationIssuerLabel: "Issuer",
+		certificationPreviewLabel: "Certificate preview",
 		specializations: [
 			"BI dashboards and KPI monitoring",
 			"ETL/ELT pipelines and data standardization",
@@ -334,7 +336,12 @@ export function renderPage(data, state) {
 		certificationsGrid.innerHTML = certifications
 			.map(
 				(item) => `
-				<article class="cert-card">
+				<article class="cert-card cert-card-${item.theme || "default"}">
+					${item.image ? `
+						<div class="cert-media">
+							<img src="${item.image}" alt="${pickText(item.title, lang)} - ${t.certificationPreviewLabel}" loading="lazy" />
+						</div>
+					` : ""}
 					<div class="cert-card-top">
 						<p class="cert-badge">${item.badge || ""}</p>
 						<div class="cert-copy">
