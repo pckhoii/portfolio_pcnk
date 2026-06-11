@@ -78,34 +78,10 @@
 	],
 	"certifications": [
 		{
-			"badge": "690",
-			"title": {
-				"vi": "TOEIC Listening & Reading",
-				"en": "TOEIC Listening & Reading"
-			},
-			"issuer": {
-				"vi": "Điểm số ngoại ngữ",
-				"en": "Language proficiency"
-			},
-			"description": {
-				"vi": "TOEIC 690, phù hợp cho môi trường làm việc với tài liệu và báo cáo tiếng Anh.",
-				"en": "TOEIC score of 690, supporting English-based documentation and reporting work."
-			},
-			"theme": "score"
-		},
-		{
 			"badge": "Google",
 			"title": {
 				"vi": "Google Data Analytics Certificate",
 				"en": "Google Data Analytics Certificate"
-			},
-			"issuer": {
-				"vi": "Google x Coursera",
-				"en": "Google x Coursera"
-			},
-			"description": {
-				"vi": "Nền tảng về làm sạch dữ liệu, phân tích, trực quan hóa và tư duy ra quyết định dựa trên dữ liệu.",
-				"en": "Foundation in data cleaning, analysis, visualization, and data-driven decision making."
 			},
 			"image": "./assets/cert/google da.jpeg",
 			"theme": "image"
@@ -115,14 +91,6 @@
 			"title": {
 				"vi": "Associate Data Analyst",
 				"en": "Associate Data Analyst"
-			},
-			"issuer": {
-				"vi": "DataCamp",
-				"en": "DataCamp"
-			},
-			"description": {
-				"vi": "Xác nhận năng lực phân tích dữ liệu thực hành, từ làm sạch dữ liệu đến diễn giải insight phục vụ quyết định.",
-				"en": "Validates practical analytics capability, from data cleaning to communicating decision-ready insight."
 			},
 			"image": "./assets/cert/da datacamp.png",
 			"theme": "image"

@@ -39,7 +39,6 @@ const uiText = {
 		availabilityText: "Sẵn sàng cho cơ hội mới",
 		availabilityNote:
 			"Mở cho các cơ hội Data Analyst, Data Engineer, dashboard BI và tối ưu pipeline dữ liệu.",
-		certificationIssuerLabel: "Đơn vị",
 		certificationPreviewLabel: "Xem chứng chỉ",
 		specializations: [
 			"Dashboard BI và theo dõi KPI",
@@ -98,7 +97,6 @@ const uiText = {
 		availabilityText: "Available for new opportunities",
 		availabilityNote:
 			"Open to Data Analyst and Data Engineer opportunities, BI dashboard work, and data pipeline optimization.",
-		certificationIssuerLabel: "Issuer",
 		certificationPreviewLabel: "Certificate preview",
 		specializations: [
 			"BI dashboards and KPI monitoring",
@@ -346,10 +344,8 @@ export function renderPage(data, state) {
 						<p class="cert-badge">${item.badge || ""}</p>
 						<div class="cert-copy">
 							<h4>${pickText(item.title, lang)}</h4>
-							<p class="cert-issuer"><span>${t.certificationIssuerLabel}</span> ${pickText(item.issuer, lang)}</p>
 						</div>
 					</div>
-					<p class="cert-description">${pickText(item.description, lang)}</p>
 				</article>
 			`
 			)
