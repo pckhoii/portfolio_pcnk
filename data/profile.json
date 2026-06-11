@@ -78,21 +78,21 @@
 	],
 	"certifications": [
 		{
-			"badge": "Google",
 			"title": {
 				"vi": "Google Data Analytics Certificate",
 				"en": "Google Data Analytics Certificate"
 			},
 			"image": "./assets/cert/google da.jpeg",
+			"url": "https://www.coursera.org/account/accomplishments/specialization/LLXXMPLGDNPN",
 			"theme": "image"
 		},
 		{
-			"badge": "DCA",
 			"title": {
 				"vi": "Associate Data Analyst",
 				"en": "Associate Data Analyst"
 			},
 			"image": "./assets/cert/da datacamp.png",
+			"url": "https://www.datacamp.com/certificate/DAA0010135033973",
 			"theme": "image"
 		}
 	]

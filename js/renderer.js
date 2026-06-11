@@ -33,9 +33,6 @@ const uiText = {
 		viewCode: "Source",
 		themeSwitchLabel: "Light / Dark",
 		languageSwitchLabel: "VI / EN",
-		projectSummaryLabel: "Case study nổi bật",
-		impactSummaryValue: "Impact",
-		impactSummaryLabel: "Tập trung vào quyết định kinh doanh",
 		availabilityText: "Sẵn sàng cho cơ hội mới",
 		availabilityNote:
 			"Mở cho các cơ hội Data Analyst, Data Engineer, dashboard BI và tối ưu pipeline dữ liệu.",
@@ -91,9 +88,6 @@ const uiText = {
 		viewCode: "Source",
 		themeSwitchLabel: "Light / Dark",
 		languageSwitchLabel: "VI / EN",
-		projectSummaryLabel: "Featured case studies",
-		impactSummaryValue: "Impact",
-		impactSummaryLabel: "Designed for business decisions",
 		availabilityText: "Available for new opportunities",
 		availabilityNote:
 			"Open to Data Analyst and Data Engineer opportunities, BI dashboard work, and data pipeline optimization.",
@@ -207,10 +201,6 @@ export function renderPage(data, state) {
 	setText("emailLabel", t.emailLabel);
 	setText("phoneLabel", t.phoneLabel);
 	setText("socialLabel", t.socialLabel);
-	setText("projectSummaryValue", `${featuredProjects.length}`);
-	setText("projectSummaryLabel", t.projectSummaryLabel);
-	setText("impactSummaryValue", t.impactSummaryValue);
-	setText("impactSummaryLabel", t.impactSummaryLabel);
 	setText("availabilityText", t.availabilityText);
 	setText("availabilityNote", t.availabilityNote);
 
@@ -334,19 +324,18 @@ export function renderPage(data, state) {
 		certificationsGrid.innerHTML = certifications
 			.map(
 				(item) => `
-				<article class="cert-card cert-card-${item.theme || "default"}">
+				<a class="cert-card cert-card-${item.theme || "default"}" href="${item.url}" target="_blank" rel="noreferrer" aria-label="${pickText(item.title, lang)}">
 					${item.image ? `
 						<div class="cert-media">
 							<img src="${item.image}" alt="${pickText(item.title, lang)} - ${t.certificationPreviewLabel}" loading="lazy" />
 						</div>
 					` : ""}
 					<div class="cert-card-top">
-						<p class="cert-badge">${item.badge || ""}</p>
 						<div class="cert-copy">
 							<h4>${pickText(item.title, lang)}</h4>
 						</div>
 					</div>
-				</article>
+				</a>
 			`
 			)
 			.join("");
