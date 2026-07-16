@@ -1,7 +1,6 @@
 import { renderPage } from "./renderer.js";
 import { initRevealAnimations } from "./animations.js";
 import { initCosmos } from "./cosmos.js";
-import { initSceneDeck } from "./scenes.js";
 
 const state = {
 	lang: localStorage.getItem("portfolio_lang") || "vi",
@@ -64,7 +63,6 @@ async function startApp() {
 
 		cachedData = await loadData();
 		rerender();
-		initSceneDeck();
 	} catch (error) {
 		console.error("Failed to start portfolio app:", error);
 	}

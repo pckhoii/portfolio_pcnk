@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Khoi Pham | A Small Universe of Data</title>
+	<title>Khoi Pham | Turning Data Into Direction</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
@@ -17,23 +17,21 @@
 <body>
 	<div class="cosmos-bg" aria-hidden="true">
 		<canvas id="cosmosCanvas" class="cosmos-canvas"></canvas>
+		<div class="nebula nebula-a"></div>
+		<div class="nebula nebula-b"></div>
 		<div class="star-field"></div>
-		<div class="orbit orbit-one"></div>
-		<div class="orbit orbit-two"></div>
-		<div class="signal signal-a"></div>
-		<div class="signal signal-b"></div>
-		<div class="signal signal-c"></div>
 	</div>
 
 	<header class="site-header">
 		<div class="container header-shell reveal">
-			<a class="brand" href="#universe" id="brandText">Khoi Pham</a>
+			<a class="brand" href="#top" id="brandText">Khoi Pham</a>
 			<nav class="main-nav" aria-label="Main navigation">
-				<a href="#signals" id="navSignals">Signals</a>
-				<a href="#systems" id="navSystems">Systems</a>
-				<a href="#missions" id="navMissions">Missions</a>
-				<a href="#journey" id="navJourney">Journey</a>
-				<a href="#transmission" id="navTransmission">Transmission</a>
+				<a href="#observer" id="navSignals">Observer</a>
+				<a href="#process" id="navProcess">Process</a>
+				<a href="#missions" id="navMissions">Constellations</a>
+				<a href="#systems" id="navSystems">Tools</a>
+				<a href="#journey" id="navJourney">Orbit</a>
+				<a href="#transmission" id="navTransmission">Contact</a>
 			</nav>
 			<div class="toolbar" aria-label="Display controls">
 				<label class="switch-wrap switch-wrap-lang" for="languageSwitch">
@@ -50,140 +48,110 @@
 		</div>
 	</header>
 
-	<nav class="scene-rail" aria-label="Universe scenes">
-		<a href="#universe" aria-label="Universe">01</a>
-		<a href="#signals" aria-label="Signals">02</a>
-		<a href="#systems" aria-label="Systems">03</a>
-		<a href="#certifications" aria-label="Coordinates">04</a>
-		<a href="#missions" aria-label="Missions">05</a>
-		<a href="#journey" aria-label="Journey">06</a>
-		<a href="#transmission" aria-label="Transmission">07</a>
-	</nav>
-
-	<main id="top" class="scene-deck" aria-live="polite">
-		<section id="universe" class="hero universe-hero scene is-active" data-scene-label="Universe">
-			<div class="hero-orbit-field" aria-hidden="true">
-				<div class="hero-orbit hero-orbit-a"></div>
-				<div class="hero-orbit hero-orbit-b"></div>
-				<div class="hero-orbit hero-orbit-c"></div>
-				<div class="hero-planet planet-cyan"></div>
-				<div class="hero-planet planet-gold"></div>
-				<div class="hero-planet planet-warm"></div>
+	<main id="top">
+		<section class="journey-section hero-journey">
+			<div class="hero-camera" aria-hidden="true">
+				<div class="camera-ring camera-ring-one"></div>
+				<div class="camera-ring camera-ring-two"></div>
+				<div class="camera-core"></div>
+				<div class="camera-star star-one"></div>
+				<div class="camera-star star-two"></div>
+				<div class="camera-star star-three"></div>
 			</div>
-			<div class="container universe-hero-shell">
+			<div class="container hero-shell">
 				<div class="hero-copy reveal">
-					<p class="eyebrow" id="heroKicker">A Small Universe of Data</p>
-					<h1 id="heroRole">Khoi Pham</h1>
-					<h2 id="heroHeadline">A data analyst with a dreamer's eye.</h2>
+					<p class="eyebrow" id="heroKicker">Entering the universe</p>
+					<h1 id="heroRole">Turning Data Into Direction</h1>
 					<p class="hero-summary" id="heroSummary"></p>
 					<div class="hero-actions">
-						<a class="btn btn-solid" id="heroPrimaryBtn" href="#missions">Explore Missions</a>
-						<a class="btn btn-outline" id="heroSecondaryBtn" href="#systems">Enter the Lab</a>
+						<a class="btn btn-solid magnetic" id="heroPrimaryBtn" href="#observer">Explore the Journey</a>
 					</div>
 				</div>
-
-				<aside class="star-console reveal" data-reveal-delay="120">
-					<div class="console-core">
-						<span>KP</span>
-					</div>
-					<div class="console-line console-line-one"></div>
-					<div class="console-line console-line-two"></div>
-					<div class="console-line console-line-three"></div>
-					<div class="console-node console-node-one">
-						<strong id="heroNodeSignals">Signals</strong>
-						<span>business questions</span>
-					</div>
-					<div class="console-node console-node-two">
-						<strong id="heroNodeSystems">Systems</strong>
-						<span>clean data flows</span>
-					</div>
-					<div class="console-node console-node-three">
-						<strong id="heroNodeStories">Stories</strong>
-						<span>usable insight</span>
-					</div>
-				</aside>
-
-				<div class="orbit-stats reveal" id="statRow" data-reveal-delay="180"></div>
+				<div class="hero-observatory reveal" data-reveal-delay="120">
+					<div class="observatory-orbit"></div>
+					<div class="observatory-lens">KP</div>
+					<div class="observatory-note note-one">raw signals</div>
+					<div class="observatory-note note-two">connected patterns</div>
+					<div class="observatory-note note-three">clear direction</div>
+				</div>
 			</div>
-			<a class="scene-next" href="#signals" aria-label="Next scene">Signals</a>
 		</section>
 
-		<section id="signals" class="cosmic-section signals-section scene" data-scene-label="Signals" aria-hidden="true">
-			<div class="container signals-shell">
+		<section id="observer" class="journey-section observer-section">
+			<div class="container observer-shell">
 				<div class="section-heading section-heading-left reveal">
-					<p class="section-kicker" id="signalsKicker">Signals</p>
-					<h3 id="signalsTitle">How I Read The Noise</h3>
+					<p class="section-kicker" id="signalsKicker">The Observer</p>
+					<h2 id="signalsTitle">I look for patterns hidden inside complexity.</h2>
 					<p class="section-intro" id="signalsIntro"></p>
 				</div>
-				<div class="signal-radar reveal" data-reveal-delay="80">
-					<div class="radar-rings" aria-hidden="true"></div>
-					<article class="signal-story">
+				<div class="observer-stage reveal" data-reveal-delay="120">
+					<article class="observer-card">
 						<p id="aboutText"></p>
 					</article>
-					<div class="trait-orbit" id="traitGrid"></div>
+					<div id="traitGrid" class="observer-planets"></div>
 				</div>
 			</div>
-			<a class="scene-next" href="#systems" aria-label="Next scene">Systems</a>
 		</section>
 
-		<section id="systems" class="cosmic-section systems-section scene" data-scene-label="Systems" aria-hidden="true">
+		<section id="process" class="journey-section process-section">
 			<div class="container">
 				<div class="section-heading reveal">
-					<p class="section-kicker" id="systemsKicker">Systems</p>
-					<h3 id="systemsTitle">Modules I Build With</h3>
+					<p class="section-kicker" id="processKicker">Finding the Constellation</p>
+					<h2 id="processTitle">A question becomes a map.</h2>
 				</div>
-				<div class="constellation reveal" data-reveal-delay="80">
-					<div class="constellation-core">
-						<span>INSIGHT</span>
-					</div>
-					<div id="skillsGrid" class="systems-orbit"></div>
-				</div>
+				<div class="process-constellation reveal" id="processConstellation" data-reveal-delay="80"></div>
 			</div>
-			<a class="scene-next" href="#certifications" aria-label="Next scene">Coordinates</a>
 		</section>
 
-		<section id="certifications" class="section-shell certifications-section scene" data-scene-label="Coordinates" aria-hidden="true">
+		<section id="missions" class="journey-section projects-section">
+			<div class="container projects-shell">
+				<div class="section-heading section-heading-left reveal">
+					<p class="section-kicker" id="missionsKicker">Constellations</p>
+					<h2 id="missionsTitle">Projects are maps made from scattered stars.</h2>
+					<p class="section-intro" id="missionsIntro"></p>
+				</div>
+				<div id="projectsGrid" class="project-constellation-field reveal" data-reveal-delay="100"></div>
+			</div>
+		</section>
+
+		<section id="systems" class="journey-section tools-section">
+			<div class="container">
+				<div class="section-heading reveal">
+					<p class="section-kicker" id="systemsKicker">Tools of Exploration</p>
+					<h2 id="systemsTitle">The instruments I use to navigate data.</h2>
+				</div>
+				<div class="tools-orbit reveal" data-reveal-delay="80">
+					<div class="tools-core">INSIGHT</div>
+					<div id="skillsGrid" class="tools-grid"></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="journey" class="journey-section orbit-section">
+			<div class="container">
+				<div class="section-heading reveal">
+					<p class="section-kicker" id="journeyKicker">My Orbit</p>
+					<h2 id="journeyTitle">The path that shaped the way I see data.</h2>
+				</div>
+				<div class="planetary-timeline reveal" id="experienceList" data-reveal-delay="80"></div>
+			</div>
+		</section>
+
+		<section id="certifications" class="journey-section credentials-section">
 			<div class="container">
 				<div class="section-heading reveal">
 					<p class="section-kicker" id="certificationsKicker">Coordinates</p>
-					<h3 id="certificationsTitle">Learning Signals</h3>
+					<h2 id="certificationsTitle">Learning signals along the route.</h2>
 				</div>
 				<div id="certificationsGrid" class="certifications-grid reveal" data-reveal-delay="80"></div>
 			</div>
-			<a class="scene-next" href="#missions" aria-label="Next scene">Missions</a>
 		</section>
 
-		<section id="missions" class="cosmic-section mission-section scene" data-scene-label="Missions" aria-hidden="true">
-			<div class="container mission-shell">
-				<div class="section-heading section-heading-left reveal">
-					<p class="section-kicker" id="missionsKicker">Missions</p>
-					<h3 id="missionsTitle">Mission Logs</h3>
-					<p class="section-intro" id="missionsIntro"></p>
-				</div>
-				<div class="mission-galaxy reveal" data-reveal-delay="100">
-					<div class="mission-orbit-track" aria-hidden="true"></div>
-					<div id="projectsGrid" class="missions-grid"></div>
-				</div>
-			</div>
-			<a class="scene-next" href="#journey" aria-label="Next scene">Journey</a>
-		</section>
-
-		<section id="journey" class="cosmic-section journey-section scene" data-scene-label="Journey" aria-hidden="true">
-			<div class="container">
+		<section id="transmission" class="journey-section contact-section">
+			<div class="container contact-shell">
 				<div class="section-heading reveal">
-					<p class="section-kicker" id="journeyKicker">Journey</p>
-					<h3 id="journeyTitle">Flight Path</h3>
-				</div>
-				<div class="flight-path reveal" id="experienceList" data-reveal-delay="80"></div>
-			</div>
-			<a class="scene-next" href="#transmission" aria-label="Next scene">Transmission</a>
-		</section>
-
-		<section id="transmission" class="cosmic-section transmission-section scene" data-scene-label="Transmission" aria-hidden="true">
-			<div class="container transmission-shell">
-				<div class="section-heading reveal">
-					<p class="section-kicker" id="transmissionKicker">Transmission</p>
-					<h3 id="transmissionTitle">Have a signal worth exploring?</h3>
+					<p class="section-kicker" id="transmissionKicker">The Next Destination</p>
+					<h2 id="transmissionTitle">Let's Discover the Next Constellation Together.</h2>
 					<p class="section-intro" id="contactText"></p>
 				</div>
 				<div class="contact-grid reveal" data-reveal-delay="80">
@@ -205,7 +173,7 @@
 					</article>
 				</div>
 				<div class="transmission-actions reveal" data-reveal-delay="120">
-					<a class="btn btn-solid" id="contactBtn" href="#">Send a Message</a>
+					<a class="btn btn-solid magnetic" id="contactBtn" href="#">Send a Message</a>
 					<a class="btn btn-outline" id="cvBtn" href="#" aria-disabled="true">CV</a>
 				</div>
 			</div>

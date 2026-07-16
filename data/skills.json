@@ -1,30 +1,37 @@
 [
 	{
 		"title": {
-			"vi": "Data Foundation",
-			"en": "Data Foundation"
+			"vi": "Explore",
+			"en": "Explore"
 		},
-		"items": ["SQL", "Excel", "Data Cleaning", "Data Modeling", "Data Validation"]
+		"items": ["Business Questions", "Data Discovery", "EDA", "KPI Framing", "Problem Scoping"]
 	},
 	{
 		"title": {
-			"vi": "Analysis Engine",
-			"en": "Analysis Engine"
+			"vi": "Analyze",
+			"en": "Analyze"
 		},
-		"items": ["Python", "Pandas", "Power Query", "DAX", "EDA"]
+		"items": ["SQL", "Python", "Pandas", "Excel", "DAX"]
 	},
 	{
 		"title": {
-			"vi": "Visualization Deck",
-			"en": "Visualization Deck"
+			"vi": "Visualize",
+			"en": "Visualize"
 		},
 		"items": ["Power BI", "Dashboard Design", "KPI Tracking", "Storytelling with Data", "Tableau"]
 	},
 	{
 		"title": {
-			"vi": "Workflow Orbit",
-			"en": "Workflow Orbit"
+			"vi": "Build",
+			"en": "Build"
 		},
-		"items": ["Automation", "Reporting Flow", "Documentation", "Business Thinking", "ETL/ELT"]
+		"items": ["Data Cleaning", "Data Modeling", "ETL/ELT", "Power Query", "Automation"]
+	},
+	{
+		"title": {
+			"vi": "Communicate",
+			"en": "Communicate"
+		},
+		"items": ["Documentation", "Stakeholder Thinking", "Business Insight", "Reporting Flow", "Decision Support"]
 	}
 ]
