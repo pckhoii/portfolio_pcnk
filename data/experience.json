@@ -1,5 +1,23 @@
 [
 	{
+		"company": "Now",
+		"position": {
+			"vi": "Building a personal data universe",
+			"en": "Building a personal data universe"
+		},
+		"period": "Now",
+		"highlights": {
+			"vi": [
+				"Building a personal data universe where systems are useful and insights feel human.",
+				"Turning project work into clearer case studies, mission logs and dashboard stories."
+			],
+			"en": [
+				"Building a personal data universe where systems are useful and insights feel human.",
+				"Turning project work into clearer case studies, mission logs and dashboard stories."
+			]
+		}
+	},
+	{
 		"company": "FSS JSC, Ho Chi Minh City",
 		"position": {
 			"vi": "Data Engineer",
@@ -8,16 +26,14 @@
 		"period": "Apr 2025 - Present",
 		"highlights": {
 			"vi": [
-				"Ở FSS, mình làm các bài toán dữ liệu cho khối ngân hàng, chủ yếu xoay quanh vận hành và tài chính, nơi yêu cầu về độ chính xác và tính ổn định khá cao.",
-				"Mình đã tham gia triển khai hơn 10 dashboard BI để phía khách hàng theo dõi KPI quan trọng và nhìn tình hình vận hành rõ hơn thay vì phụ thuộc vào báo cáo rời rạc.",
-				"Bên cạnh phần báo cáo, mình cũng thiết kế và tối ưu ETL pipeline bằng Python và PySpark để xử lý dữ liệu tài chính hằng ngày, giúp dữ liệu lên báo cáo đúng lúc và đáng tin hơn.",
-				"Công việc này cho mình nhiều cơ hội phối hợp với engineer, analyst, business user và cả khách hàng, nên mình học được cách nối yêu cầu nghiệp vụ với cách tổ chức dữ liệu phía sau sao cho thực sự dùng được."
+				"Moved deeper into analytics infrastructure, daily financial data flows and reporting reliability for banking clients.",
+				"Helped deliver 10+ BI dashboards so clients can track important KPIs through a clearer operational lens.",
+				"Designed and improved ETL pipelines with Python and PySpark so reporting data arrives on time and with more trust."
 			],
 			"en": [
-				"At FSS, I work on data problems for banking clients, mostly around operations and finance, where accuracy and stability matter a lot.",
-				"I have helped deliver more than 10 BI dashboards so clients can track important KPIs and get a clearer view of operations instead of relying on scattered reporting.",
-				"Alongside reporting work, I design and improve ETL pipelines with Python and PySpark to process daily financial data and make it available for reporting in a more reliable way.",
-				"This role has given me a lot of chances to work with engineers, analysts, business users, and clients directly, which helped me learn how to connect business needs with practical data solutions."
+				"Moved deeper into analytics infrastructure, daily financial data flows and reporting reliability for banking clients.",
+				"Helped deliver 10+ BI dashboards so clients can track important KPIs through a clearer operational lens.",
+				"Designed and improved ETL pipelines with Python and PySpark so reporting data arrives on time and with more trust."
 			]
 		}
 	},
@@ -30,16 +46,32 @@
 		"period": "Sep 2024 - Mar 2025",
 		"highlights": {
 			"vi": [
-				"Ở Winwin Logistics, mình bắt đầu đi sâu hơn vào dữ liệu vận hành và học cách đọc một quy trình logistics qua các con số hằng ngày.",
-				"Mình xây dashboard Power BI để theo dõi các KPI như hiệu suất giao hàng, chi phí vận hành và mức sử dụng nguồn lực, qua đó giúp team giảm khoảng 20% thời gian làm báo cáo thủ công.",
-				"Phần mình học được nhiều nhất ở giai đoạn này là dùng SQL và Excel để lần theo các bất thường trong dữ liệu, tìm nguyên nhân gốc của vấn đề thay vì chỉ dừng ở việc mô tả kết quả.",
-				"Đây cũng là nơi giúp mình hình thành tư duy chuyển câu hỏi kinh doanh thành phân tích cụ thể, rồi biến phân tích đó thành những đề xuất mà stakeholder có thể dùng ngay."
+				"Built dashboards and reporting logic for delivery performance, operating cost and resource utilization.",
+				"Reduced manual reporting time by about 20% through Power BI dashboards and cleaner data preparation.",
+				"Learned to trace operational anomalies with SQL and Excel instead of stopping at surface-level reporting."
 			],
 			"en": [
-				"At Winwin Logistics, I started getting deeper into operational data and learned how to read a logistics process through day-to-day numbers.",
-				"I built Power BI dashboards to track KPIs such as delivery performance, operating cost, and resource utilization, helping the team reduce manual reporting time by about 20%.",
-				"What I learned most from this role was how to use SQL and Excel to trace anomalies back to root causes instead of stopping at surface-level reporting.",
-				"It was also the place where I built the habit of turning business questions into focused analysis, then into suggestions that stakeholders could actually use."
+				"Built dashboards and reporting logic for delivery performance, operating cost and resource utilization.",
+				"Reduced manual reporting time by about 20% through Power BI dashboards and cleaner data preparation.",
+				"Learned to trace operational anomalies with SQL and Excel instead of stopping at surface-level reporting."
+			]
+		}
+	},
+	{
+		"company": "University of Economics and Law",
+		"position": {
+			"vi": "Started with data tools and business questions",
+			"en": "Started with data tools and business questions"
+		},
+		"period": "2021 - 2025",
+		"highlights": {
+			"vi": [
+				"Studied Management Information Systems, majoring in Digital Business and AI.",
+				"Built the foundation for connecting business processes, information systems and analytics."
+			],
+			"en": [
+				"Studied Management Information Systems, majoring in Digital Business and AI.",
+				"Built the foundation for connecting business processes, information systems and analytics."
 			]
 		}
 	}

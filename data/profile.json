@@ -5,20 +5,21 @@
 		"en": "Data Analyst | Data Engineer"
 	},
 	"headline": {
-		"vi": "Tôi bắt đầu từ những câu hỏi vận hành rất thực tế, rồi dùng dữ liệu để biến chúng thành quyết định rõ ràng hơn.",
-		"en": "I usually start with real operational questions, then use data to turn them into clearer decisions."
+		"vi": "A data analyst with a dreamer's eye.",
+		"en": "A data analyst with a dreamer's eye."
 	},
 	"summary": {
-		"vi": "Mình đi từ Data Analyst sang Data Engineer, nên cách làm việc cũng mang màu sắc của cả hai bên: vừa muốn hiểu bài toán kinh doanh đang vướng ở đâu, vừa muốn dữ liệu phía sau đủ sạch và đủ chắc để người dùng có thể tin mà sử dụng. Phần lớn thời gian, mình làm với SQL, Excel, Power BI, Python và PySpark để xây dashboard, theo dõi KPI, xử lý dữ liệu và hỗ trợ team ra quyết định nhanh hơn.",
-		"en": "My path has moved from Data Analyst into Data Engineer, so I naturally work with both mindsets: understanding where the business problem really is, and making sure the data behind it is clean and reliable enough for people to trust. Most of my work involves SQL, Excel, Power BI, Python, and PySpark for dashboards, KPI tracking, data processing, and helping teams make faster decisions."
+		"vi": "Tôi thu nhặt những tín hiệu rời rạc, sắp chúng thành hệ thống, rồi biến con số thành câu chuyện mà người khác có thể dùng để ra quyết định.",
+		"en": "I collect scattered signals, shape them into systems, and turn numbers into stories people can actually use."
 	},
 	"about": {
-		"vi": "Điều mình thấy thú vị ở nghề data là mỗi bài toán luôn có hai lớp. Một lớp là câu chuyện nghiệp vụ: vì sao doanh thu lệch, vì sao vận hành chậm, vì sao một KPI nhìn không đúng như kỳ vọng. Lớp còn lại là hạ tầng dữ liệu phía sau: dữ liệu đang nằm ở đâu, có nhất quán không, và phải xử lý thế nào để khi lên báo cáo thì ai nhìn vào cũng hiểu giống nhau. Mình thích làm ở giao điểm đó, nơi phân tích không chỉ dừng ở insight mà còn đi tiếp đến một hệ thống dữ liệu gọn gàng, ổn định và dùng được lâu dài.",
-		"en": "What I enjoy about data work is that every problem has two layers. One is the business story: why revenue shifts, why operations slow down, or why a KPI does not look the way people expect. The other is the data foundation behind it: where the data lives, whether it is consistent, and how it needs to be shaped so reports mean the same thing to everyone reading them. I like working at that intersection, where analysis does not stop at insight but continues into building data systems that are clean, stable, and useful over time."
+		"vi": "Tôi thích đứng ở khoảng giao giữa câu hỏi kinh doanh và hệ thống dữ liệu phía sau nó. Một phía là những tín hiệu chưa rõ hình dạng: doanh thu lệch, vận hành chậm, KPI nhìn chưa đúng kỳ vọng. Phía còn lại là dữ liệu cần được làm sạch, nối lại và kể thành một câu chuyện đủ rõ để stakeholder tin mà hành động. Với tôi, làm data không chỉ là trả lời câu hỏi bằng số, mà là tạo ra một hệ thống giúp câu trả lời đó tiếp tục hữu ích sau buổi trình bày đầu tiên.",
+		"en": "I like working at the intersection between business questions and the data systems behind them. On one side are signals that do not have a clear shape yet: shifting revenue, slow operations, or KPIs that do not match expectations. On the other side is data that needs to be cleaned, connected, and turned into a story clear enough for stakeholders to trust and act on. For me, data work is not only about answering questions with numbers. It is about building systems that keep the answer useful after the first presentation."
 	},
 	"location": "Thu Duc, Ho Chi Minh City, Vietnam",
 	"phone": "0858833863",
 	"email": "phamkhoi1602fw@gmail.com",
+	"cvUrl": "#",
 	"socials": [
 		{
 			"label": "GitHub",
@@ -33,46 +34,22 @@
 		{
 			"value": "10+",
 			"label": {
-				"vi": "Dashboard BI đã triển khai",
-				"en": "BI Dashboards Delivered"
+				"vi": "BI dashboards delivered",
+				"en": "BI dashboards delivered"
 			}
 		},
 		{
 			"value": "20+",
 			"label": {
-				"vi": "Nguồn dữ liệu đã tích hợp",
-				"en": "Data Sources Standardized"
+				"vi": "data sources standardized",
+				"en": "data sources standardized"
 			}
 		},
 		{
 			"value": "2",
 			"label": {
-				"vi": "Vai trò chuyên môn chính",
-				"en": "Core Data Roles"
-			}
-		}
-	],
-	"highlights": [
-		{
-			"value": "UEL",
-			"title": {
-				"vi": "Học vấn",
-				"en": "Education"
-			},
-			"description": {
-				"vi": "Cử nhân Hệ thống Thông tin Quản lý, chuyên ngành Digital Business & AI (09/2021 - 05/2025).",
-				"en": "Bachelor's degree in Management Information Systems, majoring in Digital Business & AI (Sep 2021 - May 2025)."
-			}
-		},
-		{
-			"value": "ETL",
-			"title": {
-				"vi": "Trọng tâm hiện tại",
-				"en": "Current Focus"
-			},
-			"description": {
-				"vi": "Dashboard BI, ETL/ELT pipeline, data warehouse và phân tích dữ liệu vận hành.",
-				"en": "BI dashboards, ETL/ELT pipelines, data warehousing, and operational analytics."
+				"vi": "worlds: analysis and engineering",
+				"en": "worlds: analysis and engineering"
 			}
 		}
 	],

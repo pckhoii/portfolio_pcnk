@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+	<rect width="64" height="64" rx="10" fill="#050913"/>
+	<circle cx="42" cy="18" r="3" fill="#f3d77b"/>
+	<circle cx="17" cy="45" r="2" fill="#78d8ff"/>
+	<path d="M13 36c12-18 27-22 42-16" fill="none" stroke="#78d8ff" stroke-width="2" opacity=".7"/>
+	<text x="32" y="39" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#f5f7fb">KP</text>
+</svg>

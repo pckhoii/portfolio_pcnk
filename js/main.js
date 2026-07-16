@@ -1,9 +1,11 @@
 import { renderPage } from "./renderer.js";
 import { initRevealAnimations } from "./animations.js";
+import { initCosmos } from "./cosmos.js";
+import { initSceneDeck } from "./scenes.js";
 
 const state = {
 	lang: localStorage.getItem("portfolio_lang") || "vi",
-	theme: localStorage.getItem("portfolio_theme") || "light"
+	theme: localStorage.getItem("portfolio_theme") || "dark"
 };
 
 let cachedData = null;
@@ -58,9 +60,11 @@ async function startApp() {
 	try {
 		applyTheme();
 		bindToolbar();
+		initCosmos();
 
 		cachedData = await loadData();
 		rerender();
+		initSceneDeck();
 	} catch (error) {
 		console.error("Failed to start portfolio app:", error);
 	}

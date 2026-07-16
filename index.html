@@ -3,70 +3,39 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Khoi Pham | Data Analyst & Data Engineer</title>
+	<title>Khoi Pham | A Small Universe of Data</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700;800&display=swap"
 		rel="stylesheet"
 	/>
+	<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/animations.css" />
 </head>
 <body>
-	<div class="page-bg" aria-hidden="true">
-		<div class="grid-overlay"></div>
-		<div class="ambient ambient-a"></div>
-		<div class="ambient ambient-b"></div>
-		<div class="ambient ambient-c"></div>
-	</div>
-
-	<div class="floating-icons" aria-hidden="true">
-		<span class="float-icon icon-database" style="--x: 13%; --y: 20%; --delay: 0s; --duration: 10s; --drift-x: 4px;">
-			<svg viewBox="0 0 24 24" aria-hidden="true">
-				<ellipse cx="12" cy="5" rx="7" ry="3"></ellipse>
-				<path d="M5 5v10c0 1.7 3.1 3 7 3s7-1.3 7-3V5"></path>
-				<path d="M5 10c0 1.7 3.1 3 7 3s7-1.3 7-3"></path>
-			</svg>
-		</span>
-		<span class="float-icon icon-trend" style="--x: 84%; --y: 28%; --delay: 1s; --duration: 11s; --drift-x: -6px;">
-			<svg viewBox="0 0 24 24" aria-hidden="true">
-				<path d="M4 16l6-6 4 4 6-7"></path>
-				<path d="M14 7h6v6"></path>
-			</svg>
-		</span>
-		<span class="float-icon icon-bars" style="--x: 18%; --y: 64%; --delay: 1.5s; --duration: 9.5s; --drift-x: 3px;">
-			<svg viewBox="0 0 24 24" aria-hidden="true">
-				<path d="M4 20V10"></path>
-				<path d="M10 20V4"></path>
-				<path d="M16 20v-7"></path>
-				<path d="M22 20v-11"></path>
-			</svg>
-		</span>
-		<span class="float-icon icon-pie" style="--x: 77%; --y: 74%; --delay: 0.8s; --duration: 12s; --drift-x: -4px;">
-			<svg viewBox="0 0 24 24" aria-hidden="true">
-				<path d="M11 2a10 10 0 1 0 11 11h-11z"></path>
-				<path d="M13 2a10 10 0 0 1 9 9h-9z"></path>
-			</svg>
-		</span>
-		<span class="float-dot dot-cyan" style="--x: 28%; --y: 18%; --delay: 0.2s; --duration: 8.5s;"></span>
-		<span class="float-dot dot-violet" style="--x: 62%; --y: 24%; --delay: 1.2s; --duration: 9.2s;"></span>
-		<span class="float-dot dot-green" style="--x: 38%; --y: 75%; --delay: 0.9s; --duration: 10s;"></span>
-		<span class="float-dot dot-orange" style="--x: 70%; --y: 68%; --delay: 1.8s; --duration: 8.8s;"></span>
+	<div class="cosmos-bg" aria-hidden="true">
+		<canvas id="cosmosCanvas" class="cosmos-canvas"></canvas>
+		<div class="star-field"></div>
+		<div class="orbit orbit-one"></div>
+		<div class="orbit orbit-two"></div>
+		<div class="signal signal-a"></div>
+		<div class="signal signal-b"></div>
+		<div class="signal signal-c"></div>
 	</div>
 
 	<header class="site-header">
 		<div class="container header-shell reveal">
-			<a class="brand" href="#top" id="brandText">Portfolio</a>
+			<a class="brand" href="#universe" id="brandText">Khoi Pham</a>
 			<nav class="main-nav" aria-label="Main navigation">
-				<a href="#about" id="navAbout">Giới thiệu</a>
-				<a href="#skills" id="navSkills">Kỹ năng</a>
-				<a href="#certifications" id="navCertifications">Chứng chỉ</a>
-				<a href="#projects" id="navProjects">Dự án</a>
-				<a href="#experience" id="navExperience">Kinh nghiệm</a>
-				<a href="#contact" id="navContact">Liên hệ</a>
+				<a href="#signals" id="navSignals">Signals</a>
+				<a href="#systems" id="navSystems">Systems</a>
+				<a href="#missions" id="navMissions">Missions</a>
+				<a href="#journey" id="navJourney">Journey</a>
+				<a href="#transmission" id="navTransmission">Transmission</a>
 			</nav>
-			<div class="toolbar">
+			<div class="toolbar" aria-label="Display controls">
 				<label class="switch-wrap switch-wrap-lang" for="languageSwitch">
 					<span id="languageSwitchLabel" class="sr-only">VI / EN</span>
 					<input id="languageSwitch" class="switch-input" type="checkbox" aria-label="Change language" />
@@ -81,156 +50,175 @@
 		</div>
 	</header>
 
-	<main id="top">
-		<section class="hero section-shell">
-			<div class="container hero-shell">
-				<div class="hero-copy reveal" data-reveal-delay="0">
-					<p class="eyebrow" id="heroKicker">Data Analyst</p>
-					<h1 id="heroRole">Data Analyst</h1>
-					<h2 id="heroHeadline">Biến dữ liệu thô thành góc nhìn kinh doanh rõ ràng.</h2>
+	<nav class="scene-rail" aria-label="Universe scenes">
+		<a href="#universe" aria-label="Universe">01</a>
+		<a href="#signals" aria-label="Signals">02</a>
+		<a href="#systems" aria-label="Systems">03</a>
+		<a href="#certifications" aria-label="Coordinates">04</a>
+		<a href="#missions" aria-label="Missions">05</a>
+		<a href="#journey" aria-label="Journey">06</a>
+		<a href="#transmission" aria-label="Transmission">07</a>
+	</nav>
+
+	<main id="top" class="scene-deck" aria-live="polite">
+		<section id="universe" class="hero universe-hero scene is-active" data-scene-label="Universe">
+			<div class="hero-orbit-field" aria-hidden="true">
+				<div class="hero-orbit hero-orbit-a"></div>
+				<div class="hero-orbit hero-orbit-b"></div>
+				<div class="hero-orbit hero-orbit-c"></div>
+				<div class="hero-planet planet-cyan"></div>
+				<div class="hero-planet planet-gold"></div>
+				<div class="hero-planet planet-warm"></div>
+			</div>
+			<div class="container universe-hero-shell">
+				<div class="hero-copy reveal">
+					<p class="eyebrow" id="heroKicker">A Small Universe of Data</p>
+					<h1 id="heroRole">Khoi Pham</h1>
+					<h2 id="heroHeadline">A data analyst with a dreamer's eye.</h2>
 					<p class="hero-summary" id="heroSummary"></p>
 					<div class="hero-actions">
-						<a class="btn btn-solid" id="heroPrimaryBtn" href="#projects">Xem dự án</a>
-						<a class="btn btn-outline" id="heroSecondaryBtn" href="#contact">Liên hệ</a>
-					</div>
-					<div class="scroll-cue">
-						<span class="scroll-dot"></span>
+						<a class="btn btn-solid" id="heroPrimaryBtn" href="#missions">Explore Missions</a>
+						<a class="btn btn-outline" id="heroSecondaryBtn" href="#systems">Enter the Lab</a>
 					</div>
 				</div>
 
-				<div class="hero-stats reveal" data-reveal-delay="120">
-					<div class="stats-grid" id="statRow"></div>
-				</div>
+				<aside class="star-console reveal" data-reveal-delay="120">
+					<div class="console-core">
+						<span>KP</span>
+					</div>
+					<div class="console-line console-line-one"></div>
+					<div class="console-line console-line-two"></div>
+					<div class="console-line console-line-three"></div>
+					<div class="console-node console-node-one">
+						<strong id="heroNodeSignals">Signals</strong>
+						<span>business questions</span>
+					</div>
+					<div class="console-node console-node-two">
+						<strong id="heroNodeSystems">Systems</strong>
+						<span>clean data flows</span>
+					</div>
+					<div class="console-node console-node-three">
+						<strong id="heroNodeStories">Stories</strong>
+						<span>usable insight</span>
+					</div>
+				</aside>
+
+				<div class="orbit-stats reveal" id="statRow" data-reveal-delay="180"></div>
 			</div>
+			<a class="scene-next" href="#signals" aria-label="Next scene">Signals</a>
 		</section>
 
-		<section id="about" class="section-shell">
-			<div class="container">
-				<div class="section-heading reveal">
-					<p class="section-kicker" id="aboutKicker">About</p>
-					<h3 id="aboutTitle">Giới thiệu</h3>
+		<section id="signals" class="cosmic-section signals-section scene" data-scene-label="Signals" aria-hidden="true">
+			<div class="container signals-shell">
+				<div class="section-heading section-heading-left reveal">
+					<p class="section-kicker" id="signalsKicker">Signals</p>
+					<h3 id="signalsTitle">How I Read The Noise</h3>
+					<p class="section-intro" id="signalsIntro"></p>
 				</div>
-
-				<div class="about-grid">
-					<article class="panel panel-feature reveal" data-reveal-delay="40">
-						<div class="profile-orb">
-							<div class="profile-ring"></div>
-							<div class="profile-core">DA</div>
-						</div>
-						<div class="feature-copy">
-							<h4 id="aboutFeatureTitle">Turning Data Into Direction</h4>
-							<p id="aboutText"></p>
-						</div>
+				<div class="signal-radar reveal" data-reveal-delay="80">
+					<div class="radar-rings" aria-hidden="true"></div>
+					<article class="signal-story">
+						<p id="aboutText"></p>
 					</article>
-
-					<div class="about-highlights reveal" data-reveal-delay="120" id="aboutHighlights"></div>
+					<div class="trait-orbit" id="traitGrid"></div>
 				</div>
 			</div>
+			<a class="scene-next" href="#systems" aria-label="Next scene">Systems</a>
 		</section>
 
-		<section id="skills" class="section-shell">
+		<section id="systems" class="cosmic-section systems-section scene" data-scene-label="Systems" aria-hidden="true">
 			<div class="container">
 				<div class="section-heading reveal">
-					<p class="section-kicker" id="skillsKicker">Toolkit</p>
-					<h3 id="skillsTitle">Kỹ năng cốt lõi</h3>
+					<p class="section-kicker" id="systemsKicker">Systems</p>
+					<h3 id="systemsTitle">Modules I Build With</h3>
 				</div>
-
-				<div class="skills-focus panel reveal" data-reveal-delay="40">
-					<div class="skills-focus-head">
-						<h4 id="skillsAsideTitle">Focus Areas</h4>
+				<div class="constellation reveal" data-reveal-delay="80">
+					<div class="constellation-core">
+						<span>INSIGHT</span>
 					</div>
-					<div id="specializationList" class="specialization-list specialization-list-compact"></div>
+					<div id="skillsGrid" class="systems-orbit"></div>
 				</div>
-
-				<div id="skillsGrid" class="skills-grid reveal" data-reveal-delay="100"></div>
 			</div>
+			<a class="scene-next" href="#certifications" aria-label="Next scene">Coordinates</a>
 		</section>
 
-		<section id="certifications" class="section-shell">
+		<section id="certifications" class="section-shell certifications-section scene" data-scene-label="Coordinates" aria-hidden="true">
 			<div class="container">
 				<div class="section-heading reveal">
-					<p class="section-kicker" id="certificationsKicker">Credentials</p>
-					<h3 id="certificationsTitle">Chứng chỉ</h3>
+					<p class="section-kicker" id="certificationsKicker">Coordinates</p>
+					<h3 id="certificationsTitle">Learning Signals</h3>
 				</div>
-
-				<div id="certificationsGrid" class="certifications-grid reveal" data-reveal-delay="60"></div>
+				<div id="certificationsGrid" class="certifications-grid reveal" data-reveal-delay="80"></div>
 			</div>
+			<a class="scene-next" href="#missions" aria-label="Next scene">Missions</a>
 		</section>
 
-		<section id="projects" class="section-shell">
-			<div class="container">
-				<div class="section-heading reveal">
-					<p class="section-kicker" id="projectsKicker">Selected Work</p>
-					<h3 id="projectsTitle">Dự án nổi bật</h3>
+		<section id="missions" class="cosmic-section mission-section scene" data-scene-label="Missions" aria-hidden="true">
+			<div class="container mission-shell">
+				<div class="section-heading section-heading-left reveal">
+					<p class="section-kicker" id="missionsKicker">Missions</p>
+					<h3 id="missionsTitle">Mission Logs</h3>
+					<p class="section-intro" id="missionsIntro"></p>
 				</div>
-
-				<div id="projectsGrid" class="projects-grid reveal" data-reveal-delay="100"></div>
+				<div class="mission-galaxy reveal" data-reveal-delay="100">
+					<div class="mission-orbit-track" aria-hidden="true"></div>
+					<div id="projectsGrid" class="missions-grid"></div>
+				</div>
 			</div>
+			<a class="scene-next" href="#journey" aria-label="Next scene">Journey</a>
 		</section>
 
-		<section id="experience" class="section-shell">
+		<section id="journey" class="cosmic-section journey-section scene" data-scene-label="Journey" aria-hidden="true">
 			<div class="container">
 				<div class="section-heading reveal">
-					<p class="section-kicker" id="experienceKicker">Journey</p>
-					<h3 id="experienceTitle">Kinh nghiệm</h3>
+					<p class="section-kicker" id="journeyKicker">Journey</p>
+					<h3 id="journeyTitle">Flight Path</h3>
 				</div>
-				<div class="timeline" id="experienceList"></div>
+				<div class="flight-path reveal" id="experienceList" data-reveal-delay="80"></div>
 			</div>
+			<a class="scene-next" href="#transmission" aria-label="Next scene">Transmission</a>
 		</section>
 
-		<section id="contact" class="section-shell">
-			<div class="container">
+		<section id="transmission" class="cosmic-section transmission-section scene" data-scene-label="Transmission" aria-hidden="true">
+			<div class="container transmission-shell">
 				<div class="section-heading reveal">
-					<p class="section-kicker" id="contactKicker">Contact</p>
-					<h3 id="contactTitle">Cùng hợp tác</h3>
+					<p class="section-kicker" id="transmissionKicker">Transmission</p>
+					<h3 id="transmissionTitle">Have a signal worth exploring?</h3>
+					<p class="section-intro" id="contactText"></p>
 				</div>
-
-				<div class="hero-meta-grid contact-meta-grid reveal" data-reveal-delay="40">
-					<article class="info-card">
-						<p class="meta-label" id="locationLabel">Địa điểm</p>
+				<div class="contact-grid reveal" data-reveal-delay="80">
+					<article class="contact-card">
+						<p class="meta-label" id="locationLabel">Base</p>
 						<p id="locationText"></p>
 					</article>
-					<article class="info-card">
+					<article class="contact-card">
 						<p class="meta-label" id="emailLabel">Email</p>
 						<a id="emailLink" href="#"></a>
 					</article>
-					<article class="info-card">
+					<article class="contact-card">
 						<p class="meta-label" id="phoneLabel">Phone</p>
 						<a id="phoneLink" href="#"></a>
 					</article>
-					<article class="info-card info-card-social">
-						<p class="meta-label" id="socialLabel">Mạng xã hội</p>
+					<article class="contact-card contact-card-social">
+						<p class="meta-label" id="socialLabel">Channels</p>
 						<ul id="socialList" class="social-list"></ul>
 					</article>
 				</div>
-
-				<div class="contact-layout">
-					<article class="panel contact-panel reveal" data-reveal-delay="60">
-						<p id="contactText"></p>
-						<div class="contact-points" id="contactPoints"></div>
-						<a class="btn btn-solid" id="contactBtn" href="#">Gửi email</a>
-					</article>
-
-					<aside class="panel availability-panel reveal" data-reveal-delay="120">
-						<div class="availability-pill">
-							<span class="availability-dot"></span>
-							<span id="availabilityText">Available for projects</span>
-						</div>
-						<p id="availabilityNote">Open to freelance collaborations, analytics consulting, and in-house opportunities.</p>
-					</aside>
+				<div class="transmission-actions reveal" data-reveal-delay="120">
+					<a class="btn btn-solid" id="contactBtn" href="#">Send a Message</a>
+					<a class="btn btn-outline" id="cvBtn" href="#" aria-disabled="true">CV</a>
 				</div>
 			</div>
 		</section>
 	</main>
 
 	<footer class="site-footer">
-		<div class="container footer-shell reveals" data-reveal-delay="180">
+		<div class="container footer-shell reveal">
 			<p id="footerText"></p>
 		</div>
 	</footer>
 
 	<noscript>This site needs JavaScript enabled to render data.</noscript>
-	<script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
 	<script type="module" src="js/main.js"></script>
 </body>
 </html>

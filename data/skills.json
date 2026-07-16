@@ -1,37 +1,30 @@
 [
 	{
 		"title": {
-			"vi": "SQL & Python",
-			"en": "SQL & Python"
+			"vi": "Data Foundation",
+			"en": "Data Foundation"
 		},
-		"items": ["SQL (T-SQL)", "Python", "Pandas", "NumPy", "PySpark"]
+		"items": ["SQL", "Excel", "Data Cleaning", "Data Modeling", "Data Validation"]
 	},
 	{
 		"title": {
-			"vi": "BI & Báo cáo",
-			"en": "BI & Reporting"
+			"vi": "Analysis Engine",
+			"en": "Analysis Engine"
 		},
-		"items": ["Power BI", "IBM Cognos", "Tableau", "Excel"]
+		"items": ["Python", "Pandas", "Power Query", "DAX", "EDA"]
 	},
 	{
 		"title": {
-			"vi": "Data Engineering",
-			"en": "Data Engineering"
+			"vi": "Visualization Deck",
+			"en": "Visualization Deck"
 		},
-		"items": ["ETL/ELT Pipelines", "Spark", "dbt", "Data Validation", "Job Automation"]
+		"items": ["Power BI", "Dashboard Design", "KPI Tracking", "Storytelling with Data", "Tableau"]
 	},
 	{
 		"title": {
-			"vi": "Data Modeling",
-			"en": "Data Modeling"
+			"vi": "Workflow Orbit",
+			"en": "Workflow Orbit"
 		},
-		"items": ["Data Modeling", "Data Warehousing", "Star Schema", "Snowflake Schema", "Data Integration"]
-	},
-	{
-		"title": {
-			"vi": "Phân tích nền tảng",
-			"en": "Analytics Foundations"
-		},
-		"items": ["EDA", "Statistical Analysis", "Data Cleaning", "Git (Fundamental)", "AWS (Fundamental)", "Azure (Fundamental)"]
+		"items": ["Automation", "Reporting Flow", "Documentation", "Business Thinking", "ETL/ELT"]
 	}
 ]

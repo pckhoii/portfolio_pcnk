@@ -2,12 +2,30 @@
 	{
 		"id": "marketing-performance",
 		"title": {
-			"vi": "Dashboard Phân Tích Hiệu Quả Chiến Dịch Marketing",
+			"vi": "Marketing Spend Performance Analysis",
 			"en": "Marketing Spend Performance Analysis"
 		},
 		"description": {
-			"vi": "Xử lý và phân tích dữ liệu marketing đa kênh bằng Python và Power BI để đánh giá hiệu quả campaign, theo dõi các KPI như CTR, Conversion Rate, ROAS và CPO, đồng thời phát hiện bất thường để đề xuất tối ưu phân bổ ngân sách.",
-			"en": "Processed and analyzed multi-channel marketing data with Python and Power BI to evaluate campaign performance, monitor CTR, Conversion Rate, ROAS, and CPO, and surface anomalies that informed smarter budget reallocation."
+			"vi": "A mission to separate real marketing efficiency from growth created mainly by bigger spend.",
+			"en": "A mission to separate real marketing efficiency from growth created mainly by bigger spend."
+		},
+		"mission": {
+			"question": {
+				"vi": "Doanh thu tăng vì campaign hiệu quả hơn, hay chỉ vì business đang chi nhiều tiền hơn?",
+				"en": "Is revenue growing because campaigns are more efficient, or because the business is simply spending more?"
+			},
+			"signal": {
+				"vi": "Revenue, spend, clicks, ROAS, ROMI and conversion rate created conflicting signals across channels.",
+				"en": "Revenue, spend, clicks, ROAS, ROMI and conversion rate created conflicting signals across channels."
+			},
+			"system": {
+				"vi": "Python cleaning pipeline, KPI modeling and Power BI decision dashboard.",
+				"en": "Python cleaning pipeline, KPI modeling and Power BI decision dashboard."
+			},
+			"outcome": {
+				"vi": "Found budget reallocation signals: scale influencer, optimize social, and re-check high-volume campaigns with weak return.",
+				"en": "Found budget reallocation signals: scale influencer, optimize social, and re-check high-volume campaigns with weak return."
+			}
 		},
 		"tags": ["Python", "Pandas", "Power BI", "Marketing Analytics", "ROAS"],
 		"detailUrl": "marketing-performance.html",

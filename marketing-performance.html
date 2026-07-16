@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Marketing Spend Performance Analysis</title>
+	<title>Mission 01 | Marketing Spend Performance Analysis</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700;800&display=swap"
 		rel="stylesheet"
 	/>
+	<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/animations.css" />
 </head>
 <body>
-	<div class="page-bg" aria-hidden="true">
-		<div class="grid-overlay"></div>
-		<div class="ambient ambient-a"></div>
-		<div class="ambient ambient-b"></div>
-		<div class="ambient ambient-c"></div>
+	<div class="cosmos-bg" aria-hidden="true">
+		<canvas id="cosmosCanvas" class="cosmos-canvas"></canvas>
+		<div class="star-field"></div>
+		<div class="orbit orbit-one"></div>
+		<div class="orbit orbit-two"></div>
+		<div class="signal signal-a"></div>
+		<div class="signal signal-b"></div>
+		<div class="signal signal-c"></div>
 	</div>
 
 	<header class="site-header">
 		<div class="container header-shell reveal">
-			<a class="brand" href="index.html#projects">Portfolio</a>
+			<a class="brand" href="index.html#missions">Khoi Pham</a>
 			<nav class="main-nav" aria-label="Project navigation">
-				<a href="index.html#projects">Projects</a>
+				<a href="index.html#missions">Missions</a>
 				<a href="#dashboard">Dashboard</a>
-				<a href="#insights">Insights</a>
-				<a href="#decisions">Decisions</a>
+				<a href="#signals">Signals</a>
+				<a href="#decision">Decision Layer</a>
 			</nav>
 			<div class="toolbar">
-				<a class="btn btn-outline btn-compact" href="index.html#projects">Back</a>
+				<a class="btn btn-outline" href="index.html#missions">Back</a>
 			</div>
 		</div>
 	</header>
@@ -40,23 +44,22 @@
 		<section class="project-detail-hero section-shell">
 			<div class="container project-detail-shell">
 				<div class="project-detail-copy reveal">
-					<p class="eyebrow">Marketing Analytics Case Study</p>
-					<h1>Phân tích hiệu quả chi tiêu Marketing</h1>
+					<p class="eyebrow">Mission 01 / Marketing Analytics</p>
+					<h1>Marketing Spend Performance Analysis</h1>
 					<p class="hero-summary">
-						Dự án sử dụng bộ dữ liệu Marketing Campaign Performance để phân tích hiệu quả chi tiêu theo channel, category,
-						platform và campaign. Dữ liệu được xử lý bằng Python để làm sạch, chuẩn hóa và chuẩn bị các chỉ số như revenue,
-						cost, ROAS, ROMI và conversion rate, sau đó được trực quan hóa bằng Power BI để hỗ trợ phân tích hiệu suất và ra quyết định ngân sách.
+						A mission to find whether marketing growth was powered by true efficiency or simply by a larger budget.
+						The work turns campaign data into a decision layer for budget allocation, channel optimization and performance storytelling.
 					</p>
 					<div class="tag-row">
 						<span class="tag">Python</span>
+						<span class="tag">Pandas</span>
 						<span class="tag">Power BI</span>
-						<span class="tag">Marketing Analytics</span>
-						<span class="tag">Business Insight</span>
+						<span class="tag">ROAS</span>
 						<span class="tag">Budget Optimization</span>
 					</div>
 					<div class="hero-actions">
-						<a class="btn btn-solid" href="#dashboard">Xem dashboard</a>
-						<a class="btn btn-outline" href="https://github.com/pckhoii/marketing_campaign_performance" target="_blank" rel="noreferrer">GitHub repo & notebook</a>
+						<a class="btn btn-solid" href="#dashboard">View Dashboard</a>
+						<a class="btn btn-outline" href="https://github.com/pckhoii/marketing_campaign_performance" target="_blank" rel="noreferrer">GitHub Repo</a>
 					</div>
 				</div>
 			</div>
@@ -65,21 +68,19 @@
 		<section class="section-shell">
 			<div class="container detail-grid">
 				<article class="panel reveal">
-					<p class="section-kicker">Requirement</p>
-					<h3>Yêu cầu dự án</h3>
+					<p class="section-kicker">Question</p>
+					<h3>The signal to investigate</h3>
 					<p>
-						Bài toán không phải là trình bày dashboard đẹp, mà là giúp business trả lời được ba câu hỏi quan trọng:
-						tăng trưởng hiện tại đến từ hiệu suất hay chỉ từ việc tăng spend, kênh nào đang tạo profitability thật,
-						và ngân sách hiện tại có đang được phân bổ đúng vào những campaign chất lượng nhất hay chưa.
+						Revenue was moving up, but the core question was less obvious: were campaigns becoming more efficient,
+						or was the business buying growth by increasing spend? Looking only at revenue, clicks or orders could create a false positive.
 					</p>
 				</article>
 				<article class="panel reveal" data-reveal-delay="80">
-					<p class="section-kicker">Problem</p>
-					<h3>Bài toán cần giải quyết</h3>
+					<p class="section-kicker">System</p>
+					<h3>The analytical orbit</h3>
 					<p>
-						Dữ liệu cho thấy doanh thu đang tăng, nhưng phần lớn tăng trưởng hiện tại phụ thuộc vào mở rộng chi tiêu thay vì cải thiện conversion efficiency.
-						Nếu chỉ nhìn revenue, clicks hoặc orders, một số campaign có vẻ đang hoạt động tốt. Nhưng khi đối chiếu thêm ROAS, ROMI và conversion rate,
-						bức tranh trở nên khác hẳn: business đang mua growth, chưa thực sự tối ưu return.
+						I cleaned and prepared campaign data with Python, modeled performance metrics such as revenue, cost, ROAS,
+						ROMI and conversion rate, then built a Power BI dashboard for channel, category, platform and campaign analysis.
 					</p>
 				</article>
 			</div>
@@ -88,11 +89,11 @@
 		<section id="dashboard" class="section-shell">
 			<div class="container">
 				<div class="section-heading reveal">
-					<p class="section-kicker">Power BI</p>
-					<h3>Dashboard phân tích</h3>
+					<p class="section-kicker">Dashboard</p>
+					<h3>The mission control panel</h3>
 					<p class="section-intro">
-						Dashboard được thiết kế như một lớp điều hướng quyết định: đi từ bức tranh tổng quan chi tiêu đến drill-down theo platform,
-						channel và campaign để kiểm tra giả thuyết, truy nguyên vấn đề và tìm ra nơi nên tăng, giữ hay cắt ngân sách.
+						The dashboard is designed as a navigation layer: start from spend and revenue, drill into channels and campaigns,
+						then compare efficiency metrics before deciding where budget should scale, pause or be reworked.
 					</p>
 				</div>
 				<div class="dashboard-frame reveal" data-reveal-delay="80">
@@ -105,52 +106,52 @@
 			</div>
 		</section>
 
-		<section id="insights" class="section-shell">
+		<section id="signals" class="section-shell">
 			<div class="container">
 				<div class="section-heading reveal">
-					<p class="section-kicker">Analysis</p>
-					<h3>Phân tích chuyên sâu từ dashboard</h3>
-					<p class="section-intro">
-						Các insight chính không nằm ở việc kênh nào có nhiều volume nhất, mà ở việc kênh nào thật sự tạo return tốt,
-						kênh nào đang burn budget, và nơi nào business đang có cơ hội scale hiệu quả hơn.
-					</p>
+					<p class="section-kicker">Signals</p>
+					<h3>What the data revealed</h3>
 				</div>
 				<div class="detail-grid detail-grid-three">
-					<article class="mini-card reveal">
-						<p class="mini-value">Category insight</p>
-						<h4>Influencer là kênh tạo lợi nhuận tốt nhất</h4>
-						<p>Influencer tạo khoảng 21M revenue với cost chỉ khoảng 8.3M và ROMI xấp xỉ 95, dù không phải kênh có spend lớn nhất. Đây là tín hiệu rất mạnh cho thấy audience trust và conversion quality từ influencer đang vượt trội so với paid social truyền thống.</p>
+					<article class="panel reveal">
+						<p class="section-kicker">Signal 01</p>
+						<h3>Influencer quality stood out</h3>
+						<p>
+							Influencer campaigns produced strong revenue with comparatively lower cost, making them a better candidate for controlled scaling than broad paid social.
+						</p>
 					</article>
-					<article class="mini-card reveal" data-reveal-delay="80">
-						<p class="mini-value">Channel conflict</p>
-						<h4>Social đang tạo volume lớn nhưng monetization yếu</h4>
-						<p>Social có số click cao nhất, spend cao nhất khoảng 13.8M, nhưng revenue chỉ quanh 11.9M và ROMI chỉ khoảng 13. Đây là dấu hiệu điển hình của high-volume, low-efficiency acquisition: chiến dịch đang tối ưu traffic nhiều hơn là conversion quality.</p>
+					<article class="panel reveal" data-reveal-delay="80">
+						<p class="section-kicker">Signal 02</p>
+						<h3>Social volume was not enough</h3>
+						<p>
+							Social generated large traffic and spend, but weaker monetization suggested the need to audit targeting, creative fatigue and post-click intent.
+						</p>
 					</article>
-					<article class="mini-card reveal" data-reveal-delay="160">
-						<p class="mini-value">Funnel signal</p>
-						<h4>Business đang mua growth, chưa mua efficiency</h4>
-						<p>Hệ thống tạo gần 2 tỷ impressions và khoảng 3 triệu clicks nhưng conversion rate chỉ đạt 0.28%. Funnel đang tạo awareness rất lớn nhưng hiệu suất chuyển đổi thấp, cho thấy traffic intent còn yếu hoặc trải nghiệm sau click chưa được tối ưu đủ tốt.</p>
+					<article class="panel reveal" data-reveal-delay="160">
+						<p class="section-kicker">Signal 03</p>
+						<h3>Growth was spend-heavy</h3>
+						<p>
+							High impressions and clicks did not translate into equally strong conversion efficiency, so the business needed to separate reach from return.
+						</p>
 					</article>
 				</div>
 			</div>
 		</section>
 
-		<section id="decisions" class="section-shell">
+		<section id="decision" class="section-shell">
 			<div class="container">
 				<article class="panel decision-panel reveal">
 					<p class="section-kicker">Decision Layer</p>
-					<h3>Key business actions</h3>
+					<h3>Recommended actions</h3>
 					<div class="decision-list">
-						<p><strong>Scale:</strong> Ưu tiên influencer campaigns, đặc biệt là <strong>youtube_blogger</strong>, vì đây là campaign có revenue cao nhất và ROAS khoảng 3.77. Content-led acquisition đang cho thấy chất lượng chuyển đổi tốt hơn paid display hoặc broad social targeting.</p>
-						<p><strong>Optimize:</strong> Audit lại audience segmentation, creative strategy và bidding cho social campaigns. Social đang mang về phần lớn traffic nhưng hiệu suất thương mại thấp, cho thấy dấu hiệu targeting rộng, creative fatigue, low-intent traffic hoặc audience saturation.</p>
-						<p><strong>Re-evaluate:</strong> Banner campaigns tạo nhiều orders nhưng ROAS chỉ khoảng 1.22, nghĩa là volume tốt nhưng profitability yếu. Nếu chỉ nhìn orders thì dễ tạo false positive trong quyết định scale.</p>
-						<p><strong>Pause or cut back:</strong> Các Facebook campaigns như <strong>facebook_tier1</strong> và <strong>facebook_tier2</strong> có ROMI âm, cho thấy doanh thu tạo ra chưa đủ bù chi phí acquisition. Đây là nhóm nên xem lại ngay trước khi tiếp tục cấp thêm ngân sách.</p>
-						<p><strong>Hidden opportunity:</strong> Google chưa tạo volume lớn nhưng hiệu suất khá ổn định. Đây có thể là kênh tăng trưởng tiềm năng nếu được mở rộng có kiểm soát thay vì dồn thêm ngân sách tuyến tính vào social.</p>
-						<p><strong>Executive conclusion:</strong> Current marketing performance is driven primarily by spend expansion rather than conversion efficiency improvements. Influencer-led campaigns deliver stronger profitability, while several high-volume campaigns still prioritize reach over return.</p>
+						<p><strong>Scale:</strong> Prioritize influencer campaigns with better return signals and stronger conversion quality.</p>
+						<p><strong>Optimize:</strong> Rework social campaigns around audience segmentation, creative strategy and conversion intent.</p>
+						<p><strong>Re-evaluate:</strong> Treat high-order or high-click campaigns carefully when ROAS and ROMI do not support the same story.</p>
+						<p><strong>Monitor:</strong> Use the dashboard as a recurring decision layer instead of a one-time reporting artifact.</p>
 					</div>
 					<div class="hero-actions">
-						<a class="btn btn-solid" href="https://app.powerbi.com/view?r=eyJrIjoiY2JiODBjMjMtMjY4NS00N2NiLTk0OGEtNjY0ZWFjN2E1MGViIiwidCI6Ijk4MmEyZGRkLTliZTEtNGQ2ZS05Y2M5LTM3ZGVhYjEwM2MwNyIsImMiOjEwfQ%3D%3D" target="_blank" rel="noreferrer">Mở Power BI</a>
-						<a class="btn btn-outline" href="https://github.com/pckhoii/marketing_campaign_performance" target="_blank" rel="noreferrer">Xem notebook xử lý data</a>
+						<a class="btn btn-solid" href="https://app.powerbi.com/view?r=eyJrIjoiY2JiODBjMjMtMjY4NS00N2NiLTk0OGEtNjY0ZWFjN2E1MGViIiwidCI6Ijk4MmEyZGRkLTliZTEtNGQ2ZS05Y2M5LTM3ZGVhYjEwM2MwNyIsImMiOjEwfQ%3D%3D" target="_blank" rel="noreferrer">Open Power BI</a>
+						<a class="btn btn-outline" href="https://github.com/pckhoii/marketing_campaign_performance" target="_blank" rel="noreferrer">View Notebook</a>
 					</div>
 				</article>
 			</div>
@@ -159,15 +160,17 @@
 
 	<footer class="site-footer">
 		<div class="container footer-shell reveal">
-			<p>Marketing performance case study built with Python, Power BI, and Kaggle data.</p>
+			<p>Mission 01 in A Small Universe of Data.</p>
 		</div>
 	</footer>
 
 	<script type="module">
 		import { initRevealAnimations } from "./js/animations.js";
+		import { initCosmos } from "./js/cosmos.js";
 
-		document.documentElement.setAttribute("data-theme", localStorage.getItem("portfolio_theme") || "light");
+		document.documentElement.setAttribute("data-theme", localStorage.getItem("portfolio_theme") || "dark");
 		initRevealAnimations();
+		initCosmos();
 	</script>
 </body>
 </html>
