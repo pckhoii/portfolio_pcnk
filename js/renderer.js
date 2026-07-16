@@ -24,10 +24,10 @@ const uiText = {
 		missionsIntro: "Each project begins as uncertainty, then slowly becomes a readable shape: a question, a signal, a system, and a decision.",
 		journeyKicker: "My Orbit",
 		journeyTitle: "The path that shaped the way I see data.",
-		transmissionKicker: "The Next Destination",
-		transmissionTitle: "Let's Discover the Next Constellation Together.",
-		contactText: "Send me a message. I'm open to data projects, dashboard work, reporting systems, and thoughtful collaborations.",
-		contactBtn: "Send a Message",
+		transmissionKicker: "Final Transmission",
+		transmissionTitle: "The Next Signal",
+		contactText: "Every meaningful journey begins with a question. Whether you have a data problem, a project idea, or an opportunity to collaborate, I would be glad to hear the signal.",
+		contactBtn: "Start a Conversation",
 		cvBtn: "CV",
 		footer: "He doesn't just analyze data. He navigates complexity, connects patterns, and turns information into direction.",
 		locationLabel: "Base",
@@ -72,10 +72,10 @@ const uiText = {
 		missionsIntro: "Each project begins as uncertainty, then slowly becomes a readable shape: a question, a signal, a system, and a decision.",
 		journeyKicker: "My Orbit",
 		journeyTitle: "The path that shaped the way I see data.",
-		transmissionKicker: "The Next Destination",
-		transmissionTitle: "Let's Discover the Next Constellation Together.",
-		contactText: "Send me a message. I'm open to data projects, dashboard work, reporting systems, and thoughtful collaborations.",
-		contactBtn: "Send a Message",
+		transmissionKicker: "Final Transmission",
+		transmissionTitle: "The Next Signal",
+		contactText: "Every meaningful journey begins with a question. Whether you have a data problem, a project idea, or an opportunity to collaborate, I would be glad to hear the signal.",
+		contactBtn: "Start a Conversation",
 		cvBtn: "CV",
 		footer: "He doesn't just analyze data. He navigates complexity, connects patterns, and turns information into direction.",
 		locationLabel: "Base",
@@ -159,7 +159,7 @@ const bindText = (t) => {
 };
 
 export function renderPage(data, state) {
-	const { profile, skills, projects, experience } = data;
+	const { profile, skills, projects, experience, beyond } = data;
 	const lang = state.lang;
 	const t = uiText[lang];
 	const featuredProjects = [...projects].filter((item) => item.featured).sort((a, b) => (a.order || 99) - (b.order || 99));
@@ -299,6 +299,24 @@ export function renderPage(data, state) {
 			.join("");
 	}
 	setVisibility("certifications", certifications.length > 0);
+
+	const beyondGrid = document.getElementById("beyondGrid");
+	if (beyondGrid && beyond) {
+		setText("beyondTitle", pickText(beyond.title, lang));
+		setText("beyondSummary", pickText(beyond.summary, lang));
+		beyondGrid.innerHTML = (beyond.items || [])
+			.map(
+				(item, index) => `
+				<article class="beyond-card beyond-card-${index + 1}">
+					<p class="mission-code">${String(index + 1).padStart(2, "0")} / ${item.id}</p>
+					<h3>${pickText(item.title, lang)}</h3>
+					<p>${pickText(item.description, lang)}</p>
+					<span>${pickText(item.placeholder, lang)}</span>
+				</article>
+			`
+			)
+			.join("");
+	}
 
 	const emailLink = document.getElementById("emailLink");
 	if (emailLink) {

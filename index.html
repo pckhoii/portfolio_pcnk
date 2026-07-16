@@ -15,6 +15,21 @@
 	<link rel="stylesheet" href="css/animations.css" />
 </head>
 <body>
+	<div id="signalIntro" class="signal-intro" role="dialog" aria-modal="true" aria-labelledby="introTitle">
+		<div class="intro-constellation" aria-hidden="true">
+			<span></span><span></span><span></span><span></span>
+		</div>
+		<div class="intro-copy">
+			<p class="intro-status" id="introStatus">Receiving transmission...</p>
+			<h1 id="introTitle">Turning Data Into Direction</h1>
+			<p>I navigate through complexity, connect hidden patterns, and transform data into clear direction.</p>
+			<div class="hero-actions">
+				<button class="btn btn-solid" id="beginJourneyBtn" type="button">Begin the Journey</button>
+				<button class="btn btn-outline" id="skipIntroBtn" type="button">Skip intro</button>
+			</div>
+		</div>
+	</div>
+
 	<div class="cosmos-bg" aria-hidden="true">
 		<canvas id="cosmosCanvas" class="cosmos-canvas"></canvas>
 		<div class="nebula nebula-a"></div>
@@ -47,6 +62,16 @@
 			</div>
 		</div>
 	</header>
+
+	<nav class="journey-map" aria-label="Journey progress">
+		<a href="#top"><span>01</span> Signal</a>
+		<a href="#observer"><span>02</span> Explorer</a>
+		<a href="#process"><span>03</span> Constellation</a>
+		<a href="#systems"><span>04</span> Observatory</a>
+		<a href="#missions"><span>05</span> Missions</a>
+		<a href="#journey"><span>06</span> Archive</a>
+		<a href="#beyond"><span>07</span> Beyond</a>
+	</nav>
 
 	<main id="top">
 		<section class="journey-section hero-journey">
@@ -147,11 +172,43 @@
 			</div>
 		</section>
 
+		<section id="turning-point" class="journey-section turning-point-section">
+			<div class="container turning-point-shell reveal">
+				<div class="final-map" aria-hidden="true">
+					<span class="map-star ms1"></span>
+					<span class="map-star ms2"></span>
+					<span class="map-star ms3"></span>
+					<span class="map-star ms4"></span>
+					<span class="map-line ml1"></span>
+					<span class="map-line ml2"></span>
+					<span class="map-line ml3"></span>
+				</div>
+				<p class="section-kicker">The Turning Point</p>
+				<h2>Data becomes valuable when it gives people direction.</h2>
+				<p class="section-intro">My goal is not simply to create dashboards or write queries. It is to help people understand what is happening, why it matters, and what they can do next.</p>
+				<div class="hero-actions">
+					<a class="btn btn-solid" href="#beyond">Continue Beyond the Data</a>
+					<a class="btn btn-outline" href="#missions">Explore the Missions Again</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="beyond" class="journey-section beyond-section">
+			<div class="container beyond-shell">
+				<div class="section-heading section-heading-left reveal">
+					<p class="section-kicker" id="beyondKicker">Beyond the Data</p>
+					<h2 id="beyondTitle">Beyond the Data</h2>
+					<p class="section-intro" id="beyondSummary"></p>
+				</div>
+				<div id="beyondGrid" class="beyond-grid reveal" data-reveal-delay="100"></div>
+			</div>
+		</section>
+
 		<section id="transmission" class="journey-section contact-section">
 			<div class="container contact-shell">
 				<div class="section-heading reveal">
-					<p class="section-kicker" id="transmissionKicker">The Next Destination</p>
-					<h2 id="transmissionTitle">Let's Discover the Next Constellation Together.</h2>
+					<p class="section-kicker" id="transmissionKicker">Final Transmission</p>
+					<h2 id="transmissionTitle">The Next Signal</h2>
 					<p class="section-intro" id="contactText"></p>
 				</div>
 				<div class="contact-grid reveal" data-reveal-delay="80">

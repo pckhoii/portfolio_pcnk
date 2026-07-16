@@ -1,6 +1,7 @@
 import { renderPage } from "./renderer.js";
 import { initRevealAnimations } from "./animations.js";
 import { initCosmos } from "./cosmos.js";
+import { initJourneyMap, initSignalIntro } from "./intro.js";
 
 const state = {
 	lang: localStorage.getItem("portfolio_lang") || "vi",
@@ -10,14 +11,15 @@ const state = {
 let cachedData = null;
 
 async function loadData() {
-	const [profile, skills, projects, experience] = await Promise.all([
+	const [profile, skills, projects, experience, beyond] = await Promise.all([
 		fetch("./data/profile.json").then((res) => res.json()),
 		fetch("./data/skills.json").then((res) => res.json()),
 		fetch("./data/projects.json").then((res) => res.json()),
-		fetch("./data/experience.json").then((res) => res.json())
+		fetch("./data/experience.json").then((res) => res.json()),
+		fetch("./data/beyond.json").then((res) => res.json())
 	]);
 
-	return { profile, skills, projects, experience };
+	return { profile, skills, projects, experience, beyond };
 }
 
 function applyTheme() {
@@ -60,9 +62,11 @@ async function startApp() {
 		applyTheme();
 		bindToolbar();
 		initCosmos();
+		initSignalIntro();
 
 		cachedData = await loadData();
 		rerender();
+		initJourneyMap();
 	} catch (error) {
 		console.error("Failed to start portfolio app:", error);
 	}

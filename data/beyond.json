@@ -1,0 +1,102 @@
+{
+	"title": {
+		"vi": "Beyond the Data",
+		"en": "Beyond the Data"
+	},
+	"summary": {
+		"vi": "The things that shape how I think when I am away from the dashboard.",
+		"en": "The things that shape how I think when I am away from the dashboard."
+	},
+	"items": [
+		{
+			"id": "field-notes",
+			"title": {
+				"vi": "Field Notes",
+				"en": "Field Notes"
+			},
+			"description": {
+				"vi": "A collection of observations about data, work, learning, and the questions that continue to follow me.",
+				"en": "A collection of observations about data, work, learning, and the questions that continue to follow me."
+			},
+			"placeholder": {
+				"vi": "The first field note is still being decoded.",
+				"en": "The first field note is still being decoded."
+			}
+		},
+		{
+			"id": "boxing",
+			"title": {
+				"vi": "Boxing",
+				"en": "Boxing"
+			},
+			"description": {
+				"vi": "Boxing teaches me to stay calm under pressure, repeat the fundamentals, and improve through disciplined practice.",
+				"en": "Boxing teaches me to stay calm under pressure, repeat the fundamentals, and improve through disciplined practice."
+			},
+			"placeholder": {
+				"vi": "Training log transmission in progress.",
+				"en": "Training log transmission in progress."
+			}
+		},
+		{
+			"id": "reading",
+			"title": {
+				"vi": "Reading",
+				"en": "Reading"
+			},
+			"description": {
+				"vi": "I read to discover new frameworks, question familiar assumptions, and connect ideas outside my daily work.",
+				"en": "I read to discover new frameworks, question familiar assumptions, and connect ideas outside my daily work."
+			},
+			"placeholder": {
+				"vi": "Reading archive coming soon.",
+				"en": "Reading archive coming soon."
+			}
+		},
+		{
+			"id": "design",
+			"title": {
+				"vi": "Design and Visual Thinking",
+				"en": "Design and Visual Thinking"
+			},
+			"description": {
+				"vi": "Design helps me communicate analytical ideas more clearly. It reminds me that insight is only useful when people can understand it.",
+				"en": "Design helps me communicate analytical ideas more clearly. It reminds me that insight is only useful when people can understand it."
+			},
+			"placeholder": {
+				"vi": "Visual experiments are still being assembled.",
+				"en": "Visual experiments are still being assembled."
+			}
+		},
+		{
+			"id": "photography-travel",
+			"title": {
+				"vi": "Photography and Travel",
+				"en": "Photography and Travel"
+			},
+			"description": {
+				"vi": "Photography slows me down and teaches me to notice composition, light, context, and small details that are easy to overlook.",
+				"en": "Photography slows me down and teaches me to notice composition, light, context, and small details that are easy to overlook."
+			},
+			"placeholder": {
+				"vi": "New coordinates will be documented soon.",
+				"en": "New coordinates will be documented soon."
+			}
+		},
+		{
+			"id": "learning-log",
+			"title": {
+				"vi": "Learning Log",
+				"en": "Learning Log"
+			},
+			"description": {
+				"vi": "A record of the tools, systems, and questions I am currently exploring.",
+				"en": "A record of the tools, systems, and questions I am currently exploring."
+			},
+			"placeholder": {
+				"vi": "More signals are being collected.",
+				"en": "More signals are being collected."
+			}
+		}
+	]
+}
