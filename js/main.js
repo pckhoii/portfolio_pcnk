@@ -11,15 +11,16 @@ const state = {
 let cachedData = null;
 
 async function loadData() {
-	const [profile, skills, projects, experience, beyond] = await Promise.all([
+	const [profile, skills, projects, experience, beyond, books] = await Promise.all([
 		fetch("./data/profile.json").then((res) => res.json()),
 		fetch("./data/skills.json").then((res) => res.json()),
 		fetch("./data/projects.json").then((res) => res.json()),
 		fetch("./data/experience.json").then((res) => res.json()),
-		fetch("./data/beyond.json").then((res) => res.json())
+		fetch("./data/beyond.json").then((res) => res.json()),
+		fetch("./data/books.json").then((res) => res.json())
 	]);
 
-	return { profile, skills, projects, experience, beyond };
+	return { profile, skills, projects, experience, beyond, books };
 }
 
 function applyTheme() {

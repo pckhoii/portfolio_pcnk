@@ -1,4 +1,4 @@
-const introSteps = ["Receiving transmission...", "Searching for signal...", "Signal acquired."];
+const introSteps = ["Receiving transmission...", "Searching for coordinates...", "Signal acquired."];
 
 export function initSignalIntro() {
 	const intro = document.getElementById("signalIntro");

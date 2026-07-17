@@ -1145,6 +1145,167 @@ p {
 	font-weight: 900;
 }
 
+.reading-archive {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: minmax(260px, 0.44fr) minmax(320px, 0.56fr);
+	grid-template-areas:
+		"head current"
+		"artifacts detail";
+	gap: 16px;
+	margin-top: 18px;
+	padding: 18px;
+	border: 1px solid rgba(217, 193, 121, 0.18);
+	border-radius: 28px;
+	background:
+		linear-gradient(145deg, rgba(217, 193, 121, 0.08), rgba(156, 140, 255, 0.05)),
+		var(--surface);
+	box-shadow: var(--shadow);
+}
+
+.reading-head {
+	grid-area: head;
+}
+
+.reading-head h3 {
+	margin: 0;
+	font-family: "Fraunces", Georgia, serif;
+	font-size: clamp(1.8rem, 3vw, 3rem);
+	line-height: 1;
+}
+
+.reading-head p:not(.section-kicker),
+.current-signal p,
+.book-detail p {
+	color: var(--muted);
+	line-height: 1.7;
+}
+
+.current-signal {
+	grid-area: current;
+	padding: 18px;
+	border: 1px solid var(--line);
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.035);
+}
+
+.current-signal h4 {
+	margin: 0;
+	font-size: 1.05rem;
+}
+
+.book-artifacts {
+	grid-area: artifacts;
+	display: grid;
+	gap: 10px;
+	align-content: start;
+}
+
+.book-artifact {
+	display: grid;
+	grid-template-columns: 38px 1fr;
+	gap: 6px 12px;
+	align-items: center;
+	width: 100%;
+	padding: 14px;
+	border: 1px solid var(--line);
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.035);
+	color: var(--text);
+	text-align: left;
+	cursor: pointer;
+	transition: border-color 180ms ease, transform 180ms ease, background-color 180ms ease;
+}
+
+.book-artifact:hover,
+.book-artifact:focus-visible,
+.book-artifact.is-active {
+	border-color: rgba(217, 193, 121, 0.42);
+	background: rgba(217, 193, 121, 0.08);
+	transform: translateY(-2px);
+	outline: none;
+}
+
+.book-artifact span {
+	grid-row: span 2;
+	width: 34px;
+	height: 34px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	border: 1px solid rgba(217, 193, 121, 0.28);
+	color: var(--accent-2);
+	font-weight: 900;
+}
+
+.book-artifact strong,
+.book-artifact small {
+	min-width: 0;
+}
+
+.book-artifact small {
+	color: var(--muted);
+}
+
+.book-detail {
+	grid-area: detail;
+	min-height: 420px;
+	padding: 22px;
+	border: 1px solid var(--line);
+	border-radius: 22px;
+	background: rgba(5, 8, 22, 0.38);
+}
+
+.book-detail h3 {
+	margin: 0;
+	font-family: "Fraunces", Georgia, serif;
+	font-size: clamp(2rem, 4vw, 3.8rem);
+	line-height: 0.98;
+}
+
+.book-author {
+	color: var(--accent-2) !important;
+	font-weight: 900;
+}
+
+.book-detail-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+	margin-top: 18px;
+}
+
+.book-detail-grid section,
+.before-after > div {
+	padding: 14px;
+	border: 1px solid var(--line);
+	border-radius: 16px;
+	background: rgba(255, 255, 255, 0.03);
+}
+
+.book-detail-grid h4 {
+	margin: 0 0 8px;
+	color: var(--accent);
+	font-size: 0.78rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.before-after {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+	padding: 0 !important;
+	border: 0 !important;
+	background: transparent !important;
+}
+
+.personal-note {
+	margin-top: 16px;
+	padding-top: 14px;
+	border-top: 1px solid var(--line);
+}
+
 .contact-shell {
 	max-width: 980px;
 }
@@ -1471,8 +1632,19 @@ p {
 	.contact-grid,
 	.detail-grid,
 	.detail-grid-three,
-	.beyond-grid {
+	.beyond-grid,
+	.reading-archive,
+	.book-detail-grid,
+	.before-after {
 		grid-template-columns: 1fr;
+	}
+
+	.reading-archive {
+		grid-template-areas:
+			"head"
+			"current"
+			"artifacts"
+			"detail";
 	}
 
 	.planetary-timeline::before {

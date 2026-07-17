@@ -1,11 +1,9 @@
 const uiText = {
 	vi: {
 		brand: "Khoi Pham",
-		navSignals: "Observer",
-		navProcess: "Process",
-		navSystems: "Tools",
+		navJourneyMain: "The Journey",
+		navBeyondMain: "Beyond the Data",
 		navMissions: "Constellations",
-		navJourney: "Orbit",
 		navTransmission: "Contact",
 		heroKicker: "Entering the universe",
 		heroSummary: "I transform scattered data into meaningful insights that help people make better decisions.",
@@ -49,11 +47,9 @@ const uiText = {
 	},
 	en: {
 		brand: "Khoi Pham",
-		navSignals: "Observer",
-		navProcess: "Process",
-		navSystems: "Tools",
+		navJourneyMain: "The Journey",
+		navBeyondMain: "Beyond the Data",
 		navMissions: "Constellations",
-		navJourney: "Orbit",
 		navTransmission: "Contact",
 		heroKicker: "Entering the universe",
 		heroSummary: "I transform scattered data into meaningful insights that help people make better decisions.",
@@ -119,11 +115,9 @@ const createTags = (tags = []) => tags.map((tag) => `<span class="tag">${tag}</s
 const bindText = (t) => {
 	const bindings = {
 		brandText: "brand",
-		navSignals: "navSignals",
-		navProcess: "navProcess",
-		navSystems: "navSystems",
+		navJourneyMain: "navJourneyMain",
+		navBeyondMain: "navBeyondMain",
 		navMissions: "navMissions",
-		navJourney: "navJourney",
 		navTransmission: "navTransmission",
 		heroKicker: "heroKicker",
 		heroSummary: "heroSummary",
@@ -159,7 +153,7 @@ const bindText = (t) => {
 };
 
 export function renderPage(data, state) {
-	const { profile, skills, projects, experience, beyond } = data;
+	const { profile, skills, projects, experience, beyond, books } = data;
 	const lang = state.lang;
 	const t = uiText[lang];
 	const featuredProjects = [...projects].filter((item) => item.featured).sort((a, b) => (a.order || 99) - (b.order || 99));
@@ -316,6 +310,98 @@ export function renderPage(data, state) {
 			`
 			)
 			.join("");
+	}
+
+	const readingArchive = document.getElementById("readingArchive");
+	if (readingArchive && books) {
+		const bookItems = books.items || [];
+		const current = books.current || {};
+		const renderBookDetail = (book = bookItems[0]) => {
+			if (!book) {
+				return `
+					<div class="book-detail-empty">
+						<p class="mission-code">Reading Archive</p>
+						<h3>The first field note is coming soon.</h3>
+						<p>More signals are being collected.</p>
+					</div>
+				`;
+			}
+
+			return `
+				<div class="book-detail-copy">
+					<p class="mission-code">${book.status === "placeholder" ? "Placeholder artifact" : "Reading artifact"}</p>
+					<h3>${pickText(book.title, lang)}</h3>
+					<p class="book-author">${pickText(book.author, lang)}</p>
+					<div class="book-detail-grid">
+						<section>
+							<h4>The Signal</h4>
+							<p>${pickText(book.signal, lang)}</p>
+						</section>
+						<section>
+							<h4>What Stayed With Me</h4>
+							<p>${pickText(book.reflection, lang)}</p>
+						</section>
+						<section>
+							<h4>Why It Mattered</h4>
+							<p>${pickText(book.why, lang)}</p>
+						</section>
+						<section class="before-after">
+							<div>
+								<h4>Before</h4>
+								<p>${pickText(book.before, lang)}</p>
+							</div>
+							<div>
+								<h4>After</h4>
+								<p>${pickText(book.after, lang)}</p>
+							</div>
+						</section>
+					</div>
+					<p class="personal-note">${pickText(book.note, lang)}</p>
+					<div class="tag-row">${(book.relatedIdeas || []).map((item) => `<span class="tag">${item}</span>`).join("")}</div>
+				</div>
+			`;
+		};
+
+		readingArchive.innerHTML = `
+			<div class="reading-head">
+				<p class="section-kicker">Reading Archive</p>
+				<h3>Ideas as quiet signals.</h3>
+				<p>A reflective archive for books and ideas that shape how I work, learn, and make decisions.</p>
+			</div>
+			<aside class="current-signal">
+				<p class="mission-code">${pickText(current.author, lang)}</p>
+				<h4>${pickText(current.title, lang)}</h4>
+				<p>${pickText(current.observation, lang)}</p>
+			</aside>
+			<div class="book-artifacts" role="list">
+				${bookItems
+					.map(
+						(book, index) => `
+						<button class="book-artifact ${index === 0 ? "is-active" : ""}" type="button" data-book-index="${index}" role="listitem">
+							<span>${String(index + 1).padStart(2, "0")}</span>
+							<strong>${pickText(book.title, lang)}</strong>
+							<small>${pickText(book.author, lang)}</small>
+						</button>
+					`
+					)
+					.join("")}
+			</div>
+			<article class="book-detail" aria-live="polite">
+				${renderBookDetail(bookItems[0])}
+			</article>
+		`;
+
+		const detail = readingArchive.querySelector(".book-detail");
+		readingArchive.querySelectorAll(".book-artifact").forEach((button) => {
+			button.addEventListener("click", () => {
+				const index = Number(button.dataset.bookIndex || 0);
+				readingArchive.querySelectorAll(".book-artifact").forEach((item) => item.classList.remove("is-active"));
+				button.classList.add("is-active");
+				if (detail) {
+					detail.innerHTML = renderBookDetail(bookItems[index]);
+				}
+			});
+		});
 	}
 
 	const emailLink = document.getElementById("emailLink");
