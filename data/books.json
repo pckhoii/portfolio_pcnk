@@ -16,7 +16,7 @@
 	"items": [
 		{
 			"id": "book-placeholder-01",
-			"status": "placeholder",
+			"status": "reading",
 			"title": {
 				"vi": "Book title",
 				"en": "Book title"
@@ -53,7 +53,7 @@
 		},
 		{
 			"id": "book-placeholder-02",
-			"status": "placeholder",
+			"status": "next",
 			"title": {
 				"vi": "Another signal",
 				"en": "Another signal"
@@ -87,6 +87,19 @@
 				"en": "Archive still being indexed."
 			},
 			"relatedIdeas": ["focus", "practice", "visual-thinking"]
+		},
+		{
+			"id": "book-placeholder-03",
+			"status": "read",
+			"title": { "vi": "Archived signal", "en": "Archived signal" },
+			"author": { "vi": "Author name", "en": "Author name" },
+			"signal": { "vi": "A completed placeholder slot for a future reading note.", "en": "A completed placeholder slot for a future reading note." },
+			"reflection": { "vi": "This archive is waiting for a real reflection.", "en": "This archive is waiting for a real reflection." },
+			"why": { "vi": "Why it mattered will be documented later.", "en": "Why it mattered will be documented later." },
+			"before": { "vi": "Before the note is written.", "en": "Before the note is written." },
+			"after": { "vi": "After the archive is updated.", "en": "After the archive is updated." },
+			"note": { "vi": "Personal note coming soon.", "en": "Personal note coming soon." },
+			"relatedIdeas": ["archive", "reflection"]
 		}
 	]
 }

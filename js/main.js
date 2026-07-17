@@ -1,7 +1,6 @@
 import { renderPage } from "./renderer.js";
-import { initRevealAnimations } from "./animations.js";
 import { initCosmos } from "./cosmos.js";
-import { initJourneyMap, initSignalIntro } from "./intro.js";
+import { initJourneyStory, initSignalIntro } from "./intro.js";
 
 const state = {
 	lang: localStorage.getItem("portfolio_lang") || "vi",
@@ -33,7 +32,6 @@ function rerender() {
 	}
 
 	renderPage(cachedData, state);
-	initRevealAnimations();
 }
 
 function bindToolbar() {
@@ -67,7 +65,7 @@ async function startApp() {
 
 		cachedData = await loadData();
 		rerender();
-		initJourneyMap();
+		initJourneyStory();
 	} catch (error) {
 		console.error("Failed to start portfolio app:", error);
 	}

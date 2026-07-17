@@ -6,248 +6,105 @@
 	<title>Khoi Pham | Turning Data Into Direction</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700;800&display=swap"
-		rel="stylesheet"
-	/>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 	<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/animations.css" />
 </head>
 <body>
 	<div id="signalIntro" class="signal-intro" role="dialog" aria-modal="true" aria-labelledby="introTitle">
-		<div class="intro-constellation" aria-hidden="true">
-			<span></span><span></span><span></span><span></span>
-		</div>
+		<div class="intro-map" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
 		<div class="intro-copy">
 			<p class="intro-status" id="introStatus">Receiving transmission...</p>
-			<ul class="intro-signal-lines" aria-label="Signal transformation">
-				<li>Scattered signals.</li>
-				<li>Hidden patterns.</li>
-				<li>Clear direction.</li>
-			</ul>
+			<p class="intro-sequence">Scattered signals. <span>Hidden patterns.</span> Clear direction.</p>
 			<h1 id="introTitle">Turning Data Into Direction</h1>
-			<p>I navigate through complexity, connect hidden patterns, and transform scattered information into clear direction.</p>
-			<div class="hero-actions">
-				<button class="btn btn-solid" id="beginJourneyBtn" type="button">Begin the Journey</button>
-				<a class="btn btn-outline" href="#missions">Explore the Missions</a>
-				<button class="btn btn-outline" id="skipIntroBtn" type="button">Skip intro</button>
+			<p>I navigate through complexity, connect hidden patterns, and turn scattered information into clear direction.</p>
+			<div class="action-row">
+				<button class="button button-primary" id="beginJourneyBtn" type="button">Begin the Journey</button>
+				<a class="button button-quiet" href="#missionScene" id="introMissionsBtn">Explore Missions</a>
+				<button class="text-button" id="skipIntroBtn" type="button">Skip intro</button>
 			</div>
 		</div>
 	</div>
 
-	<div class="cosmos-bg" aria-hidden="true">
-		<canvas id="cosmosCanvas" class="cosmos-canvas"></canvas>
-		<div class="nebula nebula-a"></div>
-		<div class="nebula nebula-b"></div>
-		<div class="star-field"></div>
-	</div>
+	<div class="cosmos-bg" aria-hidden="true"><canvas id="cosmosCanvas"></canvas></div>
+	<div class="chapter-pass" id="chapterPass" aria-hidden="true"><span>Crossing the horizon</span></div>
 
 	<header class="site-header">
-		<div class="container header-shell reveal">
-			<a class="brand" href="#top" id="brandText">Khoi Pham</a>
-			<nav class="main-nav" aria-label="Main navigation">
-				<a href="#top" id="navJourneyMain">The Journey</a>
-				<a href="#beyond" id="navBeyondMain">Beyond the Data</a>
-				<a href="#missions" id="navMissions">Missions</a>
+		<div class="header-shell">
+			<a class="brand" href="#journeyChapter" id="brandText">Khoi Pham</a>
+			<nav class="main-nav" aria-label="Primary navigation">
+				<a href="#journeyChapter" id="navJourneyMain">The Journey</a>
+				<a href="#beyondChapter" id="navBeyondMain">Beyond the Data</a>
+				<a href="#missionScene" id="navMissions">Missions</a>
 				<a href="#transmission" id="navTransmission">Contact</a>
 			</nav>
 			<div class="toolbar" aria-label="Display controls">
-				<label class="switch-wrap switch-wrap-lang" for="languageSwitch">
-					<span id="languageSwitchLabel" class="sr-only">VI / EN</span>
-					<input id="languageSwitch" class="switch-input" type="checkbox" aria-label="Change language" />
-					<span class="switch-slider switch-slider-sm"></span>
-				</label>
-				<label class="switch-wrap switch-wrap-theme" for="themeSwitch">
-					<span id="themeSwitchLabel" class="sr-only">Light / Dark</span>
-					<input id="themeSwitch" class="switch-input" type="checkbox" aria-label="Toggle theme" />
-					<span class="switch-slider switch-slider-sm"></span>
-				</label>
+				<label class="toggle" for="languageSwitch"><span class="sr-only" id="languageSwitchLabel">VI / EN</span><input id="languageSwitch" type="checkbox" aria-label="Change language" /><i>VI</i><b>EN</b></label>
+				<label class="toggle theme-toggle" for="themeSwitch"><span class="sr-only" id="themeSwitchLabel">Light / Dark</span><input id="themeSwitch" type="checkbox" aria-label="Toggle theme" /><i></i></label>
 			</div>
 		</div>
 	</header>
 
-	<nav class="journey-map" aria-label="Journey progress">
-		<a href="#top"><span>01</span> Signal</a>
-		<a href="#observer"><span>02</span> Explorer</a>
-		<a href="#process"><span>03</span> Constellation</a>
-		<a href="#systems"><span>04</span> Observatory</a>
-		<a href="#missions"><span>05</span> Missions</a>
-		<a href="#journey"><span>06</span> Archive</a>
-		<a href="#turning-point"><span>07</span> Turning Point</a>
-	</nav>
-
-	<main id="top">
-		<section class="journey-section hero-journey">
-			<div class="hero-camera" aria-hidden="true">
-				<div class="camera-ring camera-ring-one"></div>
-				<div class="camera-ring camera-ring-two"></div>
-				<div class="camera-core"></div>
-				<div class="camera-star star-one"></div>
-				<div class="camera-star star-two"></div>
-				<div class="camera-star star-three"></div>
+	<main>
+		<section id="journeyChapter" class="journey-chapter" aria-label="The Journey">
+			<div class="journey-stage" id="journeyStage" data-scene="signal">
+				<div class="stage-sky"></div>
+				<div class="stage-orbit orbit-a"></div><div class="stage-orbit orbit-b"></div><div class="stage-orbit orbit-c"></div>
+				<div class="stage-planet"><span>KP</span></div>
+				<div class="stage-observatory"><i></i><i></i><i></i></div>
+				<div class="stage-network" aria-hidden="true">
+					<span class="network-line nl-1"></span><span class="network-line nl-2"></span><span class="network-line nl-3"></span><span class="network-line nl-4"></span><span class="network-line nl-5"></span>
+					<b class="network-node n-1"></b><b class="network-node n-2"></b><b class="network-node n-3"></b><b class="network-node n-4"></b><b class="network-node n-5"></b><b class="network-node n-6"></b>
+				</div>
+				<div class="stage-route" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+				<div class="stage-hud">
+					<p id="stageIndex">01 / 07</p><span></span><p id="stageName">Signal acquired</p>
+				</div>
+				<div class="journey-context" aria-live="polite"><span id="contextLabel">Signal</span><div id="contextSteps"></div></div>
 			</div>
-			<div class="container hero-shell">
-				<div class="hero-copy reveal">
-					<p class="eyebrow" id="heroKicker">Entering the universe</p>
-					<h1 id="heroRole">Turning Data Into Direction</h1>
-					<p class="hero-summary" id="heroSummary"></p>
-					<div class="hero-actions">
-						<a class="btn btn-solid magnetic" id="heroPrimaryBtn" href="#observer">Explore the Journey</a>
-					</div>
-				</div>
-				<div class="hero-observatory reveal" data-reveal-delay="120">
-					<div class="observatory-orbit"></div>
-					<div class="observatory-lens">KP</div>
-					<div class="observatory-note note-one">raw signals</div>
-					<div class="observatory-note note-two">connected patterns</div>
-					<div class="observatory-note note-three">clear direction</div>
-				</div>
+
+			<div class="journey-track" id="journeyTrack">
+				<article class="story-scene scene-signal" id="top" data-scene="signal">
+					<div class="story-copy intro-story"><p class="eyebrow">A small universe of data</p><h1 id="heroRole">Turning Data Into Direction</h1><p id="heroSummary"></p><a class="button button-primary" href="#explorerScene" id="heroPrimaryBtn">Enter the observatory</a></div>
+				</article>
+				<article class="story-scene scene-explorer" id="explorerScene" data-scene="explorer">
+					<div class="story-copy"><p class="eyebrow" id="signalsKicker">The Explorer</p><h2 id="signalsTitle">I look for patterns hidden inside complexity.</h2><p id="signalsIntro"></p><p class="story-detail" id="aboutText"></p><div id="traitGrid" class="trait-list"></div></div>
+				</article>
+				<article class="story-scene scene-constellation" id="constellationScene" data-scene="constellation">
+					<div class="story-copy align-right"><p class="eyebrow" id="processKicker">Finding the Constellation</p><h2 id="processTitle">A question becomes a map.</h2><p>The signal settles into a working route. Each point has a job; each connection makes the answer more trustworthy.</p><div id="processConstellation" class="process-list"></div></div>
+				</article>
+				<article class="story-scene scene-observatory" id="observatoryScene" data-scene="observatory">
+					<div class="story-copy"><p class="eyebrow" id="systemsKicker">The Observatory</p><h2 id="systemsTitle">The instruments I use to navigate data.</h2><p>Tools are not a collection. They become a system when the question determines what happens next.</p><div id="skillsGrid" class="system-list"></div></div>
+				</article>
+				<article class="story-scene scene-missions" id="missionScene" data-scene="missions">
+					<div class="story-copy mission-copy"><p class="eyebrow" id="missionsKicker">Mission Control</p><h2 id="missionsTitle">Projects are maps made from scattered stars.</h2><p id="missionsIntro"></p><div id="missionNavigator" class="mission-navigator"></div></div>
+				</article>
+				<article class="story-scene scene-archive" id="archiveScene" data-scene="archive">
+					<div class="story-copy align-right archive-copy"><p class="eyebrow" id="journeyKicker">Flight Archive</p><h2 id="journeyTitle">The path that shaped the way I see data.</h2><div id="experienceList" class="flight-archive"></div><div id="certificationsGrid" class="credentials-strip"></div></div>
+				</article>
+				<article class="story-scene scene-turning" id="turningPointScene" data-scene="turning-point">
+					<div class="story-copy turning-copy"><p class="eyebrow">The edge of the known map</p><h2>You have reached the edge of the known map.</h2><p>There is more beyond the data.</p><div class="action-row"><button class="button button-warm" id="enterBeyondBtn" type="button">Enter Beyond the Data</button><a class="button button-quiet" href="#missionScene">Return to Missions</a></div></div>
+				</article>
 			</div>
 		</section>
 
-		<section id="observer" class="journey-section observer-section">
-			<div class="container observer-shell">
-				<div class="section-heading section-heading-left reveal">
-					<p class="section-kicker" id="signalsKicker">The Observer</p>
-					<h2 id="signalsTitle">I look for patterns hidden inside complexity.</h2>
-					<p class="section-intro" id="signalsIntro"></p>
+		<section id="beyondChapter" class="beyond-chapter" aria-label="Beyond the Data">
+			<div class="beyond-shell">
+				<div class="beyond-heading"><p class="eyebrow" id="beyondKicker">Beyond the Data</p><h2 id="beyondTitle">Beyond the Data</h2><p id="beyondSummary"></p></div>
+				<div class="personal-world">
+					<div class="personal-core"><span>KP</span><small>personal archive</small></div>
+					<div id="beyondDestinations" class="destination-ring" role="tablist" aria-label="Personal archive destinations"></div>
+					<article id="personalDestination" class="destination-detail" aria-live="polite"></article>
 				</div>
-				<div class="observer-stage reveal" data-reveal-delay="120">
-					<article class="observer-card">
-						<p id="aboutText"></p>
-					</article>
-					<div id="traitGrid" class="observer-planets"></div>
-				</div>
+				<section id="readingArchive" class="reading-archive" aria-label="Reading archive"></section>
 			</div>
-		</section>
-
-		<section id="process" class="journey-section process-section">
-			<div class="container">
-				<div class="section-heading reveal">
-					<p class="section-kicker" id="processKicker">Finding the Constellation</p>
-					<h2 id="processTitle">A question becomes a map.</h2>
-				</div>
-				<div class="process-constellation reveal" id="processConstellation" data-reveal-delay="80"></div>
-			</div>
-		</section>
-
-		<section id="missions" class="journey-section projects-section">
-			<div class="container projects-shell">
-				<div class="section-heading section-heading-left reveal">
-					<p class="section-kicker" id="missionsKicker">Constellations</p>
-					<h2 id="missionsTitle">Projects are maps made from scattered stars.</h2>
-					<p class="section-intro" id="missionsIntro"></p>
-				</div>
-				<div id="projectsGrid" class="project-constellation-field reveal" data-reveal-delay="100"></div>
-			</div>
-		</section>
-
-		<section id="systems" class="journey-section tools-section">
-			<div class="container">
-				<div class="section-heading reveal">
-					<p class="section-kicker" id="systemsKicker">Tools of Exploration</p>
-					<h2 id="systemsTitle">The instruments I use to navigate data.</h2>
-				</div>
-				<div class="tools-orbit reveal" data-reveal-delay="80">
-					<div class="tools-core">INSIGHT</div>
-					<div id="skillsGrid" class="tools-grid"></div>
-				</div>
-			</div>
-		</section>
-
-		<section id="journey" class="journey-section orbit-section">
-			<div class="container">
-				<div class="section-heading reveal">
-					<p class="section-kicker" id="journeyKicker">My Orbit</p>
-					<h2 id="journeyTitle">The path that shaped the way I see data.</h2>
-				</div>
-				<div class="planetary-timeline reveal" id="experienceList" data-reveal-delay="80"></div>
-			</div>
-		</section>
-
-		<section id="certifications" class="journey-section credentials-section">
-			<div class="container">
-				<div class="section-heading reveal">
-					<p class="section-kicker" id="certificationsKicker">Coordinates</p>
-					<h2 id="certificationsTitle">Learning signals along the route.</h2>
-				</div>
-				<div id="certificationsGrid" class="certifications-grid reveal" data-reveal-delay="80"></div>
-			</div>
-		</section>
-
-		<section id="turning-point" class="journey-section turning-point-section">
-			<div class="container turning-point-shell reveal">
-				<div class="final-map" aria-hidden="true">
-					<span class="map-star ms1"></span>
-					<span class="map-star ms2"></span>
-					<span class="map-star ms3"></span>
-					<span class="map-star ms4"></span>
-					<span class="map-line ml1"></span>
-					<span class="map-line ml2"></span>
-					<span class="map-line ml3"></span>
-				</div>
-				<p class="section-kicker">The Turning Point</p>
-				<h2>Data becomes valuable when it gives people direction.</h2>
-				<p class="section-intro">My goal is not simply to create dashboards or write queries. It is to help people understand what is happening, why it matters, and what they can do next.</p>
-				<div class="hero-actions">
-					<a class="btn btn-solid" href="#beyond">Continue Beyond the Data</a>
-					<a class="btn btn-outline" href="#missions">Explore the Missions Again</a>
-				</div>
-			</div>
-		</section>
-
-		<section id="beyond" class="journey-section beyond-section">
-			<div class="container beyond-shell">
-				<div class="section-heading section-heading-left reveal">
-					<p class="section-kicker" id="beyondKicker">Beyond the Data</p>
-					<h2 id="beyondTitle">Beyond the Data</h2>
-					<p class="section-intro" id="beyondSummary"></p>
-				</div>
-				<div id="beyondGrid" class="beyond-grid reveal" data-reveal-delay="100"></div>
-				<div id="readingArchive" class="reading-archive reveal" data-reveal-delay="160"></div>
-			</div>
-		</section>
-
-		<section id="transmission" class="journey-section contact-section">
-			<div class="container contact-shell">
-				<div class="section-heading reveal">
-					<p class="section-kicker" id="transmissionKicker">Final Transmission</p>
-					<h2 id="transmissionTitle">The Next Signal</h2>
-					<p class="section-intro" id="contactText"></p>
-				</div>
-				<div class="contact-grid reveal" data-reveal-delay="80">
-					<article class="contact-card">
-						<p class="meta-label" id="locationLabel">Base</p>
-						<p id="locationText"></p>
-					</article>
-					<article class="contact-card">
-						<p class="meta-label" id="emailLabel">Email</p>
-						<a id="emailLink" href="#"></a>
-					</article>
-					<article class="contact-card">
-						<p class="meta-label" id="phoneLabel">Phone</p>
-						<a id="phoneLink" href="#"></a>
-					</article>
-					<article class="contact-card contact-card-social">
-						<p class="meta-label" id="socialLabel">Channels</p>
-						<ul id="socialList" class="social-list"></ul>
-					</article>
-				</div>
-				<div class="transmission-actions reveal" data-reveal-delay="120">
-					<a class="btn btn-solid magnetic" id="contactBtn" href="#">Send a Message</a>
-					<a class="btn btn-outline" id="cvBtn" href="#" aria-disabled="true">CV</a>
-				</div>
-			</div>
+			<section id="transmission" class="transmission-section">
+				<div class="transmission-copy"><p class="eyebrow" id="transmissionKicker">Transmission</p><h2 id="transmissionTitle">Have a signal worth exploring?</h2><p id="contactText"></p></div>
+				<div class="contact-console"><p><span id="locationLabel">Base</span><strong id="locationText"></strong></p><p><span id="emailLabel">Email</span><a id="emailLink" href="#"></a></p><p><span id="phoneLabel">Phone</span><a id="phoneLink" href="#"></a></p><div><span id="socialLabel">Channels</span><ul id="socialList"></ul></div><div class="action-row"><a class="button button-warm" id="contactBtn" href="#">Send a message</a><a class="button button-quiet" id="cvBtn" href="#" aria-disabled="true">CV</a></div></div>
+			</section>
 		</section>
 	</main>
-
-	<footer class="site-footer">
-		<div class="container footer-shell reveal">
-			<p id="footerText"></p>
-		</div>
-	</footer>
-
+	<footer class="site-footer"><p id="footerText"></p></footer>
 	<noscript>This site needs JavaScript enabled to render data.</noscript>
 	<script type="module" src="js/main.js"></script>
 </body>

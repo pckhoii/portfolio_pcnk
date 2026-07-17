@@ -1,440 +1,121 @@
 const uiText = {
 	vi: {
-		brand: "Khoi Pham",
-		navJourneyMain: "The Journey",
-		navBeyondMain: "Beyond the Data",
-		navMissions: "Constellations",
-		navTransmission: "Contact",
-		heroKicker: "Entering the universe",
-		heroSummary: "I transform scattered data into meaningful insights that help people make better decisions.",
-		heroPrimaryBtn: "Explore the Journey",
-		signalsKicker: "The Observer",
-		signalsTitle: "I look for patterns hidden inside complexity.",
-		signalsIntro: "Every dataset is like a sky full of stars. Individual points may look random, but when connected carefully, they become constellations that guide decisions.",
-		processKicker: "Finding the Constellation",
-		processTitle: "A question becomes a map.",
-		systemsKicker: "Tools of Exploration",
-		systemsTitle: "The instruments I use to navigate data.",
-		certificationsKicker: "Coordinates",
-		certificationsTitle: "Learning signals along the route.",
-		missionsKicker: "Constellations",
-		missionsTitle: "Projects are maps made from scattered stars.",
-		missionsIntro: "Each project begins as uncertainty, then slowly becomes a readable shape: a question, a signal, a system, and a decision.",
-		journeyKicker: "My Orbit",
-		journeyTitle: "The path that shaped the way I see data.",
-		transmissionKicker: "Final Transmission",
-		transmissionTitle: "The Next Signal",
-		contactText: "Every meaningful journey begins with a question. Whether you have a data problem, a project idea, or an opportunity to collaborate, I would be glad to hear the signal.",
-		contactBtn: "Start a Conversation",
-		cvBtn: "CV",
-		footer: "He doesn't just analyze data. He navigates complexity, connects patterns, and turns information into direction.",
-		locationLabel: "Base",
-		emailLabel: "Email",
-		phoneLabel: "Phone",
-		socialLabel: "Channels",
-		languageSwitchLabel: "VI / EN",
-		themeSwitchLabel: "Light / Dark",
-		certificationPreviewLabel: "Certificate preview",
-		viewCase: "Open Galaxy",
-		viewDashboard: "Dashboard",
-		viewCode: "GitHub",
-		process: ["Question", "Collect", "Clean", "Analyze", "Visualize", "Decision"],
+		brand: "Khoi Pham", navJourneyMain: "The Journey", navBeyondMain: "Beyond the Data", navMissions: "Missions", navTransmission: "Contact",
+		heroSummary: "I collect scattered signals, shape them into systems, and turn numbers into stories people can actually use.", heroPrimaryBtn: "Enter the observatory",
+		signalsKicker: "The Explorer", signalsTitle: "I look for patterns hidden inside complexity.", signalsIntro: "A useful answer starts with noticing the question behind the numbers.",
+		processKicker: "Finding the Constellation", processTitle: "A question becomes a map.", systemsKicker: "The Observatory", systemsTitle: "The instruments I use to navigate data.",
+		missionsKicker: "Mission Control", missionsTitle: "Projects are maps made from scattered stars.", missionsIntro: "Choose a destination. Each mission turns an uncertain business question into a system people can use.",
+		journeyKicker: "Flight Archive", journeyTitle: "The path that shaped the way I see data.", transmissionKicker: "Transmission", transmissionTitle: "Have a signal worth exploring?",
+		contactText: "Send me a message. I am open to data projects, dashboard work, reporting systems, and thoughtful collaborations.", footer: "A Small Universe of Data.",
+		locationLabel: "Base", emailLabel: "Email", phoneLabel: "Phone", socialLabel: "Channels", languageSwitchLabel: "VI / EN", themeSwitchLabel: "Light / Dark",
+		viewCase: "View case study", viewDashboard: "Dashboard", viewCode: "GitHub", all: "All", read: "Read", reading: "Reading", next: "Next",
+		process: ["Question", "Collect", "Clean", "Analyze", "Visualize", "Decide"],
 		traits: [
 			{ title: "Curious Observer", body: "I start by asking what changed, why it matters, and who needs the answer." },
 			{ title: "System Thinker", body: "I care about the structure behind the insight, because trustworthy systems create trustworthy decisions." },
 			{ title: "Quiet Builder", body: "I prefer calm, useful tools that keep working after the first presentation ends." }
 		]
 	},
-	en: {
-		brand: "Khoi Pham",
-		navJourneyMain: "The Journey",
-		navBeyondMain: "Beyond the Data",
-		navMissions: "Constellations",
-		navTransmission: "Contact",
-		heroKicker: "Entering the universe",
-		heroSummary: "I transform scattered data into meaningful insights that help people make better decisions.",
-		heroPrimaryBtn: "Explore the Journey",
-		signalsKicker: "The Observer",
-		signalsTitle: "I look for patterns hidden inside complexity.",
-		signalsIntro: "Every dataset is like a sky full of stars. Individual points may look random, but when connected carefully, they become constellations that guide decisions.",
-		processKicker: "Finding the Constellation",
-		processTitle: "A question becomes a map.",
-		systemsKicker: "Tools of Exploration",
-		systemsTitle: "The instruments I use to navigate data.",
-		certificationsKicker: "Coordinates",
-		certificationsTitle: "Learning signals along the route.",
-		missionsKicker: "Constellations",
-		missionsTitle: "Projects are maps made from scattered stars.",
-		missionsIntro: "Each project begins as uncertainty, then slowly becomes a readable shape: a question, a signal, a system, and a decision.",
-		journeyKicker: "My Orbit",
-		journeyTitle: "The path that shaped the way I see data.",
-		transmissionKicker: "Final Transmission",
-		transmissionTitle: "The Next Signal",
-		contactText: "Every meaningful journey begins with a question. Whether you have a data problem, a project idea, or an opportunity to collaborate, I would be glad to hear the signal.",
-		contactBtn: "Start a Conversation",
-		cvBtn: "CV",
-		footer: "He doesn't just analyze data. He navigates complexity, connects patterns, and turns information into direction.",
-		locationLabel: "Base",
-		emailLabel: "Email",
-		phoneLabel: "Phone",
-		socialLabel: "Channels",
-		languageSwitchLabel: "VI / EN",
-		themeSwitchLabel: "Light / Dark",
-		certificationPreviewLabel: "Certificate preview",
-		viewCase: "Open Galaxy",
-		viewDashboard: "Dashboard",
-		viewCode: "GitHub",
-		process: ["Question", "Collect", "Clean", "Analyze", "Visualize", "Decision"],
-		traits: [
-			{ title: "Curious Observer", body: "I start by asking what changed, why it matters, and who needs the answer." },
-			{ title: "System Thinker", body: "I care about the structure behind the insight, because trustworthy systems create trustworthy decisions." },
-			{ title: "Quiet Builder", body: "I prefer calm, useful tools that keep working after the first presentation ends." }
-		]
-	}
+	en: {}
 };
+uiText.en = uiText.vi;
 
 const pickText = (value, lang) => {
 	if (typeof value === "string") return value;
 	if (Array.isArray(value)) return value;
 	if (!value) return "";
-	return value[lang] || value.en || value.vi || "";
+	const preferred = value[lang] || value.en || value.vi || "";
+	return typeof preferred === "string" && /Ã|Ä|á»/.test(preferred) ? value.en || preferred : preferred;
 };
 
-const setText = (id, text) => {
-	const node = document.getElementById(id);
-	if (node) node.textContent = text;
-};
+const setText = (id, value) => { const node = document.getElementById(id); if (node) node.textContent = value || ""; };
+const tags = (items = []) => `<div class="tag-row">${items.map((item) => `<span class="tag">${item}</span>`).join("")}</div>`;
 
-const setVisibility = (id, isVisible) => {
-	const node = document.getElementById(id);
-	if (node) node.hidden = !isVisible;
-};
-
-const createTags = (tags = []) => tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
-
-const bindText = (t) => {
-	const bindings = {
-		brandText: "brand",
-		navJourneyMain: "navJourneyMain",
-		navBeyondMain: "navBeyondMain",
-		navMissions: "navMissions",
-		navTransmission: "navTransmission",
-		heroKicker: "heroKicker",
-		heroSummary: "heroSummary",
-		heroPrimaryBtn: "heroPrimaryBtn",
-		signalsKicker: "signalsKicker",
-		signalsTitle: "signalsTitle",
-		signalsIntro: "signalsIntro",
-		processKicker: "processKicker",
-		processTitle: "processTitle",
-		systemsKicker: "systemsKicker",
-		systemsTitle: "systemsTitle",
-		certificationsKicker: "certificationsKicker",
-		certificationsTitle: "certificationsTitle",
-		missionsKicker: "missionsKicker",
-		missionsTitle: "missionsTitle",
-		missionsIntro: "missionsIntro",
-		journeyKicker: "journeyKicker",
-		journeyTitle: "journeyTitle",
-		transmissionKicker: "transmissionKicker",
-		transmissionTitle: "transmissionTitle",
-		contactText: "contactText",
-		contactBtn: "contactBtn",
-		cvBtn: "cvBtn",
-		footerText: "footer",
-		locationLabel: "locationLabel",
-		emailLabel: "emailLabel",
-		phoneLabel: "phoneLabel",
-		socialLabel: "socialLabel",
-		languageSwitchLabel: "languageSwitchLabel",
-		themeSwitchLabel: "themeSwitchLabel"
-	};
+function bindText(t) {
+	const bindings = { brandText: "brand", navJourneyMain: "navJourneyMain", navBeyondMain: "navBeyondMain", navMissions: "navMissions", navTransmission: "navTransmission", heroSummary: "heroSummary", heroPrimaryBtn: "heroPrimaryBtn", signalsKicker: "signalsKicker", signalsTitle: "signalsTitle", signalsIntro: "signalsIntro", processKicker: "processKicker", processTitle: "processTitle", systemsKicker: "systemsKicker", systemsTitle: "systemsTitle", missionsKicker: "missionsKicker", missionsTitle: "missionsTitle", missionsIntro: "missionsIntro", journeyKicker: "journeyKicker", journeyTitle: "journeyTitle", transmissionKicker: "transmissionKicker", transmissionTitle: "transmissionTitle", contactText: "contactText", footerText: "footer", locationLabel: "locationLabel", emailLabel: "emailLabel", phoneLabel: "phoneLabel", socialLabel: "socialLabel", languageSwitchLabel: "languageSwitchLabel", themeSwitchLabel: "themeSwitchLabel" };
 	Object.entries(bindings).forEach(([id, key]) => setText(id, t[key]));
-};
+}
+
+function renderMissionNavigator(container, projects, lang, t) {
+	let activeIndex = 0;
+	const detail = (project, index) => {
+		const mission = project.mission || {};
+		return `<p class="mission-code">Mission ${String(index + 1).padStart(2, "0")} / ${project.id}</p><h3>${pickText(project.title, lang)}</h3><p>${pickText(mission.question, lang) || pickText(project.description, lang)}</p><div class="mission-facts"><div><span>Signal</span><p>${pickText(mission.signal, lang) || "Transmission in progress."}</p></div><div><span>System</span><p>${pickText(mission.system, lang) || "System map is being assembled."}</p></div><div><span>Outcome</span><p>${pickText(mission.outcome, lang) || "New coordinates will be available soon."}</p></div></div>${tags(project.tags)}<div class="mission-links"><a href="${project.detailUrl || project.demoUrl || "#"}">${t.viewCase}</a>${project.demoUrl ? `<a href="${project.demoUrl}" target="_blank" rel="noreferrer">${t.viewDashboard}</a>` : ""}${project.repoUrl ? `<a href="${project.repoUrl}" target="_blank" rel="noreferrer">${t.viewCode}</a>` : ""}</div>`;
+	};
+	const render = () => {
+		if (!projects.length) { container.innerHTML = "<p>Mission coordinates are being assembled.</p>"; return; }
+		container.innerHTML = `<div class="mission-dock">${projects.map((project, index) => `<button class="mission-select ${index === activeIndex ? "is-active" : ""}" type="button" data-mission="${index}">0${index + 1} ${pickText(project.title, lang)}</button>`).join("")}</div><article class="mission-detail">${detail(projects[activeIndex], activeIndex)}</article>`;
+		container.querySelectorAll("[data-mission]").forEach((button) => button.addEventListener("click", () => { activeIndex = Number(button.dataset.mission); render(); }));
+	};
+	render();
+}
+
+function renderBeyondHub(container, beyond, lang) {
+	const items = beyond?.items || [];
+	let activeIndex = Math.max(0, items.findIndex((item) => item.id === "reading"));
+	const destination = document.getElementById("personalDestination");
+	const render = () => {
+		container.innerHTML = items.map((item, index) => `<button class="destination-button ${index === activeIndex ? "is-active" : ""}" type="button" role="tab" aria-selected="${index === activeIndex}" data-destination="${index}">${pickText(item.title, lang)}<small>${String(index + 1).padStart(2, "0")} / archive</small></button>`).join("");
+		const item = items[activeIndex];
+		if (destination && item) {
+			destination.innerHTML = `<p class="destination-id">${item.id}</p><h3>${pickText(item.title, lang)}</h3><p>${pickText(item.description, lang)}</p><p class="destination-status">${pickText(item.placeholder, lang)}</p>`;
+			destination.classList.add("is-visible");
+		}
+		container.querySelectorAll("[data-destination]").forEach((button) => button.addEventListener("click", () => { activeIndex = Number(button.dataset.destination); render(); if (items[activeIndex]?.id === "reading") document.getElementById("readingArchive")?.scrollIntoView({ behavior: "smooth", block: "center" }); }));
+	};
+	render();
+}
+
+function renderReadingArchive(container, books, lang, t) {
+	const bookItems = books?.items || [];
+	let filter = "all";
+	let activeId = bookItems[0]?.id;
+	const statusText = { read: t.read, reading: t.reading, next: t.next, placeholder: "Archive" };
+	const render = () => {
+		const shown = bookItems.filter((book) => filter === "all" || book.status === filter);
+		if (!shown.some((book) => book.id === activeId)) activeId = shown[0]?.id;
+		const active = shown.find((book) => book.id === activeId) || bookItems[0];
+		const field = (label, value) => `<section><h4>${label}</h4><p>${value || "Transmission in progress."}</p></section>`;
+		container.innerHTML = `<div class="reading-layout"><div class="reading-copy"><p class="eyebrow">Reading Archive</p><h3>Ideas, kept close.</h3><p>A quiet shelf for books and ideas. Placeholder entries stay explicitly unfinished until real notes are added.</p><div class="book-filters">${["all", "reading", "read", "next"].map((key) => `<button type="button" class="book-filter ${filter === key ? "is-active" : ""}" data-filter="${key}">${key === "all" ? t.all : statusText[key]}</button>`).join("")}</div></div><div><div class="book-shelf">${shown.map((book) => `<button type="button" class="book-spine ${book.id === activeId ? "is-active" : ""}" data-book="${book.id}">${pickText(book.title, lang)}</button>`).join("") || "<p>More signals are being collected.</p>"}</div>${active ? `<article class="book-detail"><p class="book-meta">${statusText[active.status] || "Archive"} / ${pickText(active.author, lang)}</p><h3>${pickText(active.title, lang)}</h3><p class="book-author">${pickText(active.author, lang)}</p><div class="book-fields">${field("The Signal", pickText(active.signal, lang))}${field("What Stayed With Me", pickText(active.reflection, lang))}${field("Why It Mattered", pickText(active.why, lang))}${field("Before / After", `${pickText(active.before, lang)} / ${pickText(active.after, lang)}`)}</div><p class="book-note">${pickText(active.note, lang)}</p></article>` : ""}</div></div>`;
+		container.querySelectorAll("[data-filter]").forEach((button) => button.addEventListener("click", () => { filter = button.dataset.filter; render(); }));
+		container.querySelectorAll("[data-book]").forEach((button) => button.addEventListener("click", () => { activeId = button.dataset.book; render(); }));
+	};
+	render();
+}
 
 export function renderPage(data, state) {
-	const { profile, skills, projects, experience, beyond, books } = data;
+	const { profile, skills = [], projects = [], experience = [], beyond, books } = data;
 	const lang = state.lang;
-	const t = uiText[lang];
-	const featuredProjects = [...projects].filter((item) => item.featured).sort((a, b) => (a.order || 99) - (b.order || 99));
-	const certifications = Array.isArray(profile.certifications) ? profile.certifications : [];
-
+	const t = uiText[lang] || uiText.en;
 	document.documentElement.lang = lang;
 	bindText(t);
+	setText("heroRole", "Turning Data Into Direction");
 	setText("aboutText", pickText(profile.about, lang));
 	setText("locationText", profile.location);
 
 	const traitGrid = document.getElementById("traitGrid");
-	if (traitGrid) {
-		traitGrid.innerHTML = t.traits
-			.map(
-				(item, index) => `
-				<article class="observer-planet observer-planet-${index + 1}">
-					<span>0${index + 1}</span>
-					<h3>${item.title}</h3>
-					<p>${item.body}</p>
-				</article>
-			`
-			)
-			.join("");
-	}
+	if (traitGrid) traitGrid.innerHTML = t.traits.map((item, index) => `<article class="trait-item"><span>0${index + 1}</span><div><h3>${item.title}</h3><p>${item.body}</p></div></article>`).join("");
+	const process = document.getElementById("processConstellation");
+	if (process) process.innerHTML = t.process.map((step, index) => `<span class="process-step"><b>0${index + 1}</b>${step}</span>`).join("");
+	const systems = document.getElementById("skillsGrid");
+	if (systems) systems.innerHTML = skills.map((group) => `<article class="system-module"><h3>${pickText(group.title, lang)}</h3>${tags(group.items)}</article>`).join("");
 
-	const processConstellation = document.getElementById("processConstellation");
-	if (processConstellation) {
-		processConstellation.innerHTML = `
-			<div class="process-line" aria-hidden="true"></div>
-			${t.process
-				.map(
-					(step, index) => `
-					<article class="process-star process-star-${index + 1}">
-						<span class="star-dot"></span>
-						<p>${step}</p>
-					</article>
-				`
-				)
-				.join("")}
-		`;
-	}
+	renderMissionNavigator(document.getElementById("missionNavigator"), projects.filter((item) => item.featured).sort((a,b) => (a.order || 99) - (b.order || 99)), lang, t);
+	const archive = document.getElementById("experienceList");
+	if (archive) archive.innerHTML = experience.map((item) => `<article class="flight-entry"><p class="flight-meta">${item.period}</p><h3>${pickText(item.position, lang)}</h3><p class="company">${item.company}</p><ul>${(pickText(item.highlights, lang) || []).map((point) => `<li>${point}</li>`).join("")}</ul></article>`).join("");
+	const certs = document.getElementById("certificationsGrid");
+	if (certs) certs.innerHTML = (profile.certifications || []).map((item) => `<a class="credential" href="${item.url}" target="_blank" rel="noreferrer" title="${pickText(item.title, lang)}">${item.image ? `<img src="${item.image}" alt="${pickText(item.title, lang)}" loading="lazy" />` : ""}</a>`).join("");
 
-	const projectsGrid = document.getElementById("projectsGrid");
-	if (projectsGrid) {
-		projectsGrid.innerHTML = featuredProjects
-			.map((item, index) => {
-				const mission = item.mission || {};
-				const detailUrl = item.detailUrl || item.demoUrl || "#";
-				return `
-				<article class="project-constellation project-constellation-${index + 1}" role="link" tabindex="0" data-detail-url="${detailUrl}">
-					<div class="constellation-map" aria-hidden="true">
-						<span class="constellation-star s1"></span>
-						<span class="constellation-star s2"></span>
-						<span class="constellation-star s3"></span>
-						<span class="constellation-star s4"></span>
-						<span class="constellation-line l1"></span>
-						<span class="constellation-line l2"></span>
-						<span class="constellation-line l3"></span>
-					</div>
-					<div class="project-info">
-						<p class="mission-code">Constellation ${String(index + 1).padStart(2, "0")}</p>
-						<h3>${pickText(item.title, lang)}</h3>
-						<p>${pickText(mission.question, lang) || pickText(item.description, lang)}</p>
-						<div class="tag-row">${createTags(item.tags)}</div>
-						<div class="mission-links">
-							<a href="${detailUrl}">${t.viewCase}</a>
-							<a href="${item.demoUrl}" target="_blank" rel="noreferrer">${t.viewDashboard}</a>
-							<a href="${item.repoUrl}" target="_blank" rel="noreferrer">${t.viewCode}</a>
-						</div>
-					</div>
-				</article>
-			`;
-			})
-			.join("");
+	setText("beyondTitle", pickText(beyond?.title, lang));
+	setText("beyondSummary", pickText(beyond?.summary, lang));
+	renderBeyondHub(document.getElementById("beyondDestinations"), beyond, lang);
+	renderReadingArchive(document.getElementById("readingArchive"), books, lang, t);
 
-		projectsGrid.querySelectorAll("[data-detail-url]").forEach((card) => {
-			const openDetail = () => {
-				const detailUrl = card.getAttribute("data-detail-url");
-				if (detailUrl && detailUrl !== "#") window.location.href = detailUrl;
-			};
-			card.addEventListener("click", (event) => {
-				if (!event.target.closest("a")) openDetail();
-			});
-			card.addEventListener("keydown", (event) => {
-				if (event.key === "Enter" || event.key === " ") {
-					event.preventDefault();
-					openDetail();
-				}
-			});
-		});
-	}
-
-	const skillsGrid = document.getElementById("skillsGrid");
-	if (skillsGrid) {
-		skillsGrid.innerHTML = skills
-			.map(
-				(group, index) => `
-				<article class="tool-orbit tool-orbit-${index + 1}">
-					<h3>${pickText(group.title, lang)}</h3>
-					<div class="tag-row">${createTags(group.items)}</div>
-				</article>
-			`
-			)
-			.join("");
-	}
-
-	const experienceList = document.getElementById("experienceList");
-	if (experienceList) {
-		experienceList.innerHTML = experience
-			.map(
-				(item, index) => `
-				<article class="orbit-planet orbit-planet-${index + 1}">
-					<div class="planet-node">${String(index + 1).padStart(2, "0")}</div>
-					<div class="planet-copy">
-						<p class="timeline-meta">${item.period}</p>
-						<h3>${pickText(item.position, lang)}</h3>
-						<p class="timeline-company">${item.company}</p>
-						<ul>${pickText(item.highlights, lang).map((point) => `<li>${point}</li>`).join("")}</ul>
-					</div>
-				</article>
-			`
-			)
-			.join("");
-	}
-
-	const certificationsGrid = document.getElementById("certificationsGrid");
-	if (certificationsGrid) {
-		certificationsGrid.innerHTML = certifications
-			.map(
-				(item) => `
-				<a class="cert-card" href="${item.url}" target="_blank" rel="noreferrer" aria-label="${pickText(item.title, lang)}">
-					${item.image ? `<div class="cert-media"><img src="${item.image}" alt="${pickText(item.title, lang)} - ${t.certificationPreviewLabel}" loading="lazy" /></div>` : ""}
-					<h3>${pickText(item.title, lang)}</h3>
-				</a>
-			`
-			)
-			.join("");
-	}
-	setVisibility("certifications", certifications.length > 0);
-
-	const beyondGrid = document.getElementById("beyondGrid");
-	if (beyondGrid && beyond) {
-		setText("beyondTitle", pickText(beyond.title, lang));
-		setText("beyondSummary", pickText(beyond.summary, lang));
-		beyondGrid.innerHTML = (beyond.items || [])
-			.map(
-				(item, index) => `
-				<article class="beyond-card beyond-card-${index + 1}">
-					<p class="mission-code">${String(index + 1).padStart(2, "0")} / ${item.id}</p>
-					<h3>${pickText(item.title, lang)}</h3>
-					<p>${pickText(item.description, lang)}</p>
-					<span>${pickText(item.placeholder, lang)}</span>
-				</article>
-			`
-			)
-			.join("");
-	}
-
-	const readingArchive = document.getElementById("readingArchive");
-	if (readingArchive && books) {
-		const bookItems = books.items || [];
-		const current = books.current || {};
-		const renderBookDetail = (book = bookItems[0]) => {
-			if (!book) {
-				return `
-					<div class="book-detail-empty">
-						<p class="mission-code">Reading Archive</p>
-						<h3>The first field note is coming soon.</h3>
-						<p>More signals are being collected.</p>
-					</div>
-				`;
-			}
-
-			return `
-				<div class="book-detail-copy">
-					<p class="mission-code">${book.status === "placeholder" ? "Placeholder artifact" : "Reading artifact"}</p>
-					<h3>${pickText(book.title, lang)}</h3>
-					<p class="book-author">${pickText(book.author, lang)}</p>
-					<div class="book-detail-grid">
-						<section>
-							<h4>The Signal</h4>
-							<p>${pickText(book.signal, lang)}</p>
-						</section>
-						<section>
-							<h4>What Stayed With Me</h4>
-							<p>${pickText(book.reflection, lang)}</p>
-						</section>
-						<section>
-							<h4>Why It Mattered</h4>
-							<p>${pickText(book.why, lang)}</p>
-						</section>
-						<section class="before-after">
-							<div>
-								<h4>Before</h4>
-								<p>${pickText(book.before, lang)}</p>
-							</div>
-							<div>
-								<h4>After</h4>
-								<p>${pickText(book.after, lang)}</p>
-							</div>
-						</section>
-					</div>
-					<p class="personal-note">${pickText(book.note, lang)}</p>
-					<div class="tag-row">${(book.relatedIdeas || []).map((item) => `<span class="tag">${item}</span>`).join("")}</div>
-				</div>
-			`;
-		};
-
-		readingArchive.innerHTML = `
-			<div class="reading-head">
-				<p class="section-kicker">Reading Archive</p>
-				<h3>Ideas as quiet signals.</h3>
-				<p>A reflective archive for books and ideas that shape how I work, learn, and make decisions.</p>
-			</div>
-			<aside class="current-signal">
-				<p class="mission-code">${pickText(current.author, lang)}</p>
-				<h4>${pickText(current.title, lang)}</h4>
-				<p>${pickText(current.observation, lang)}</p>
-			</aside>
-			<div class="book-artifacts" role="list">
-				${bookItems
-					.map(
-						(book, index) => `
-						<button class="book-artifact ${index === 0 ? "is-active" : ""}" type="button" data-book-index="${index}" role="listitem">
-							<span>${String(index + 1).padStart(2, "0")}</span>
-							<strong>${pickText(book.title, lang)}</strong>
-							<small>${pickText(book.author, lang)}</small>
-						</button>
-					`
-					)
-					.join("")}
-			</div>
-			<article class="book-detail" aria-live="polite">
-				${renderBookDetail(bookItems[0])}
-			</article>
-		`;
-
-		const detail = readingArchive.querySelector(".book-detail");
-		readingArchive.querySelectorAll(".book-artifact").forEach((button) => {
-			button.addEventListener("click", () => {
-				const index = Number(button.dataset.bookIndex || 0);
-				readingArchive.querySelectorAll(".book-artifact").forEach((item) => item.classList.remove("is-active"));
-				button.classList.add("is-active");
-				if (detail) {
-					detail.innerHTML = renderBookDetail(bookItems[index]);
-				}
-			});
-		});
-	}
-
-	const emailLink = document.getElementById("emailLink");
-	if (emailLink) {
-		emailLink.href = `mailto:${profile.email}`;
-		emailLink.textContent = profile.email;
-	}
-
-	const phoneLink = document.getElementById("phoneLink");
-	if (phoneLink) {
-		phoneLink.href = `tel:${profile.phone || ""}`;
-		phoneLink.textContent = profile.phone || "";
-	}
-
-	const contactBtn = document.getElementById("contactBtn");
-	if (contactBtn) contactBtn.href = `mailto:${profile.email}`;
-
-	const cvBtn = document.getElementById("cvBtn");
-	if (cvBtn && profile.cvUrl && profile.cvUrl !== "#") {
-		cvBtn.href = profile.cvUrl;
-		cvBtn.removeAttribute("aria-disabled");
-	}
-
-	const socialList = document.getElementById("socialList");
-	if (socialList) {
-		socialList.innerHTML = profile.socials
-			.map((item) => `<li><a href="${item.url}" target="_blank" rel="noreferrer">${item.label}</a></li>`)
-			.join("");
-	}
-
-	const themeSwitch = document.getElementById("themeSwitch");
-	if (themeSwitch) themeSwitch.checked = state.theme === "dark";
-
-	const languageSwitch = document.getElementById("languageSwitch");
-	if (languageSwitch) languageSwitch.checked = lang === "en";
+	const email = document.getElementById("emailLink"); if (email) { email.href = `mailto:${profile.email}`; email.textContent = profile.email; }
+	const phone = document.getElementById("phoneLink"); if (phone) { phone.href = `tel:${profile.phone || ""}`; phone.textContent = profile.phone || ""; }
+	const contact = document.getElementById("contactBtn"); if (contact) contact.href = `mailto:${profile.email}`;
+	const cv = document.getElementById("cvBtn"); if (cv && profile.cvUrl && profile.cvUrl !== "#") { cv.href = profile.cvUrl; cv.removeAttribute("aria-disabled"); }
+	const social = document.getElementById("socialList"); if (social) social.innerHTML = (profile.socials || []).map((item) => `<li><a href="${item.url}" target="_blank" rel="noreferrer">${item.label}</a></li>`).join("");
+	const languageSwitch = document.getElementById("languageSwitch"); if (languageSwitch) languageSwitch.checked = lang === "en";
+	const themeSwitch = document.getElementById("themeSwitch"); if (themeSwitch) themeSwitch.checked = state.theme === "dark";
 }
