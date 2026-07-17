@@ -53,11 +53,11 @@ function renderMissionNavigator(container, projects, lang, t) {
 function renderBeyondHub(container, beyond, lang) {
 	const items = beyond?.items || [];
 	const artifactForDestination = {
-		"field-notes": "navigation-compass.svg",
+		"field-notes": "notebook.svg",
 		boxing: "flight-recorder.svg",
 		reading: "open-book.svg",
 		design: "constellation-map.svg",
-		"photography-travel": "mission-log.svg",
+		"photography-travel": "contact-sheet.svg",
 		"learning-log": "observatory.svg"
 	};
 	let activeIndex = Math.max(0, items.findIndex((item) => item.id === "reading"));
