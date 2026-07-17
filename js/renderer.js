@@ -52,10 +52,18 @@ function renderMissionNavigator(container, projects, lang, t) {
 
 function renderBeyondHub(container, beyond, lang) {
 	const items = beyond?.items || [];
+	const artifactForDestination = {
+		"field-notes": "navigation-compass.svg",
+		boxing: "flight-recorder.svg",
+		reading: "open-book.svg",
+		design: "constellation-map.svg",
+		"photography-travel": "mission-log.svg",
+		"learning-log": "observatory.svg"
+	};
 	let activeIndex = Math.max(0, items.findIndex((item) => item.id === "reading"));
 	const destination = document.getElementById("personalDestination");
 	const render = () => {
-		container.innerHTML = items.map((item, index) => `<button class="destination-button ${index === activeIndex ? "is-active" : ""}" type="button" role="tab" aria-selected="${index === activeIndex}" data-destination="${index}">${pickText(item.title, lang)}<small>${String(index + 1).padStart(2, "0")} / archive</small></button>`).join("");
+		container.innerHTML = items.map((item, index) => `<button class="destination-button ${index === activeIndex ? "is-active" : ""}" type="button" role="tab" aria-selected="${index === activeIndex}" data-destination="${index}"><img src="src/assets/artifacts/${artifactForDestination[item.id] || "navigation-compass.svg"}" alt="" aria-hidden="true" /><span>${pickText(item.title, lang)}<small>${String(index + 1).padStart(2, "0")} / archive</small></span></button>`).join("");
 		const item = items[activeIndex];
 		if (destination && item) {
 			destination.innerHTML = `<p class="destination-id">${item.id}</p><h3>${pickText(item.title, lang)}</h3><p>${pickText(item.description, lang)}</p><p class="destination-status">${pickText(item.placeholder, lang)}</p>`;
@@ -76,7 +84,7 @@ function renderReadingArchive(container, books, lang, t) {
 		if (!shown.some((book) => book.id === activeId)) activeId = shown[0]?.id;
 		const active = shown.find((book) => book.id === activeId) || bookItems[0];
 		const field = (label, value) => `<section><h4>${label}</h4><p>${value || "Transmission in progress."}</p></section>`;
-		container.innerHTML = `<div class="reading-layout"><div class="reading-copy"><p class="eyebrow">Reading Archive</p><h3>Ideas, kept close.</h3><p>A quiet shelf for books and ideas. Placeholder entries stay explicitly unfinished until real notes are added.</p><div class="book-filters">${["all", "reading", "read", "next"].map((key) => `<button type="button" class="book-filter ${filter === key ? "is-active" : ""}" data-filter="${key}">${key === "all" ? t.all : statusText[key]}</button>`).join("")}</div></div><div><div class="book-shelf">${shown.map((book) => `<button type="button" class="book-spine ${book.id === activeId ? "is-active" : ""}" data-book="${book.id}">${pickText(book.title, lang)}</button>`).join("") || "<p>More signals are being collected.</p>"}</div>${active ? `<article class="book-detail"><p class="book-meta">${statusText[active.status] || "Archive"} / ${pickText(active.author, lang)}</p><h3>${pickText(active.title, lang)}</h3><p class="book-author">${pickText(active.author, lang)}</p><div class="book-fields">${field("The Signal", pickText(active.signal, lang))}${field("What Stayed With Me", pickText(active.reflection, lang))}${field("Why It Mattered", pickText(active.why, lang))}${field("Before / After", `${pickText(active.before, lang)} / ${pickText(active.after, lang)}`)}</div><p class="book-note">${pickText(active.note, lang)}</p></article>` : ""}</div></div>`;
+		container.innerHTML = `<div class="reading-layout"><div class="reading-copy"><p class="eyebrow">Reading Archive</p><h3>Ideas, kept close.</h3><p>An index of unfinished and remembered ideas. Placeholder entries stay explicitly unfinished until real notes are added.</p><div class="book-filters">${["all", "reading", "read", "next"].map((key) => `<button type="button" class="book-filter ${filter === key ? "is-active" : ""}" data-filter="${key}">${key === "all" ? t.all : statusText[key]}</button>`).join("")}</div></div><div><div class="book-catalog">${shown.map((book, index) => `<button type="button" class="book-artifact ${book.id === activeId ? "is-active" : ""}" data-book="${book.id}"><img src="src/assets/artifacts/open-book.svg" alt="" aria-hidden="true" /><span>${String(index + 1).padStart(2, "0")} / ${statusText[book.status] || "Archive"}</span><strong>${pickText(book.title, lang)}</strong></button>`).join("") || "<p>More signals are being collected.</p>"}</div>${active ? `<article class="book-detail"><p class="book-meta">${statusText[active.status] || "Archive"} / ${pickText(active.author, lang)}</p><h3>${pickText(active.title, lang)}</h3><p class="book-author">${pickText(active.author, lang)}</p><div class="book-fields">${field("The Signal", pickText(active.signal, lang))}${field("What Stayed With Me", pickText(active.reflection, lang))}${field("Why It Mattered", pickText(active.why, lang))}${field("Before", pickText(active.before, lang))}${field("After", pickText(active.after, lang))}${field("Personal Note", pickText(active.note, lang))}</div></article>` : ""}</div></div>`;
 		container.querySelectorAll("[data-filter]").forEach((button) => button.addEventListener("click", () => { filter = button.dataset.filter; render(); }));
 		container.querySelectorAll("[data-book]").forEach((button) => button.addEventListener("click", () => { activeId = button.dataset.book; render(); }));
 	};

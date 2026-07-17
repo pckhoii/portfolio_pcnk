@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" fill="none">
+  <rect x="48" y="63" width="224" height="114" rx="8" stroke="#84D8E9" stroke-width="1.5"/><path d="M73 113h20l10-22 17 45 18-67 18 89 17-45 15 18h44" stroke="#D7B46B" stroke-width="1.5"/>
+  <path d="M48 93h224M48 147h224M83 63v114M237 63v114" stroke="#84D8E9" stroke-opacity=".35"/>
+  <circle cx="83" cy="93" r="4" fill="#DDF9FF"/><circle cx="237" cy="147" r="4" fill="#DDF9FF"/>
+  <text x="68" y="47" fill="#B6D3DB" font-family="Arial" font-size="9" letter-spacing="2">FLIGHT RECORDER / TRACE</text>
+  <path d="M68 195h184M114 205h92" stroke="#84D8E9" stroke-opacity=".35"/>
+</svg>

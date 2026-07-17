@@ -1,5 +1,4 @@
 import { renderPage } from "./renderer.js";
-import { initCosmos } from "./cosmos.js";
 import { initJourneyStory, initSignalIntro } from "./intro.js";
 
 const state = {
@@ -60,7 +59,6 @@ async function startApp() {
 	try {
 		applyTheme();
 		bindToolbar();
-		initCosmos();
 		initSignalIntro();
 
 		cachedData = await loadData();

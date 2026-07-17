@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" fill="none">
+  <path d="M43 181 91 119l60 26 53-71 72 43" stroke="#84D8E9" stroke-width="1.5"/>
+  <path d="M43 181 132 202 204 168 276 117" stroke="#D7B46B" stroke-opacity=".72"/>
+  <circle cx="43" cy="181" r="6" fill="#081323" stroke="#84D8E9" stroke-width="2"/><circle cx="91" cy="119" r="6" fill="#081323" stroke="#84D8E9" stroke-width="2"/><circle cx="151" cy="145" r="6" fill="#081323" stroke="#84D8E9" stroke-width="2"/><circle cx="204" cy="74" r="6" fill="#081323" stroke="#84D8E9" stroke-width="2"/><circle cx="276" cy="117" r="6" fill="#081323" stroke="#D7B46B" stroke-width="2"/>
+  <path d="M37 47h246M37 55h118M37 63h72" stroke="#84D8E9" stroke-opacity=".3"/><path d="M40 206h240" stroke="#84D8E9" stroke-opacity=".3"/>
+  <text x="38" y="35" fill="#B6D3DB" font-family="Arial" font-size="9" letter-spacing="2">QUESTION / ROUTE / DECISION</text>
+</svg>

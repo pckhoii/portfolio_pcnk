@@ -12,7 +12,7 @@
 </head>
 <body>
 	<div id="signalIntro" class="signal-intro" role="dialog" aria-modal="true" aria-labelledby="introTitle">
-		<div class="intro-map" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+		<img class="intro-artifact" src="src/assets/artifacts/signal-beacon.svg" alt="" aria-hidden="true" />
 		<div class="intro-copy">
 			<p class="intro-status" id="introStatus">Receiving transmission...</p>
 			<p class="intro-sequence">Scattered signals. <span>Hidden patterns.</span> Clear direction.</p>
@@ -26,7 +26,6 @@
 		</div>
 	</div>
 
-	<div class="cosmos-bg" aria-hidden="true"><canvas id="cosmosCanvas"></canvas></div>
 	<div class="chapter-pass" id="chapterPass" aria-hidden="true"><span>Crossing the horizon</span></div>
 
 	<header class="site-header">
@@ -48,25 +47,21 @@
 	<main>
 		<section id="journeyChapter" class="journey-chapter" aria-label="The Journey">
 			<div class="journey-stage" id="journeyStage" data-scene="signal">
-				<div class="stage-sky"></div>
-				<div class="stage-orbit orbit-a"></div><div class="stage-orbit orbit-b"></div><div class="stage-orbit orbit-c"></div>
-				<div class="stage-planet"><span>KP</span></div>
-				<div class="stage-observatory"><i></i><i></i><i></i></div>
-				<div class="stage-network" aria-hidden="true">
-					<span class="network-line nl-1"></span><span class="network-line nl-2"></span><span class="network-line nl-3"></span><span class="network-line nl-4"></span><span class="network-line nl-5"></span>
-					<b class="network-node n-1"></b><b class="network-node n-2"></b><b class="network-node n-3"></b><b class="network-node n-4"></b><b class="network-node n-5"></b><b class="network-node n-6"></b>
+				<div class="stage-grid" aria-hidden="true"></div>
+				<div class="artifact-stage" aria-hidden="true">
+					<img class="stage-artifact artifact-beacon" src="src/assets/artifacts/signal-beacon.svg" alt="" />
+					<img class="stage-artifact artifact-observatory" src="src/assets/artifacts/observatory.svg" alt="" />
+					<img class="stage-artifact artifact-map" src="src/assets/artifacts/constellation-map.svg" alt="" />
+					<img class="stage-artifact artifact-mission" src="src/assets/artifacts/mission-log.svg" alt="" />
+					<img class="stage-artifact artifact-recorder" src="src/assets/artifacts/flight-recorder.svg" alt="" />
+					<img class="stage-artifact artifact-wormhole" src="src/assets/artifacts/wormhole.svg" alt="" />
 				</div>
-				<div class="stage-route" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 				<div class="stage-hud">
 					<p id="stageIndex">01 / 07</p><span></span><p id="stageName">Signal acquired</p>
 				</div>
-				<div class="journey-context" aria-live="polite"><span id="contextLabel">Signal</span><div id="contextSteps"></div></div>
 			</div>
 
 			<div class="journey-track" id="journeyTrack">
-				<article class="story-scene scene-signal" id="top" data-scene="signal">
-					<div class="story-copy intro-story"><p class="eyebrow">A small universe of data</p><h1 id="heroRole">Turning Data Into Direction</h1><p id="heroSummary"></p><a class="button button-primary" href="#explorerScene" id="heroPrimaryBtn">Enter the observatory</a></div>
-				</article>
 				<article class="story-scene scene-explorer" id="explorerScene" data-scene="explorer">
 					<div class="story-copy"><p class="eyebrow" id="signalsKicker">The Explorer</p><h2 id="signalsTitle">I look for patterns hidden inside complexity.</h2><p id="signalsIntro"></p><p class="story-detail" id="aboutText"></p><div id="traitGrid" class="trait-list"></div></div>
 				</article>
@@ -92,7 +87,7 @@
 			<div class="beyond-shell">
 				<div class="beyond-heading"><p class="eyebrow" id="beyondKicker">Beyond the Data</p><h2 id="beyondTitle">Beyond the Data</h2><p id="beyondSummary"></p></div>
 				<div class="personal-world">
-					<div class="personal-core"><span>KP</span><small>personal archive</small></div>
+					<img class="library-artifact" src="src/assets/artifacts/archive-library.svg" alt="" aria-hidden="true" />
 					<div id="beyondDestinations" class="destination-ring" role="tablist" aria-label="Personal archive destinations"></div>
 					<article id="personalDestination" class="destination-detail" aria-live="polite"></article>
 				</div>
