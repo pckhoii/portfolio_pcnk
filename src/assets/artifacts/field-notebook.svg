@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" fill="none">
+  <rect x="137" y="58" width="286" height="306" rx="10" fill="#E8ECE8" stroke="#9494AA" stroke-width="5"/>
+  <path d="M184 58v306" stroke="#A79E81" stroke-width="6"/><path d="M215 128h158m-158 42h158m-158 42h128m-128 42h158" stroke="#7899A3" stroke-width="5" stroke-linecap="round"/>
+  <path d="m265 282 28-35 23 20 43-57" stroke="#8CAAB4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M136 93h-26m26 54h-26m26 54h-26m26 54h-26" stroke="#A79E81" stroke-width="6"/>
+  <text x="215" y="104" fill="#081018" font-family="Arial" font-size="14" letter-spacing="3">FIELD NOTE</text>
+</svg>

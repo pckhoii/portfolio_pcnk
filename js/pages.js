@@ -12,14 +12,14 @@ async function data(name) { const response = await fetch(`${root}/data/${name}.j
 async function journeyPage() {
 	const [profile, skills, experience] = await Promise.all([data("profile"), data("skills"), data("experience")]);
 	document.querySelector("#journeyAbout").textContent = pick(profile.about);
-	document.querySelector("#systemDeck").innerHTML = skills.map((group) => `<article><h3>${pick(group.title)}</h3><p>${group.items.join(" · ")}</p></article>`).join("");
+	document.querySelector("#systemDeck").innerHTML = skills.map((group) => `<article><h3>${pick(group.title)}</h3><p>${group.items.join(" Â· ")}</p></article>`).join("");
 	document.querySelector("#journeyTimeline").innerHTML = experience.map((item) => `<article><p>${item.period}</p><h3>${pick(item.position)}</h3><strong>${item.company}</strong><ul>${(pick(item.highlights) || []).map((point) => `<li>${point}</li>`).join("")}</ul></article>`).join("");
 }
 
 async function missionsPage() {
 	const projects = await data("projects");
 	const featured = projects.filter((project) => project.featured).sort((a,b) => (a.order || 99) - (b.order || 99));
-	document.querySelector("#missionList").innerHTML = featured.map((project, index) => { const mission = project.mission || {}; const detailId = `mission-record-${index}`; return `<article class="mission-page-log"><img src="${artifact(index ? "mission-log.svg" : "mission-map.svg")}" alt="" /><div><p class="eyebrow">Mission ${String(index + 1).padStart(2, "0")}</p><h2>${pick(project.title)}</h2><p>${pick(mission.question) || pick(project.description)}</p><button class="discovery-toggle mission-discovery" type="button" aria-expanded="false" aria-controls="${detailId}">Open mission record</button><div id="${detailId}" class="discovery-panel mission-record" hidden><dl><div><dt>Signal</dt><dd>${pick(mission.signal)}</dd></div><div><dt>System</dt><dd>${pick(mission.system)}</dd></div><div><dt>Outcome</dt><dd>${pick(mission.outcome)}</dd></div></dl><p class="route-links"><a href="${root}/${project.detailUrl}">Case study</a><a href="${project.demoUrl}" target="_blank" rel="noreferrer">Dashboard</a><a href="${project.repoUrl}" target="_blank" rel="noreferrer">GitHub</a></p></div></div></article>`; }).join("");
+	document.querySelector("#missionList").innerHTML = featured.map((project, index) => { const mission = project.mission || {}; const detailId = `mission-record-${index}`; return `<article class="mission-page-log"><img src="${artifact(index ? "mission-log.svg" : "mission-console.svg")}" alt="" /><div><p class="eyebrow">Mission ${String(index + 1).padStart(2, "0")}</p><h2>${pick(project.title)}</h2><p>${pick(mission.question) || pick(project.description)}</p><button class="discovery-toggle mission-discovery" type="button" aria-expanded="false" aria-controls="${detailId}">Open mission record</button><div id="${detailId}" class="discovery-panel mission-record" hidden><dl><div><dt>Signal</dt><dd>${pick(mission.signal)}</dd></div><div><dt>System</dt><dd>${pick(mission.system)}</dd></div><div><dt>Outcome</dt><dd>${pick(mission.outcome)}</dd></div></dl><p class="route-links"><a href="${root}/${project.detailUrl}">Case study</a><a href="${project.demoUrl}" target="_blank" rel="noreferrer">Dashboard</a><a href="${project.repoUrl}" target="_blank" rel="noreferrer">GitHub</a></p></div></div></article>`; }).join("");
 }
 
 async function archivePage() {
@@ -30,8 +30,14 @@ async function archivePage() {
 
 async function beyondPage() {
 	const beyond = await data("beyond");
-	const artifactMap = { "field-notes": "notebook.svg", boxing: "flight-recorder.svg", reading: "open-book.svg", design: "constellation-map.svg", "photography-travel": "contact-sheet.svg", "learning-log": "observatory.svg" };
-	document.querySelector("#beyondWorld").innerHTML = beyond.items.map((item, index) => { const detailId = `beyond-detail-${index}`; return `<article><img src="${artifact(artifactMap[item.id])}" alt="" /><p class="eyebrow">${item.id}</p><h3>${pick(item.title)}</h3><p>${pick(item.description)}</p><button class="discovery-toggle beyond-discovery" type="button" aria-expanded="false" aria-controls="${detailId}">Open field note</button><small id="${detailId}" class="discovery-panel" hidden>${pick(item.placeholder)}</small></article>`; }).join("");
+	const artifactMap = { "field-notes": "field-notebook.svg", boxing: "flight-recorder.svg", reading: "open-book.svg", design: "navigation-map.svg", "photography-travel": "contact-sheet.svg", "learning-log": "observatory-telescope.svg" };
+	let active = beyond.items[0];
+	const routes = { reading: "/reading", "field-notes": "/notes" };
+	const render = () => {
+		document.querySelector("#beyondWorld").innerHTML = `<div class="study-selector" role="tablist" aria-label="Personal destinations">${beyond.items.map((item) => `<button type="button" role="tab" aria-selected="${item === active}" data-study="${item.id}">${pick(item.title)}</button>`).join("")}</div><article class="study-panel"><img src="${artifact(artifactMap[active.id])}" alt="" /><div><p class="eyebrow">${active.id}</p><h2>${pick(active.title)}</h2><p>${pick(active.description)}</p><small>${pick(active.placeholder)}</small>${routes[active.id] ? `<a class="button" href="${routes[active.id]}">Open destination</a>` : ""}</div></article>`;
+		document.querySelectorAll("[data-study]").forEach((button) => button.onclick = () => { active = beyond.items.find((item) => item.id === button.dataset.study); render(); });
+	};
+	render();
 }
 
 async function readingPage() {
@@ -40,7 +46,7 @@ async function readingPage() {
 	render();
 }
 
-async function contactPage() { const profile = await data("profile"); document.querySelector("#contactDetails").innerHTML = `<p><span>Base</span>${profile.location}</p><p><span>Email</span><a href="mailto:${profile.email}">${profile.email}</a></p><p><span>Phone</span><a href="tel:${profile.phone}">${profile.phone}</a></p><p><span>Channels</span>${profile.socials.map((item) => `<a href="${item.url}" target="_blank" rel="noreferrer">${item.label}</a>`).join(" · ")}</p>`; }
+async function contactPage() { const profile = await data("profile"); document.querySelector("#contactDetails").innerHTML = `<p><span>Base</span>${profile.location}</p><p><span>Email</span><a href="mailto:${profile.email}">${profile.email}</a></p><p><span>Phone</span><a href="tel:${profile.phone}">${profile.phone}</a></p><p><span>Channels</span>${profile.socials.map((item) => `<a href="${item.url}" target="_blank" rel="noreferrer">${item.label}</a>`).join(" Â· ")}</p>`; }
 
 setActiveNav();
 const page = document.body.dataset.page;

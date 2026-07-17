@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" fill="none">
+  <rect x="78" y="94" width="404" height="240" rx="10" fill="#1B2531" stroke="#E8ECE8" stroke-width="4"/>
+  <path d="M78 160h404" stroke="#A79E81" stroke-width="5"/><path d="M146 94V67h84v27m100 0V67h84v27" stroke="#8CAAB4" stroke-width="7" stroke-linecap="round"/>
+  <rect x="130" y="126" width="177" height="157" rx="4" fill="#E8ECE8"/><path d="M154 159h120m-120 32h120m-120 32h87" stroke="#7899A3" stroke-width="6" stroke-linecap="round"/>
+  <rect x="340" y="187" width="92" height="72" rx="5" fill="#8CAAB4"/><path d="M362 210h48m-48 20h35" stroke="#081018" stroke-width="5"/>
+  <text x="112" y="320" fill="#A79E81" font-family="Arial" font-size="13" letter-spacing="2">RECORDS / 01–04</text>
+</svg>

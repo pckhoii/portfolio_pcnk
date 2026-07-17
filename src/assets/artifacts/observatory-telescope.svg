@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" fill="none">
+  <rect x="38" y="44" width="484" height="328" rx="12" fill="#101D26" stroke="#7899A3" stroke-width="3"/>
+  <path d="M71 300H489M280 71V340" stroke="#7899A3" stroke-width="2" opacity=".5"/>
+  <path d="m173 159 174-55 22 69-174 55z" fill="#8CAAB4" stroke="#E8ECE8" stroke-width="4"/>
+  <circle cx="350" cy="139" r="34" fill="#E8ECE8" stroke="#A79E81" stroke-width="5"/>
+  <path d="m243 220 45 42-79 88m79-88 61 88m-61-88 18-65" stroke="#E8ECE8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="130" cy="108" r="8" fill="#A79E81"/><circle cx="193" cy="90" r="6" fill="#8CAAB4"/><path d="M130 108 193 90l58 46" stroke="#8CAAB4" stroke-width="3" stroke-dasharray="6 8"/>
+  <text x="71" y="337" fill="#E8ECE8" font-family="Arial" font-size="14" letter-spacing="3">OBSERVATION STATION</text>
+</svg>
