@@ -15,16 +15,6 @@
 	<link rel="stylesheet" href="css/animations.css" />
 </head>
 <body>
-	<div class="cosmos-bg" aria-hidden="true">
-		<canvas id="cosmosCanvas" class="cosmos-canvas"></canvas>
-		<div class="star-field"></div>
-		<div class="orbit orbit-one"></div>
-		<div class="orbit orbit-two"></div>
-		<div class="signal signal-a"></div>
-		<div class="signal signal-b"></div>
-		<div class="signal signal-c"></div>
-	</div>
-
 	<header class="site-header">
 		<div class="container header-shell reveal">
 			<a class="brand" href="index.html#missions">Khoi Pham</a>
@@ -166,11 +156,9 @@
 
 	<script type="module">
 		import { initRevealAnimations } from "./js/animations.js";
-		import { initCosmos } from "./js/cosmos.js";
 
 		document.documentElement.setAttribute("data-theme", localStorage.getItem("portfolio_theme") || "dark");
 		initRevealAnimations();
-		initCosmos();
 	</script>
 </body>
 </html>

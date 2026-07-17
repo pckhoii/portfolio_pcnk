@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" fill="none">
-  <path d="M51 199h218M70 199V57h180v142M100 199V80h37v119M146 199V80h37v119M192 199V80h37v119" stroke="#D7B46B" stroke-width="1.5"/>
-  <path d="M82 102h43M82 115h43M158 102h43M158 115h43M82 141h43M82 154h43M158 141h43M158 154h43" stroke="#E7C985" stroke-opacity=".6"/>
-  <path d="M70 57 160 27l90 30" stroke="#A987B5" stroke-width="1.5"/><circle cx="160" cy="50" r="6" fill="#E7C985"/>
-  <text x="101" y="220" fill="#D8C0B4" font-family="Arial" font-size="9" letter-spacing="2">ARCHIVE / INDEX</text>
+  <path d="M51 199h218M70 199V57h180v142M100 199V80h37v119M146 199V80h37v119M192 199V80h37v119" stroke="#A79E81" stroke-width="1.5"/>
+  <path d="M82 102h43M82 115h43M158 102h43M158 115h43M82 141h43M82 154h43M158 141h43M158 154h43" stroke="#C0B99D" stroke-opacity=".6"/>
+  <path d="M70 57 160 27l90 30" stroke="#9494AA" stroke-width="1.5"/><circle cx="160" cy="50" r="6" fill="#C0B99D"/>
+  <text x="101" y="220" fill="#B8ACAA" font-family="Arial" font-size="9" letter-spacing="2">ARCHIVE / INDEX</text>
 </svg>

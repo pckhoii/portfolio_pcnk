@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" fill="none">
-  <circle cx="160" cy="120" r="79" stroke="#D7B46B" stroke-width="1.5"/><circle cx="160" cy="120" r="51" stroke="#D7B46B" stroke-opacity=".45"/>
-  <path d="m160 52 18 68-18 68-18-68 18-68ZM92 120l68-18 68 18-68 18-68-18Z" stroke="#E7C985" stroke-width="1.5"/>
-  <circle cx="160" cy="120" r="6" fill="#E7C985"/><path d="M160 20v18M160 202v18M60 120h18M242 120h18" stroke="#A987B5"/>
-  <text x="155" y="34" fill="#E7C985" font-family="Arial" font-size="10">N</text><text x="155" y="216" fill="#E7C985" font-family="Arial" font-size="10">S</text>
+  <circle cx="160" cy="120" r="79" stroke="#A79E81" stroke-width="1.5"/><circle cx="160" cy="120" r="51" stroke="#A79E81" stroke-opacity=".45"/>
+  <path d="m160 52 18 68-18 68-18-68 18-68ZM92 120l68-18 68 18-68 18-68-18Z" stroke="#C0B99D" stroke-width="1.5"/>
+  <circle cx="160" cy="120" r="6" fill="#C0B99D"/><path d="M160 20v18M160 202v18M60 120h18M242 120h18" stroke="#9494AA"/>
+  <text x="155" y="34" fill="#C0B99D" font-family="Arial" font-size="10">N</text><text x="155" y="216" fill="#C0B99D" font-family="Arial" font-size="10">S</text>
 </svg>

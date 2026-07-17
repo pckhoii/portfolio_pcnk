@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" fill="none">
-  <defs><linearGradient id="g" x1="160" y1="28" x2="160" y2="204" gradientUnits="userSpaceOnUse"><stop stop-color="#DDF9FF"/><stop offset="1" stop-color="#73BFD1" stop-opacity=".2"/></linearGradient></defs>
+  <defs><linearGradient id="g" x1="160" y1="28" x2="160" y2="204" gradientUnits="userSpaceOnUse"><stop stop-color="#E8ECE8"/><stop offset="1" stop-color="#8CAAB4" stop-opacity=".2"/></linearGradient></defs>
   <path d="M160 30v117M116 188h88M132 188l18-41h20l18 41" stroke="url(#g)" stroke-width="1.5"/>
-  <circle cx="160" cy="116" r="29" stroke="#8DDDEC" stroke-width="1.5"/><circle cx="160" cy="116" r="6" fill="#DDF9FF"/>
-  <path d="M81 116c13-35 42-58 79-58s66 23 79 58M61 116c17-49 54-81 99-81s82 32 99 81" stroke="#8DDDEC" stroke-opacity=".5"/>
-  <path d="M102 209h116" stroke="#D7B46B" stroke-width="1.5"/><path d="M145 217h30" stroke="#D7B46B"/>
+  <circle cx="160" cy="116" r="29" stroke="#8CAAB4" stroke-width="1.5"/><circle cx="160" cy="116" r="6" fill="#E8ECE8"/>
+  <path d="M81 116c13-35 42-58 79-58s66 23 79 58M61 116c17-49 54-81 99-81s82 32 99 81" stroke="#8CAAB4" stroke-opacity=".5"/>
+  <path d="M102 209h116" stroke="#A79E81" stroke-width="1.5"/><path d="M145 217h30" stroke="#A79E81"/>
 </svg>
