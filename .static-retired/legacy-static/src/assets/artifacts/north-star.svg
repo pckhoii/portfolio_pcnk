@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" fill="none">
+  <defs><radialGradient id="star" cx="0" cy="0" r="1" gradientTransform="translate(160 120) rotate(90) scale(68)" gradientUnits="userSpaceOnUse"><stop stop-color="#E8ECE8"/><stop offset=".28" stop-color="#A79E81" stop-opacity=".65"/><stop offset="1" stop-color="#A79E81" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="160" cy="120" r="70" fill="url(#star)"/><path d="m160 42 12 66 66 12-66 12-12 66-12-66-66-12 66-12 12-66Z" stroke="#C0B99D" stroke-width="1.5"/>
+  <path d="M160 25v16M160 199v16M65 120h16M239 120h16" stroke="#9494AA"/><circle cx="160" cy="120" r="7" fill="#E8ECE8"/>
+  <text x="122" y="224" fill="#C0B99D" font-family="Arial" font-size="9" letter-spacing="2">TRUE NORTH</text>
+</svg>

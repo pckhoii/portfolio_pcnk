@@ -1,0 +1,78 @@
+[
+	{
+		"company": "Now",
+		"position": {
+			"vi": "Building a personal data universe",
+			"en": "Building a personal data universe"
+		},
+		"period": "Now",
+		"highlights": {
+			"vi": [
+				"Building a personal data universe where systems are useful and insights feel human.",
+				"Turning project work into clearer case studies, mission logs and dashboard stories."
+			],
+			"en": [
+				"Building a personal data universe where systems are useful and insights feel human.",
+				"Turning project work into clearer case studies, mission logs and dashboard stories."
+			]
+		}
+	},
+	{
+		"company": "FSS JSC, Ho Chi Minh City",
+		"position": {
+			"vi": "Data Engineer",
+			"en": "Data Engineer"
+		},
+		"period": "Apr 2025 - Present",
+		"highlights": {
+			"vi": [
+				"Moved deeper into analytics infrastructure, daily financial data flows and reporting reliability for banking clients.",
+				"Helped deliver 10+ BI dashboards so clients can track important KPIs through a clearer operational lens.",
+				"Designed and improved ETL pipelines with Python and PySpark so reporting data arrives on time and with more trust."
+			],
+			"en": [
+				"Moved deeper into analytics infrastructure, daily financial data flows and reporting reliability for banking clients.",
+				"Helped deliver 10+ BI dashboards so clients can track important KPIs through a clearer operational lens.",
+				"Designed and improved ETL pipelines with Python and PySpark so reporting data arrives on time and with more trust."
+			]
+		}
+	},
+	{
+		"company": "Winwin Logistics JSC, Ho Chi Minh City",
+		"position": {
+			"vi": "Data Analyst",
+			"en": "Data Analyst"
+		},
+		"period": "Sep 2024 - Mar 2025",
+		"highlights": {
+			"vi": [
+				"Built dashboards and reporting logic for delivery performance, operating cost and resource utilization.",
+				"Reduced manual reporting time by about 20% through Power BI dashboards and cleaner data preparation.",
+				"Learned to trace operational anomalies with SQL and Excel instead of stopping at surface-level reporting."
+			],
+			"en": [
+				"Built dashboards and reporting logic for delivery performance, operating cost and resource utilization.",
+				"Reduced manual reporting time by about 20% through Power BI dashboards and cleaner data preparation.",
+				"Learned to trace operational anomalies with SQL and Excel instead of stopping at surface-level reporting."
+			]
+		}
+	},
+	{
+		"company": "University of Economics and Law",
+		"position": {
+			"vi": "Started with data tools and business questions",
+			"en": "Started with data tools and business questions"
+		},
+		"period": "2021 - 2025",
+		"highlights": {
+			"vi": [
+				"Studied Management Information Systems, majoring in Digital Business and AI.",
+				"Built the foundation for connecting business processes, information systems and analytics."
+			],
+			"en": [
+				"Studied Management Information Systems, majoring in Digital Business and AI.",
+				"Built the foundation for connecting business processes, information systems and analytics."
+			]
+		}
+	}
+]

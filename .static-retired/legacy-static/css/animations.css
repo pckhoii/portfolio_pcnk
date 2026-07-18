@@ -1,0 +1,132 @@
+.reveal {
+	opacity: 0;
+	transform: translateY(28px) scale(0.985);
+	transition:
+		opacity 620ms cubic-bezier(0.22, 1, 0.36, 1),
+		transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
+	transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+	opacity: 1;
+	transform: translateY(0) scale(1);
+}
+
+.hero-copy,
+.hero-stats,
+.hero-meta-grid {
+	animation: entrance 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-stats {
+	animation-delay: 120ms;
+}
+
+.hero-meta-grid {
+	animation-delay: 220ms;
+}
+
+.float-icon svg {
+	animation: iconPulse 3.4s ease-in-out infinite;
+	animation-delay: var(--delay, 0s);
+}
+
+.icon-trend svg,
+.icon-bars svg {
+	animation-duration: 4.2s;
+}
+
+.project-card,
+.skill-card,
+.timeline-card,
+.mini-card,
+.contact-point {
+	position: relative;
+	overflow: hidden;
+}
+
+.project-card::after,
+.skill-card::after,
+.timeline-card::after,
+.mini-card::after,
+.contact-point::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.08) 48%, transparent 66%);
+	transform: translateX(-120%);
+	transition: transform 700ms ease;
+	pointer-events: none;
+}
+
+.project-card:hover::after,
+.skill-card:hover::after,
+.timeline-card:hover::after,
+.mini-card:hover::after,
+.contact-point:hover::after {
+	transform: translateX(120%);
+}
+
+.availability-dot {
+	animation: pulseGlow 2s infinite;
+}
+
+@keyframes entrance {
+	from {
+		opacity: 0;
+		transform: translateY(22px) scale(0.985);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+@keyframes pulseGlow {
+	0%,
+	100% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.45);
+	}
+
+	50% {
+		transform: scale(1.08);
+		box-shadow: 0 0 0 10px rgba(52, 211, 153, 0);
+	}
+}
+
+@keyframes iconPulse {
+	0%,
+	100% {
+		opacity: 0.72;
+		filter: drop-shadow(0 0 8px color-mix(in srgb, currentColor 32%, transparent));
+	}
+
+	50% {
+		opacity: 1;
+		filter: drop-shadow(0 0 18px color-mix(in srgb, currentColor 52%, transparent));
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.reveal,
+	.reveal.is-visible,
+	.hero-copy,
+	.hero-stats,
+	.hero-meta-grid,
+	.availability-dot {
+		opacity: 1;
+		transform: none;
+		transition: none;
+		animation: none;
+	}
+
+	.project-card::after,
+	.skill-card::after,
+	.timeline-card::after,
+	.mini-card::after,
+	.contact-point::after {
+		display: none;
+	}
+}

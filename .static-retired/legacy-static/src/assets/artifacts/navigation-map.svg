@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" fill="none">
+  <rect x="34" y="34" width="492" height="352" rx="10" fill="#101D26" stroke="#8CAAB4" stroke-width="4"/>
+  <path d="M78 104H482M78 174H482M78 244H482M78 314H482M142 70V350M226 70V350M310 70V350M394 70V350" stroke="#7899A3" stroke-width="2" opacity=".55"/>
+  <path d="M105 296C164 238 190 263 232 210S320 216 360 150 417 135 461 100" stroke="#E8ECE8" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="105" cy="296" r="12" fill="#8CAAB4"/><circle cx="232" cy="210" r="12" fill="#8CAAB4"/><circle cx="360" cy="150" r="12" fill="#8CAAB4"/><circle cx="461" cy="100" r="16" fill="#A79E81"/>
+  <path d="M461 66v-28m-14 14h28" stroke="#A79E81" stroke-width="4" stroke-linecap="round"/>
+  <text x="84" y="88" fill="#E8ECE8" font-family="Arial" font-size="14" letter-spacing="3">NAVIGATION CHART</text>
+  <text x="89" y="337" fill="#99A6AD" font-family="Arial" font-size="12">ENTRY</text><text x="420" y="337" fill="#99A6AD" font-family="Arial" font-size="12">DIRECTION</text>
+</svg>

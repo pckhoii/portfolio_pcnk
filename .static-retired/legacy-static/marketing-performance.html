@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mission 01 | Marketing Spend Performance Analysis</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700;800&display=swap"
+		rel="stylesheet"
+	/>
+	<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-shell reveal">
+			<a class="brand" href="index.html#missions">Khoi Pham</a>
+			<nav class="main-nav" aria-label="Project navigation">
+				<a href="index.html#missions">Missions</a>
+				<a href="#dashboard">Dashboard</a>
+				<a href="#signals">Signals</a>
+				<a href="#decision">Decision Layer</a>
+			</nav>
+			<div class="toolbar">
+				<a class="btn btn-outline" href="index.html#missions">Back</a>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="project-detail-hero section-shell">
+			<div class="container project-detail-shell">
+				<div class="project-detail-copy reveal">
+					<p class="eyebrow">Mission 01 / Marketing Analytics</p>
+					<h1>Marketing Spend Performance Analysis</h1>
+					<p class="hero-summary">
+						A mission to find whether marketing growth was powered by true efficiency or simply by a larger budget.
+						The work turns campaign data into a decision layer for budget allocation, channel optimization and performance storytelling.
+					</p>
+					<div class="tag-row">
+						<span class="tag">Python</span>
+						<span class="tag">Pandas</span>
+						<span class="tag">Power BI</span>
+						<span class="tag">ROAS</span>
+						<span class="tag">Budget Optimization</span>
+					</div>
+					<div class="hero-actions">
+						<a class="btn btn-solid" href="#dashboard">View Dashboard</a>
+						<a class="btn btn-outline" href="https://github.com/pckhoii/marketing_campaign_performance" target="_blank" rel="noreferrer">GitHub Repo</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-shell">
+			<div class="container detail-grid">
+				<article class="panel reveal">
+					<p class="section-kicker">Question</p>
+					<h3>The signal to investigate</h3>
+					<p>
+						Revenue was moving up, but the core question was less obvious: were campaigns becoming more efficient,
+						or was the business buying growth by increasing spend? Looking only at revenue, clicks or orders could create a false positive.
+					</p>
+				</article>
+				<article class="panel reveal" data-reveal-delay="80">
+					<p class="section-kicker">System</p>
+					<h3>The analytical orbit</h3>
+					<p>
+						I cleaned and prepared campaign data with Python, modeled performance metrics such as revenue, cost, ROAS,
+						ROMI and conversion rate, then built a Power BI dashboard for channel, category, platform and campaign analysis.
+					</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="dashboard" class="section-shell">
+			<div class="container">
+				<div class="section-heading reveal">
+					<p class="section-kicker">Dashboard</p>
+					<h3>The mission control panel</h3>
+					<p class="section-intro">
+						The dashboard is designed as a navigation layer: start from spend and revenue, drill into channels and campaigns,
+						then compare efficiency metrics before deciding where budget should scale, pause or be reworked.
+					</p>
+				</div>
+				<div class="dashboard-frame reveal" data-reveal-delay="80">
+					<iframe
+						title="Marketing Spend Performance Power BI Dashboard"
+						src="https://app.powerbi.com/view?r=eyJrIjoiY2JiODBjMjMtMjY4NS00N2NiLTk0OGEtNjY0ZWFjN2E1MGViIiwidCI6Ijk4MmEyZGRkLTliZTEtNGQ2ZS05Y2M5LTM3ZGVhYjEwM2MwNyIsImMiOjEwfQ%3D%3D"
+						allowfullscreen="true">
+					</iframe>
+				</div>
+			</div>
+		</section>
+
+		<section id="signals" class="section-shell">
+			<div class="container">
+				<div class="section-heading reveal">
+					<p class="section-kicker">Signals</p>
+					<h3>What the data revealed</h3>
+				</div>
+				<div class="detail-grid detail-grid-three">
+					<article class="panel reveal">
+						<p class="section-kicker">Signal 01</p>
+						<h3>Influencer quality stood out</h3>
+						<p>
+							Influencer campaigns produced strong revenue with comparatively lower cost, making them a better candidate for controlled scaling than broad paid social.
+						</p>
+					</article>
+					<article class="panel reveal" data-reveal-delay="80">
+						<p class="section-kicker">Signal 02</p>
+						<h3>Social volume was not enough</h3>
+						<p>
+							Social generated large traffic and spend, but weaker monetization suggested the need to audit targeting, creative fatigue and post-click intent.
+						</p>
+					</article>
+					<article class="panel reveal" data-reveal-delay="160">
+						<p class="section-kicker">Signal 03</p>
+						<h3>Growth was spend-heavy</h3>
+						<p>
+							High impressions and clicks did not translate into equally strong conversion efficiency, so the business needed to separate reach from return.
+						</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section id="decision" class="section-shell">
+			<div class="container">
+				<article class="panel decision-panel reveal">
+					<p class="section-kicker">Decision Layer</p>
+					<h3>Recommended actions</h3>
+					<div class="decision-list">
+						<p><strong>Scale:</strong> Prioritize influencer campaigns with better return signals and stronger conversion quality.</p>
+						<p><strong>Optimize:</strong> Rework social campaigns around audience segmentation, creative strategy and conversion intent.</p>
+						<p><strong>Re-evaluate:</strong> Treat high-order or high-click campaigns carefully when ROAS and ROMI do not support the same story.</p>
+						<p><strong>Monitor:</strong> Use the dashboard as a recurring decision layer instead of a one-time reporting artifact.</p>
+					</div>
+					<div class="hero-actions">
+						<a class="btn btn-solid" href="https://app.powerbi.com/view?r=eyJrIjoiY2JiODBjMjMtMjY4NS00N2NiLTk0OGEtNjY0ZWFjN2E1MGViIiwidCI6Ijk4MmEyZGRkLTliZTEtNGQ2ZS05Y2M5LTM3ZGVhYjEwM2MwNyIsImMiOjEwfQ%3D%3D" target="_blank" rel="noreferrer">Open Power BI</a>
+						<a class="btn btn-outline" href="https://github.com/pckhoii/marketing_campaign_performance" target="_blank" rel="noreferrer">View Notebook</a>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-shell reveal">
+			<p>Mission 01 in A Small Universe of Data.</p>
+		</div>
+	</footer>
+
+	<script type="module">
+		import { initRevealAnimations } from "./js/animations.js";
+
+		document.documentElement.setAttribute("data-theme", localStorage.getItem("portfolio_theme") || "dark");
+		initRevealAnimations();
+	</script>
+</body>
+</html>

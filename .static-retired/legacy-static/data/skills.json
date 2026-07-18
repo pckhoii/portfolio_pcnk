@@ -1,0 +1,37 @@
+[
+	{
+		"title": {
+			"vi": "Explore",
+			"en": "Explore"
+		},
+		"items": ["Business Questions", "Data Discovery", "EDA", "KPI Framing", "Problem Scoping"]
+	},
+	{
+		"title": {
+			"vi": "Analyze",
+			"en": "Analyze"
+		},
+		"items": ["SQL", "Python", "Pandas", "Excel", "DAX"]
+	},
+	{
+		"title": {
+			"vi": "Visualize",
+			"en": "Visualize"
+		},
+		"items": ["Power BI", "Dashboard Design", "KPI Tracking", "Storytelling with Data", "Tableau"]
+	},
+	{
+		"title": {
+			"vi": "Build",
+			"en": "Build"
+		},
+		"items": ["Data Cleaning", "Data Modeling", "ETL/ELT", "Power Query", "Automation"]
+	},
+	{
+		"title": {
+			"vi": "Communicate",
+			"en": "Communicate"
+		},
+		"items": ["Documentation", "Stakeholder Thinking", "Business Insight", "Reporting Flow", "Decision Support"]
+	}
+]

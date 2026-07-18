@@ -1,0 +1,76 @@
+{
+	"name": "Khoi Pham",
+	"role": {
+		"vi": "Data Analyst | Data Engineer",
+		"en": "Data Analyst | Data Engineer"
+	},
+	"headline": {
+		"vi": "A data analyst with a dreamer's eye.",
+		"en": "A data analyst with a dreamer's eye."
+	},
+	"summary": {
+		"vi": "Tôi thu nhặt những tín hiệu rời rạc, sắp chúng thành hệ thống, rồi biến con số thành câu chuyện mà người khác có thể dùng để ra quyết định.",
+		"en": "I collect scattered signals, shape them into systems, and turn numbers into stories people can actually use."
+	},
+	"about": {
+		"vi": "Tôi thích đứng ở khoảng giao giữa câu hỏi kinh doanh và hệ thống dữ liệu phía sau nó. Một phía là những tín hiệu chưa rõ hình dạng: doanh thu lệch, vận hành chậm, KPI nhìn chưa đúng kỳ vọng. Phía còn lại là dữ liệu cần được làm sạch, nối lại và kể thành một câu chuyện đủ rõ để stakeholder tin mà hành động. Với tôi, làm data không chỉ là trả lời câu hỏi bằng số, mà là tạo ra một hệ thống giúp câu trả lời đó tiếp tục hữu ích sau buổi trình bày đầu tiên.",
+		"en": "I like working at the intersection between business questions and the data systems behind them. On one side are signals that do not have a clear shape yet: shifting revenue, slow operations, or KPIs that do not match expectations. On the other side is data that needs to be cleaned, connected, and turned into a story clear enough for stakeholders to trust and act on. For me, data work is not only about answering questions with numbers. It is about building systems that keep the answer useful after the first presentation."
+	},
+	"location": "Thu Duc, Ho Chi Minh City, Vietnam",
+	"phone": "0858833863",
+	"email": "phamkhoi1602fw@gmail.com",
+	"cvUrl": "#",
+	"socials": [
+		{
+			"label": "GitHub",
+			"url": "https://github.com/pckhoii"
+		},
+		{
+			"label": "LinkedIn",
+			"url": "https://www.linkedin.com/in/pcnk-datananalyst/"
+		}
+	],
+	"stats": [
+		{
+			"value": "10+",
+			"label": {
+				"vi": "BI dashboards delivered",
+				"en": "BI dashboards delivered"
+			}
+		},
+		{
+			"value": "20+",
+			"label": {
+				"vi": "data sources standardized",
+				"en": "data sources standardized"
+			}
+		},
+		{
+			"value": "2",
+			"label": {
+				"vi": "worlds: analysis and engineering",
+				"en": "worlds: analysis and engineering"
+			}
+		}
+	],
+	"certifications": [
+		{
+			"title": {
+				"vi": "Google Data Analytics Certificate",
+				"en": "Google Data Analytics Certificate"
+			},
+			"image": "./assets/cert/google da.jpeg",
+			"url": "https://www.coursera.org/account/accomplishments/specialization/LLXXMPLGDNPN",
+			"theme": "image"
+		},
+		{
+			"title": {
+				"vi": "Associate Data Analyst",
+				"en": "Associate Data Analyst"
+			},
+			"image": "./assets/cert/da datacamp.png",
+			"url": "https://www.datacamp.com/certificate/DAA0010135033973",
+			"theme": "image"
+		}
+	]
+}

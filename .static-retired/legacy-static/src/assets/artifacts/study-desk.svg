@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" fill="none">
+  <rect x="36" y="42" width="488" height="334" rx="12" fill="#1B2531" stroke="#B7C5C6" stroke-width="3"/>
+  <path d="M71 299h418" stroke="#C0B99D" stroke-width="7" stroke-linecap="round"/>
+  <path d="m137 264 70-70 91 70z" fill="#E8ECE8" stroke="#7899A3" stroke-width="4"/><path d="M207 194v70m-35-35h70" stroke="#7899A3" stroke-width="4"/>
+  <rect x="276" y="164" width="88" height="103" rx="5" fill="#9494AA" stroke="#E8ECE8" stroke-width="4"/><path d="M296 191h49m-49 23h49m-49 23h34" stroke="#E8ECE8" stroke-width="4"/>
+  <circle cx="420" cy="216" r="38" fill="#7899A3" stroke="#E8ECE8" stroke-width="4"/><circle cx="420" cy="216" r="13" fill="#081018"/>
+  <path d="M104 154h58l-12-49h-34z" fill="#A79E81"/><path d="M133 105V77m-22 28h44" stroke="#E8ECE8" stroke-width="4"/>
+  <text x="71" y="338" fill="#E8ECE8" font-family="Arial" font-size="14" letter-spacing="3">PERSONAL STUDY</text>
+</svg>

@@ -1,0 +1,37 @@
+[
+	{
+		"id": "marketing-performance",
+		"title": {
+			"vi": "Marketing Spend Performance Analysis",
+			"en": "Marketing Spend Performance Analysis"
+		},
+		"description": {
+			"vi": "A mission to separate real marketing efficiency from growth created mainly by bigger spend.",
+			"en": "A mission to separate real marketing efficiency from growth created mainly by bigger spend."
+		},
+		"mission": {
+			"question": {
+				"vi": "Doanh thu tăng vì campaign hiệu quả hơn, hay chỉ vì business đang chi nhiều tiền hơn?",
+				"en": "Is revenue growing because campaigns are more efficient, or because the business is simply spending more?"
+			},
+			"signal": {
+				"vi": "Revenue, spend, clicks, ROAS, ROMI and conversion rate created conflicting signals across channels.",
+				"en": "Revenue, spend, clicks, ROAS, ROMI and conversion rate created conflicting signals across channels."
+			},
+			"system": {
+				"vi": "Python cleaning pipeline, KPI modeling and Power BI decision dashboard.",
+				"en": "Python cleaning pipeline, KPI modeling and Power BI decision dashboard."
+			},
+			"outcome": {
+				"vi": "Found budget reallocation signals: scale influencer, optimize social, and re-check high-volume campaigns with weak return.",
+				"en": "Found budget reallocation signals: scale influencer, optimize social, and re-check high-volume campaigns with weak return."
+			}
+		},
+		"tags": ["Python", "Pandas", "Power BI", "Marketing Analytics", "ROAS"],
+		"detailUrl": "marketing-performance.html",
+		"demoUrl": "https://app.powerbi.com/view?r=eyJrIjoiY2JiODBjMjMtMjY4NS00N2NiLTk0OGEtNjY0ZWFjN2E1MGViIiwidCI6Ijk4MmEyZGRkLTliZTEtNGQ2ZS05Y2M5LTM3ZGVhYjEwM2MwNyIsImMiOjEwfQ%3D%3D",
+		"repoUrl": "https://github.com/pckhoii/marketing_campaign_performance",
+		"featured": true,
+		"order": 1
+	}
+]

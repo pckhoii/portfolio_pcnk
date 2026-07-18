@@ -1,0 +1,105 @@
+{
+	"current": {
+		"title": {
+			"vi": "The next signal has not been selected yet.",
+			"en": "The next signal has not been selected yet."
+		},
+		"author": {
+			"vi": "Current Signal",
+			"en": "Current Signal"
+		},
+		"observation": {
+			"vi": "When a current book is ready, this area will hold the first observation without inventing reading progress.",
+			"en": "When a current book is ready, this area will hold the first observation without inventing reading progress."
+		}
+	},
+	"items": [
+		{
+			"id": "book-placeholder-01",
+			"status": "reading",
+			"title": {
+				"vi": "Book title",
+				"en": "Book title"
+			},
+			"author": {
+				"vi": "Author name",
+				"en": "Author name"
+			},
+			"signal": {
+				"vi": "One idea from this book that stayed with me.",
+				"en": "One idea from this book that stayed with me."
+			},
+			"reflection": {
+				"vi": "This reflection will be added after the archive is updated.",
+				"en": "This reflection will be added after the archive is updated."
+			},
+			"why": {
+				"vi": "Why this idea mattered will be documented later.",
+				"en": "Why this idea mattered will be documented later."
+			},
+			"before": {
+				"vi": "Previous way of thinking.",
+				"en": "Previous way of thinking."
+			},
+			"after": {
+				"vi": "How the idea changed my perspective or behavior.",
+				"en": "How the idea changed my perspective or behavior."
+			},
+			"note": {
+				"vi": "Personal note coming soon.",
+				"en": "Personal note coming soon."
+			},
+			"relatedIdeas": ["systems", "learning", "decision-making"]
+		},
+		{
+			"id": "book-placeholder-02",
+			"status": "next",
+			"title": {
+				"vi": "Another signal",
+				"en": "Another signal"
+			},
+			"author": {
+				"vi": "Author name",
+				"en": "Author name"
+			},
+			"signal": {
+				"vi": "A second reading artifact waiting for real notes.",
+				"en": "A second reading artifact waiting for real notes."
+			},
+			"reflection": {
+				"vi": "This archive is still being decoded.",
+				"en": "This archive is still being decoded."
+			},
+			"why": {
+				"vi": "Further reflections will be added later.",
+				"en": "Further reflections will be added later."
+			},
+			"before": {
+				"vi": "Before notes are available.",
+				"en": "Before notes are available."
+			},
+			"after": {
+				"vi": "After the archive is updated.",
+				"en": "After the archive is updated."
+			},
+			"note": {
+				"vi": "Archive still being indexed.",
+				"en": "Archive still being indexed."
+			},
+			"relatedIdeas": ["focus", "practice", "visual-thinking"]
+		},
+		{
+			"id": "book-placeholder-03",
+			"status": "read",
+			"title": { "vi": "Archived signal", "en": "Archived signal" },
+			"author": { "vi": "Author name", "en": "Author name" },
+			"signal": { "vi": "A completed placeholder slot for a future reading note.", "en": "A completed placeholder slot for a future reading note." },
+			"reflection": { "vi": "This archive is waiting for a real reflection.", "en": "This archive is waiting for a real reflection." },
+			"why": { "vi": "Why it mattered will be documented later.", "en": "Why it mattered will be documented later." },
+			"before": { "vi": "Before the note is written.", "en": "Before the note is written." },
+			"after": { "vi": "After the archive is updated.", "en": "After the archive is updated." },
+			"note": { "vi": "Personal note coming soon.", "en": "Personal note coming soon." },
+			"relatedIdeas": ["archive", "reflection"]
+		}
+	]
+}
