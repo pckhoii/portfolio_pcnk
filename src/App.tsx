@@ -43,7 +43,7 @@ function AppRoutes() {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
-      <motion.div key={location.pathname} className="route-stage" initial={{ opacity: 0, scale: 0.985 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 1.015 }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
+      <motion.div key={location.pathname} className="route-stage" initial={{ opacity: 0, scale: 1.025, y: 18, filter: "blur(7px)" }} animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }} exit={{ opacity: 0, scale: 0.985, y: -8, filter: "blur(4px)" }} transition={{ duration: 0.64, ease: [0.22, 1, 0.36, 1] }}>
         <Suspense fallback={null}>
           <Routes location={location}>
             <Route path="/" element={<Gateway />} />
